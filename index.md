@@ -14,8 +14,7 @@ I'm Babaniyi Olaniyi. I am deeply excited about the time we live in and the rate
 
 While you're still here feel free to..
 - Check out my [blog posts](https://categitau.github.io/posts/).
-- Have a look at other articles I've written on my [Medium](https://medium.com/). 
-- Look at some of the things I have worked on in [Projects](https://categitau.github.io/portfolio/) or on [![github](/images/github_icon.png)](https://github.com/CateGitau) 
+- Look at some of the things I have worked on in [Projects](https://categitau.github.io/portfolio/) or on [![github](/images/github_icon.png)](https://github.com/babaniyi) 
 - Peep my [CV](https://categitau.github.io/cv/). 
 
 
