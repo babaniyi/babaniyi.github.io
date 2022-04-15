@@ -19,7 +19,7 @@ redirect_from:
 <!-- --- -->
 
 # Education
----
+----
 <table style="width:100%">
 <col width="9%">
 <col width="20">
@@ -63,11 +63,13 @@ redirect_from:
 </td> 
 </tr>
 </table>
+
+
 <!-- --- -->
 
 # Work Experiences
 
----
+----
 
 <table style="width:100%">
 <col width="17%">
