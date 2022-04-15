@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Fuzzy String Matching In Python | categitau</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Fuzzy String Matching In Python" />
+<meta name="author" content="Cate Gitau" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As a data scientist, you are forced to retrieve information from various sources by either leveraging publicly available API’s, asking for data, or by simply scraping your own data from a web page. All this information is useful if we are able to combine it and not have any duplicates in the data. But how do we make sure that there are no duplicates?" />
+<meta property="og:description" content="As a data scientist, you are forced to retrieve information from various sources by either leveraging publicly available API’s, asking for data, or by simply scraping your own data from a web page. All this information is useful if we are able to combine it and not have any duplicates in the data. But how do we make sure that there are no duplicates?" />
+<link rel="canonical" href="https://categitau.github.io/2018/02/28/fuzzy-string-matching-in-python.html" />
+<meta property="og:url" content="https://categitau.github.io/2018/02/28/fuzzy-string-matching-in-python.html" />
+<meta property="og:site_name" content="categitau" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-02-28T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Fuzzy String Matching In Python" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"https://categitau.github.io/2018/02/28/fuzzy-string-matching-in-python.html","headline":"Fuzzy String Matching In Python","dateModified":"2018-02-28T00:00:00+00:00","datePublished":"2018-02-28T00:00:00+00:00","author":{"@type":"Person","name":"Cate Gitau"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://categitau.github.io/2018/02/28/fuzzy-string-matching-in-python.html"},"description":"As a data scientist, you are forced to retrieve information from various sources by either leveraging publicly available API’s, asking for data, or by simply scraping your own data from a web page. All this information is useful if we are able to combine it and not have any duplicates in the data. But how do we make sure that there are no duplicates?","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://categitau.github.io/feed.xml" title="categitau" />
+  
+
+
+
+
+
+  
+</head>
+<body><header class="site-header" style='border-top-width: 0px;'>
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">categitau</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/posts/">Posts</a><a class="page-link" href="/portfolio/">Projects</a><a class="page-link" href="/cv/">CV</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Fuzzy String Matching In Python</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2018-02-28T00:00:00+00:00" itemprop="datePublished">
+        Feb 28, 2018
+      </time></p>
+      <span>
+        
+          
+          <a href="/tag/data-science"><code class="highligher-rouge"><nobr>data-science</nobr></code>&nbsp;</a>
+        
+          
+          <a href="/tag/text-analysis"><code class="highligher-rouge"><nobr>text-analysis</nobr></code>&nbsp;</a>
+        
+          
+          <a href="/tag/nlp"><code class="highligher-rouge"><nobr>nlp</nobr></code>&nbsp;</a>
+        
+      </span>
+  </header>
+  
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>As a data scientist, you are forced to retrieve information from various sources by either leveraging publicly available API’s, asking for data, or by simply scraping your own data from a web page. All this information is useful if we are able to combine it and not have any duplicates in the data. But how do we make sure that there are no duplicates?</p>
+
+<!-- more -->
+
+<p>I know … <em>“duh! you can just use a function that retrieves all the unique _information thus removing duplicates”</em>. Well, that’s one way, but our function probably can’t tell that a name like <em>“Barack Obama”</em> is the same as <em>“Barack H. Obama”</em> right? (Assuming we were retrieving names of the most famous people in the world). We can clearly tell that these names are different but they are probably referring to the same person. So, how do we match these names?</p>
+
+<p>This is where Fuzzy String Matching comes in. This post will explain what Fuzzy String Matching is together with its use cases and give examples using Python’s Library <a href="https://pypi.python.org/pypi/fuzzywuzzy"><em>Fuzzywuzzy</em></a>.</p>
+
+<h4 id="fuzzy-logic"><strong>Fuzzy Logic</strong></h4>
+
+<blockquote>Fuzzy(adjective): difficult to perceive; indistinct or vague
+
+-Wikipedia</blockquote>
+
+<p><a href="https://en.wikipedia.org/wiki/Fuzzy_logic">Fuzzy logic</a> is a form of multi-valued logic that deals with reasoning that is approximate rather than fixed and exact. Fuzzy logic values range between 1 and 0. i.e the value may range from completely true to completely false. In contrast, <em><strong>Boolean Logic</strong></em> is a two-valued logic: true or false usually denoted 1 and 0 respectively, that deals with reasoning that is fixed and exact. Fuzzy logic tends to reflect how people think and attempts to model our decision making hence it is now leading to new intelligent systems(expert systems).</p>
+
+<p>So, if we are comparing two strings using fuzzy logic, we would be trying to answer the question <em>“How similar are string A and string B?”, and rephrasing it as “Are string A and String B the same?”</em> when using the Boolean Logic.</p>
+
+<h4 id="fuzzy-string-matching">Fuzzy String Matching</h4>
+
+<p><a href="https://en.wikipedia.org/wiki/Approximate_string_matching">Fuzzy String Matching</a>, also known as Approximate String Matching, is the process of finding strings that approximately match a pattern. The process has various applications such as <em>spell-checking</em>, <em>DNA analysis and detection,</em> spam detection, <em>plagiarism detection e.t.c</em></p>
+
+<h4 id="introduction-to-fuzzywuzzy-in-python">Introduction to <em>Fuzzywuzzy</em> in Python</h4>
+
+<p><strong>Fuzzywuzzy</strong> is a python library that uses <strong>Levenshtein Distance</strong> to calculate the differences between sequences and patterns that was developed and also open-sourced by <a href="https://seatgeek.com/">SeatGeek,</a> a service that finds events from all over the internet and showcase them on one platform. The big problem they were facing was the labeling of the same events as stated on their <a href="http://chairnerd.seatgeek.com/fuzzywuzzy-fuzzy-string-matching-in-python/">blog</a>. This is the same as the example I gave at the beginning of the post where an entity such as a person’s name can be labelled differently on different sources.</p>
+
+<h5 id="installation">Installation</h5>
+
+<p>To install the library, you can use pip:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pip</span> <span class="n">install</span> <span class="n">fuzzywuzzy</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">python</span><span class="o">-</span><span class="n">Levenshtein</span>
+</code></pre></div></div>
+
+<h5 id="examples">Examples</h5>
+
+<p>First we have to import the fuzzywuzzy modules:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kn">from</span> <span class="nn">fuzzywuzzy</span> <span class="kn">import</span> <span class="n">fuzz</span>
+<span class="kn">from</span> <span class="nn">fuzzywuzzy</span> <span class="kn">import</span> <span class="n">process</span>
+</code></pre></div></div>
+
+<p>Now, we can get the similarity score of two strings by using the following methods; ratio() or partial_ratio():</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">fuzz</span><span class="p">.</span><span class="n">ratio</span><span class="p">(</span><span class="s">"Catherine M Gitau"</span><span class="p">,</span><span class="s">"Catherine Gitau"</span><span class="p">)</span>
+
+<span class="mi">91</span>
+</code></pre></div></div>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fuzz</span><span class="p">.</span><span class="n">partial_ratio</span><span class="p">(</span><span class="s">"Catherine M. Gitau"</span><span class="p">,</span><span class="s">"Catherine Gitau"</span><span class="p">)</span>
+
+<span class="mi">100</span>
+</code></pre></div></div>
+
+<p>You’re probably wondering why the scores are different. This is because the fuzz.ratio() method just calculates the edit distance between some ordering of the token in both input strings using the <code class="language-plaintext highlighter-rouge">difflib.ratio.</code> You can find out more about the difflib.ratio <a href="https://docs.python.org/2/library/difflib.html#difflib.SequenceMatcher.ratio">here</a>. The <strong><em>fuzz.partial_ratio()</em></strong> takes in the shortest string, which in this case is “Catherine Gitau” (length 14) , then matches it with all the sub-strings of length(14) in “Catherine M. Gitau” which means matching with “Catherine Gitau” which gives 100%. You can play around with the strings until you get the gist.</p>
+
+<p>What if we switched up two names in one string? In the following example, I’ve interchanged the name “Catherine Gitau” to “Gitau Catherine” .Let’s see the scores:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="n">fuzz</span><span class="p">.</span><span class="n">ratio</span><span class="p">(</span><span class="s">"Catherine M Gitau"</span><span class="p">,</span><span class="s">"Gitau Catherine"</span><span class="p">)</span>
+<span class="mi">55</span>
+
+<span class="n">fuzz</span><span class="p">.</span><span class="n">partial_ratio</span><span class="p">(</span><span class="s">"Catherine M. Gitau"</span><span class="p">,</span><span class="s">"Gitau Catherine"</span><span class="p">)</span>
+<span class="mi">60</span>
+
+</code></pre></div></div>
+
+<p>We see that both methods are giving out low scores, this can be rectified by using <strong><em>token_sort_ratio()</em></strong> method. This method attempts to account for similar strings that are out of order. Example, if we used the above strings:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">fuzz</span><span class="p">.</span><span class="n">token_sort_ratio</span><span class="p">(</span><span class="s">"Catherine Gitau M."</span><span class="p">,</span> <span class="s">"Gitau Catherine"</span><span class="p">)</span>
+<span class="mi">94</span>
+
+</code></pre></div></div>
+
+<p>As you can see, we get a high score of 94.</p>
+
+<h4 id="conclusion">Conclusion</h4>
+
+<p>This article has introduced Fuzzy String Matching which is a well known problem that is built on Leivenshtein Distance. From what we have seen, it calculates how similar two strings are. This can also be calculated by finding out the number of operations needed to transform one string to the other .e.g with the name “Barack”, one might spell it as “Barac”. Only one operation is needed to correct this i.e adding a K at the end. You can try this out using the <em>stringdist</em> library in <strong>r</strong> as such:</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="w">
+</span><span class="n">adist</span><span class="p">(</span><span class="s2">"Barack"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Barac"</span><span class="p">)</span><span class="w">
+</span><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w">
+
+</span></code></pre></div></div>
+
+<h4 id="sources">Sources</h4>
+
+<p><a href="https://marcobonzanini.com/2015/02/25/fuzzy-string-matching-in-python/">Fuzzy string matching in Python</a></p>
+
+<p>Till next time:)</p>
+
+
+  </div><a class="u-url" href="/2018/02/28/fuzzy-string-matching-in-python.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <!-- <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span> -->
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">Cate Gitau</li>
+          <li><a class="u-email" href="mailto:cgitau@aimsammi.org">cgitau@aimsammi.org</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>Catherine Gitau is an Applied Data Scientist based in Nairobi, Kenya that works on building data and machine learning models to improve businesses.  She&#39;s currently interested in getting into machine learning engineering so that she can be able to build machine learning systems to benefit customers at  scale. She&#39;s keen on writing technical blog posts to teach and at the same time learn.
+</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/CateGitau" title="CateGitau"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://www.linkedin.com/in/cate-gitau" title="cate-gitau"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#linkedin"></use></svg></a></li><li><a rel="me" href="https://twitter.com/categitau_" title="categitau_"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

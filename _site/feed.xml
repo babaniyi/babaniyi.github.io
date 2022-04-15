@@ -1,0 +1,718 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://categitau.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://categitau.github.io/" rel="alternate" type="text/html" /><updated>2022-02-07T19:31:14+00:00</updated><id>https://categitau.github.io/feed.xml</id><title type="html">categitau</title><subtitle>Catherine Gitau is an Applied Data Scientist based in Nairobi, Kenya that works on building data and machine learning models to improve businesses.  She's currently interested in getting into machine learning engineering so that she can be able to build machine learning systems to benefit customers at  scale. She's keen on writing technical blog posts to teach and at the same time learn.
+</subtitle><author><name>Cate Gitau</name><email>cgitau@aimsammi.org</email></author><entry><title type="html">2021 in review and hello 2022!</title><link href="https://categitau.github.io/2022/01/02/2021-in-Review-and-Hello-2022!.html" rel="alternate" type="text/html" title="2021 in review and hello 2022!" /><published>2022-01-02T00:00:00+00:00</published><updated>2022-01-02T00:00:00+00:00</updated><id>https://categitau.github.io/2022/01/02/2021%20in%20Review%20and%20Hello%202022!</id><content type="html" xml:base="https://categitau.github.io/2022/01/02/2021-in-Review-and-Hello-2022!.html">&lt;p&gt;Happy new year!! 😅
+Better late than never right?&lt;/p&gt;
+
+&lt;p&gt;2021 was a great year for me. One of the reasons being that I managed to update my personal wesbite(This one) and get back into writing. Even though I am not doing it as much yet, I am still happy that I managed to change the look and feel of the platform and I am happy with the outcome. I used to do year in review posts when I first started writing and I used to enjoy it because it made it easy for me to look back and reflect on what I managed to do in the previous year and that would fuel the fire to do more the coming year.&lt;/p&gt;
+
+&lt;p&gt;I know it’s abit too late for reviews but, I really do need some motivation to get on here and write. So, I thought why not share my wins from last year and that will probably drive my motivation for the things I want to do this year. Well, I hope this works!&lt;/p&gt;
+
+&lt;h1 id=&quot;2021-in-review&quot;&gt;2021 in Review&lt;/h1&gt;
+
+&lt;p&gt;Like I’ve mentioned 2021 was a pretty good and productive year for me, it had its share of ups and downs but generally, It was a good year. I was just from completing my Masters’ in Ghana and I was pumped. Here’s a little recap of what I did last year:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;💻 Built a Machine Translation platform for solely African Languages.&lt;/li&gt;
+  &lt;li&gt;💻 Updated Personal Website.&lt;/li&gt;
+  &lt;li&gt;😀Started a new job at Visa! One of my biggest goals in 2021 was to get a new job at an international corporation.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;2022-at-a-glance&quot;&gt;2022 at a Glance&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;💻 Machine Learning Engineer Certificate&lt;/li&gt;
+  &lt;li&gt;✍️ Write more!&lt;/li&gt;
+  &lt;li&gt;👩‍🏫 Mentor more students!&lt;/li&gt;
+  &lt;li&gt;📚 Read More!&lt;/li&gt;
+  &lt;li&gt;😊 Listen to more podcasts&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Cate Gitau</name><email>cgitau@aimsammi.org</email></author><category term="year-review" /></entry><entry><title type="html">Textual Data Augmentation Tools And Techniques</title><link href="https://categitau.github.io/2021/09/02/textual-data-augmentation-tools-and-techniques.html" rel="alternate" type="text/html" title="Textual Data Augmentation Tools And Techniques" /><published>2021-09-02T00:00:00+00:00</published><updated>2021-09-02T00:00:00+00:00</updated><id>https://categitau.github.io/2021/09/02/textual-data-augmentation-tools%20-and-techniques</id><content type="html" xml:base="https://categitau.github.io/2021/09/02/textual-data-augmentation-tools-and-techniques.html">&lt;p&gt;&lt;strong&gt;Data Augmentation&lt;/strong&gt; is a technique that’s used to increase the amount of available data by modifying slightly already existing data. One of the limitations of NLP especially for low-resourced languages, is the unavailability of labelled data and it usually takes a great deal of money and time to manually annotate/label the relevant datasets. Therefore, it’s become necessary to come up with methods of automatically increasing the available data so as to improve the performance of the model.&lt;/p&gt;
+
+&lt;p&gt;Data augmentation is mostly popular in the computer vision domain where it involves generating augmentations using simple image transformations such as rotating or flipping the images with the aim of increasing training data for the model. However, it is very challenging to find the appropriate methods for text data augmentation because language in itself is complex and it can be difficult to preserve the context, grammar and semantics.&lt;/p&gt;
+
+&lt;p&gt;In this article, we’ll be looking at how one can use some available data augmentation methods and tools to augment text that’s low-resourced. A lot of the tools available for data augmentation are mostly used for the English language. In this article, I present to you some of the methods that can be used for languages other than English but the article will focus on the KiSwahili language.&lt;/p&gt;
+
+&lt;p&gt;Overall, some of the popular methods I will be discussing are:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lexical substitution&lt;/li&gt;
+  &lt;li&gt;Random noise injection&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;lexical-substitution&quot;&gt;Lexical Substitution&lt;/h1&gt;
+
+&lt;p&gt;This is the task of identifying a substitute for a word in a sentence without changing the meaning of the sentence. There are various techniques that can be used for this:&lt;/p&gt;
+
+&lt;h2 id=&quot;i-fasttext-based-augmentation&quot;&gt;i) Fasttext-based augmentation&lt;/h2&gt;
+&lt;p&gt;In this technique, we use the pre-trained word embedding Word2Vec and use the nearest neighbor words in the embedding space as a replacement for a particular word in the sentence.&lt;/p&gt;
+
+&lt;p&gt;For example, you can replace a word with 3 most similar words and get three variations of the text while preserving its context.&lt;/p&gt;
+
+&lt;p&gt;In this example, I will use fasttext Embeddings which has pre-trained models for over 100 different languages which you can find &lt;a href=&quot;https://fasttext.cc/docs/en/crawl-vectors.html&quot;&gt;here&lt;/a&gt;. I will also be using the &lt;a href=&quot;https://github.com/dsfsi/textaugment&quot;&gt;Textaugment&lt;/a&gt; library which is used for augmenting text for natural language processing applications.&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;#import the necessary libraries
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;!&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;q&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;textaugment&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gensim&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;textaugment&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gensim&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Download the the FastText embeddings in the language of your choice in this case I'm downloading Swahili
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wget&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;https://dl.fbaipublicfiles.com/fasttext/vectors-crawl/cc.sw.300.bin.gz&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# save path to your pre-trained model
+&lt;/span&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;gensim.test.utils&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datapath&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pretrained_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;datapath&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'./cc.sw.300.bin.gz'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# load the model
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;gensim&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;models&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;fasttext&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;load_facebook_model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pretrained_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;textaugment&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Word2vec&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Word2vec&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;wv&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;augment&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'John anacheza mpira'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;john&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anacheza&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mipira&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ii-mlm-augmentation&quot;&gt;ii) MLM augmentation&lt;/h2&gt;
+
+&lt;p&gt;MLM or Masked Language Modeling is the task of learning a model to predict missing tokens that have been masked based on its context. Transformer models like BERT, ALBERT and ROBERTA have been trained on large amounts of text using this task.&lt;/p&gt;
+
+&lt;p&gt;This method can also be used in augmenting some texts by using a pre-trained transformer model like BERT, mask some words in the sentence and use the BERT model to predict the token that’s been masked.&lt;/p&gt;
+
+&lt;p&gt;So, we can generate a number of sentences using the predictions made by the model. This particular method produces sentences that are more grammatically correct because the model takes into account the context when making te predictions.&lt;/p&gt;
+
+&lt;p&gt;For this task you could use the &lt;a href=&quot;https://github.com/google-research/bert/blob/master/multilingual.md&quot;&gt;Multilingual BERT base model&lt;/a&gt; or &lt;a href=&quot;https://github.com/pytorch/fairseq/tree/master/examples/roberta&quot;&gt;XLM-ROBERTa&lt;/a&gt; which was trained on 100 different languages.&lt;/p&gt;
+
+&lt;h2 id=&quot;iii-tf-idf-based-augmentation&quot;&gt;iii) TF-IDF based augmentation&lt;/h2&gt;
+&lt;p&gt;TF-IDF also known as Term Frequency-Inverse document frequency tells us how uninformative a word is. So, low TF-IDF scores means that a word is uninformative and thus can be replaced without affecting the ground truth labels of the sentence.&lt;/p&gt;
+
+&lt;p&gt;For this particular task, you could use the &lt;a href=&quot;https://github.com/makcedward/nlpaug&quot;&gt;nlpaug library&lt;/a&gt;. Have a look at this &lt;a href=&quot;https://github.com/makcedward/nlpaug/blob/master/example/tfidf-train_model.ipynb&quot;&gt;notebook&lt;/a&gt; to see an example of how you can use the library.&lt;/p&gt;
+
+&lt;h1 id=&quot;random-noise-injection&quot;&gt;Random noise injection&lt;/h1&gt;
+
+&lt;p&gt;The idea behind this is to inject some noise in the text. For these particular tasks we’ll use the &lt;a href=&quot;https://github.com/dsfsi/textaugment&quot;&gt;textaugment library&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;i-random-deletion&quot;&gt;i) Random Deletion&lt;/h2&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;textaugment&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EDA&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EDA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random_deletion&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'John anacheza mpira kwenye uwanja wa Nyayo'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anacheza&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mpira&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kwenye&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uwanja&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wa&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Nyayo&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;ii-random-swap&quot;&gt;ii) Random swap&lt;/h2&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;textaugment&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EDA&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;EDA&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;random_swap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'John anacheza mpira kwenye uwanja wa Nyayo'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;John&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Nyayo&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mpira&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kwenye&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uwanja&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;wa&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;anacheza&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;other-data-augmentation-techniques&quot;&gt;Other Data Augmentation techniques&lt;/h2&gt;
+
+&lt;p&gt;Other than the techniques I have mentioned above, there are others that you can look into:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Back translation
+    &lt;ul&gt;
+      &lt;li&gt;In this method, machine translation models are used to paraphrase text while retaining its original meaning. The process involves taking a language (eg. in Swahili) and translating it to another language (eg.English) using the MT model. Then you translate the English sentence back into Swahili.&lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;p&gt;The only downside to this method is that it is expensive and time consuming especially if you’d like to back-translate a lot of text.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;WordNet-based augmentation
+    &lt;ul&gt;
+      &lt;li&gt;This is another example of lexical substitution that involves replacing a word in a text with it’s synonym. The most popular open-sourced lexical database for the English language is WordNet. I did not include this as one of the examples because I couldn’t find any database for Swahili that’s similar to WordNet. Please let me know in the comment section if you have a resource like WordNet that’s open-source for low-resourced languages.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h1&gt;
+
+&lt;p&gt;In this article I have introduced techniques and tools that can be used in data augmentation for text data specifically those that can be used for low-resourced languages. A lot of the pre-trained models are still not of good quality so for methods such as MLM-augmentation and Word2Vec, you might once in a while get some nonsensical words. This means that there’s still a lot of work that needs to be done on that front.&lt;/p&gt;
+
+&lt;p&gt;Please let me know in the comments which other data augmentation methods you’ve used for a low resourced language.&lt;/p&gt;
+
+&lt;h2 id=&quot;references&quot;&gt;References&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://amitness.com/2020/05/data-augmentation-for-nlp/&quot;&gt;A visual Survey of Data Augmentation in NLP&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://arxiv.org/pdf/1901.11196.pdf&quot;&gt;EDA: Easy Data Augmentation Techniques for Boosting Performance on Text Classification Tasks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/dsfsi/textaugment&quot;&gt;Improving short text classification through global augmentation methods&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Cate Gitau</name><email>cgitau@aimsammi.org</email></author><category term="nlp" /><category term="data-augmentation" /></entry><entry><title type="html">Machine Translation Eval Metrics</title><link href="https://categitau.github.io/2020/08/08/machine-translation-eval-metrics.html" rel="alternate" type="text/html" title="Machine Translation Eval Metrics" /><published>2020-08-08T00:00:00+00:00</published><updated>2020-08-08T00:00:00+00:00</updated><id>https://categitau.github.io/2020/08/08/machine-translation-eval-metrics</id><content type="html" xml:base="https://categitau.github.io/2020/08/08/machine-translation-eval-metrics.html">&lt;p&gt;&lt;strong&gt;Machine Translation(MT)&lt;/strong&gt; is the use of a software to translate text or speech from one language to another. One of the issues in MT is how to evaluate the MT system to reasonably tell us whether the translation system makes an improvement or not. This is a challenge because unlike other machine learning problems where there can be only one correct answer, in MT, given a certain sentence in a particular language to translate, there could be multiple different translations that are equally good translations of that sentence which may vary in the choice of word or in the order of words and humans can clearly distinguish this. So how do we evaluate how good our machine translation model is given that there can be more than one correct translations of a particular sentence?&lt;/p&gt;
+
+&lt;p&gt;There have been traditional methods like human evaluations which are extensive but tend to be expensive, time-consuming and this involves human labor that cannot be reused. Researchers have gone ahead to create automatic evaluation methods for MT which provide quick and frequent evaluations which correlate highly with human evaluations. Some popular automatic evaluation methods include:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;BLEU Score&lt;/li&gt;
+  &lt;li&gt;NIST&lt;/li&gt;
+  &lt;li&gt;Word error rate(WER)&lt;/li&gt;
+  &lt;li&gt;METEOR&lt;/li&gt;
+  &lt;li&gt;LEPOR&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In this article, we will look at some of the popular automatic evaluation metrics that are being used and how they differ from one another.&lt;/p&gt;
+
+&lt;p&gt;Here’s what we will cover:&lt;/p&gt;
+
+&lt;ol id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#introduction&quot; id=&quot;markdown-toc-introduction&quot;&gt;Introduction&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#bleu&quot; id=&quot;markdown-toc-bleu&quot;&gt;BLEU&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#standard-n-gram-precision&quot; id=&quot;markdown-toc-standard-n-gram-precision&quot;&gt;Standard n-gram precision&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#modified-n-gram-precision&quot; id=&quot;markdown-toc-modified-n-gram-precision&quot;&gt;Modified n-gram precision&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#bleu-algorithm&quot; id=&quot;markdown-toc-bleu-algorithm&quot;&gt;BLEU Algorithm&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#meteor&quot; id=&quot;markdown-toc-meteor&quot;&gt;METEOR&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#meteor-metric&quot; id=&quot;markdown-toc-meteor-metric&quot;&gt;METEOR metric&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#unigram-precision-p&quot; id=&quot;markdown-toc-unigram-precision-p&quot;&gt;unigram precision (P)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#unigram-recall-r&quot; id=&quot;markdown-toc-unigram-recall-r&quot;&gt;Unigram recall (R)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#fmean&quot; id=&quot;markdown-toc-fmean&quot;&gt;Fmean&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#lepor&quot; id=&quot;markdown-toc-lepor&quot;&gt;LEPOR&lt;/a&gt;    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#design-of-the-lepor-metric&quot; id=&quot;markdown-toc-design-of-the-lepor-metric&quot;&gt;Design of the LEPOR metric&lt;/a&gt;        &lt;ol&gt;
+          &lt;li&gt;&lt;a href=&quot;#length-penalty&quot; id=&quot;markdown-toc-length-penalty&quot;&gt;Length penalty&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#n-gram-position-difference-penalty&quot; id=&quot;markdown-toc-n-gram-position-difference-penalty&quot;&gt;N-gram position difference penalty&lt;/a&gt;&lt;/li&gt;
+        &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#precision-and-recall&quot; id=&quot;markdown-toc-precision-and-recall&quot;&gt;Precision and recall&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;introduction&quot;&gt;Introduction&lt;/h1&gt;
+
+&lt;p&gt;One measures the quality of a translation based on how close it is to a professional human translation. So, the closer the machine translation is to a professional human translation, the better it is. To judge the quality of a machine translation, one measures how close it is to one or more professional human translations according to a numerical metric. These professional human translations are known as &lt;strong&gt;reference translations&lt;/strong&gt; and are provided as part of the dev or test set. We will be looking at how some of these metrics are calculated and also identify the drawbacks of some of these metrics and why one is prefered over the other.&lt;/p&gt;
+
+&lt;h1 id=&quot;bleu&quot;&gt;BLEU&lt;/h1&gt;
+
+&lt;p&gt;&lt;strong&gt;Bilingual Evaluation Understudy(BLEU)&lt;/strong&gt; is one of the most popular metrics that’s being used to evaluate sequence to sequence tasks such as machine translation.&lt;/p&gt;
+
+&lt;p&gt;Let’s say we have a swahili sentence, its reference traslations, which are various correct ways the sentence can be translated to in to english and the MT output which are the outputs from our MT model.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Swahili&lt;/strong&gt; : Kuna paka kwenye mkeka&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Reference 1&lt;/strong&gt;: The cat is on the mat&lt;br /&gt;
+&lt;strong&gt;Reference 2&lt;/strong&gt;: There is a cat on the mat&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;MT Output 1&lt;/strong&gt;: the cat the cat on the mat&lt;br /&gt;
+&lt;strong&gt;MT Output 2&lt;/strong&gt;: the the the the the the the&lt;/p&gt;
+
+&lt;p&gt;The intuition behind the BLEU score is that a good translation shares many words and phrases with the references.  Therefore, BLEU compares n-grams of the machine translation output with the n-grams of the reference translations, then count the number of matches, where the matches are position independent.&lt;/p&gt;
+
+&lt;h2 id=&quot;standard-n-gram-precision&quot;&gt;Standard n-gram precision&lt;/h2&gt;
+&lt;p&gt;BLEU metric is based on the presison metric. Precision is computed by counting up the number of machine translated words(n-grams) that occur in any reference translation and divide that by the total number of words in the candidate translation.&lt;/p&gt;
+
+&lt;p&gt;Using the example above, calcualting the unigram precision of &lt;em&gt;MT output 1&lt;/em&gt;, we would count the number of unigrams in &lt;em&gt;MT Output 1&lt;/em&gt; that appear in any of the reference sentences then divide that total count with the total number of words in the machine translated sentence as shown below:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;unigram&lt;/th&gt;
+      &lt;th&gt;shown in refrence?&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;the&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cat&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;the&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cat&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;on&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;the&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mat&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;7&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Therefore, unigram precision = &lt;strong&gt;7/7&lt;/strong&gt; = &lt;strong&gt;1.0&lt;/strong&gt;&lt;br /&gt;
+If you do the same to &lt;em&gt;MT Output 2&lt;/em&gt;, you will get a unigram precision of &lt;strong&gt;8/8&lt;/strong&gt; = &lt;strong&gt;1.0&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can see from the results of &lt;em&gt;MT Output 2&lt;/em&gt;, this is not a good measure because it says the MT Output has high precision, but that’s not the case.&lt;/p&gt;
+
+&lt;p&gt;To deal with this problem, they proposed a &lt;strong&gt;modified precision&lt;/strong&gt; method.&lt;/p&gt;
+
+&lt;h2 id=&quot;modified-n-gram-precision&quot;&gt;Modified n-gram precision&lt;/h2&gt;
+
+&lt;p&gt;It is computed by:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Counting the maximum number of times a word occurs in any single reference translation&lt;/li&gt;
+  &lt;li&gt;Clipping the total count of each MT output word by its maximum reference count&lt;/li&gt;
+  &lt;li&gt;Add all the clipped counts&lt;/li&gt;
+  &lt;li&gt;Divide the clipped counts by the total(unclipped) number of candidate words&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Using our example from above, we would now end up with the table shown:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;unigram&lt;/th&gt;
+      &lt;th&gt;clip count&lt;/th&gt;
+      &lt;th&gt;total&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;the&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cat&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;on&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mat&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;5&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;strong&gt;7&lt;/strong&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Therefore our modified precision score now becomes:  &lt;strong&gt;5/7&lt;/strong&gt; = &lt;strong&gt;0.714&lt;/strong&gt;&lt;br /&gt;.
+Compared to precision, we have seen that the modified precision is a better metric. It can also be computed the same way for any $n$ (bigram, trigram etc).&lt;/p&gt;
+
+&lt;h2 id=&quot;bleu-algorithm&quot;&gt;BLEU Algorithm&lt;/h2&gt;
+&lt;p&gt;BLEU is computed by combining a number of these modified n-gram precisions using the formula below:&lt;/p&gt;
+
+\[BLEU = BP.\exp\left(\sum_{n=1}^{N} w_n \log p_n\right)\]
+
+&lt;p&gt;Where \(p_n\) is the modified precision for \(n\) gram, \(w_n\) is the weight between 0 and 1 for \(log p_n\) and \(\sum_{n=1}^{N} w_n = 1\). The average logarithm with uniform weights is used because their experiments show that the modified n-gram precision decays exponentially with \(n\): The unigram precision is much larger than modified bigram precision which is also larger than the modified trigram precision and so on. BP is the &lt;strong&gt;brevity penalty&lt;/strong&gt; which is used to penalize short machine translations. The BP is said to be 1 when the candidate length is the same as any reference translation length and is penalized if the MT output is less than the reference text. \(c\) represents the MT outputs and \(r\) the reference texts. In the case of multiple reference sentences, \(r\) is taken to be the sum of the lengths of the sentences whose lengths are closest to the lengths of the MT outputs.&lt;/p&gt;
+
+\[\begin{equation}
+	BP=\begin{cases}
+	1, &amp;amp; \text{if $ c &amp;gt; r$}.\\
+	exp^{(1-\frac{c}{r})}, &amp;amp; \text{otherwise}.
+	\end{cases}
+	\end{equation}\]
+
+&lt;p&gt;To produce a score for the whole corpus, the modified precision scores for the segments are combined using the geometric mean which is then multiplied by a brevity penalty.&lt;/p&gt;
+
+&lt;p&gt;To read more about BLEU, check out the paper: &lt;a href=&quot;https://www.aclweb.org/anthology/P02-1040.pdf&quot;&gt;BLEU: a Method for Automatic Evaluation of Mahicne TRanslation&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;meteor&quot;&gt;METEOR&lt;/h1&gt;
+
+&lt;p&gt;METEOR is based on generalized concept of unigram matching between the machine translations and human-produced reference translations unlike BLEU, which is based on matching n-gram translations. It was designed to explicitly address several observed weakenesses in the BLEU metric. Not only is METEOR able to match words that are identical but also words with identical stem and words that are synonyms of each other.&lt;/p&gt;
+
+&lt;p&gt;Once this generalized unigram matches between the two strings have been found, METEOR computes a score for this matching using a combination of unigram-precision, unigram-recall and a measure of how out-of-order the words of the MT output are with respect to the reference.&lt;/p&gt;
+
+&lt;p&gt;METEOR attempts to address several weaknesses that have been observed in BLEU such as: &lt;br /&gt;
+&lt;strong&gt;The lack of recall&lt;/strong&gt; - BLEU does not explicitly use recall but instead uses the Brevity Penalty. This, they believe does not adequately compensate for the lack of recall.&lt;br /&gt;
+&lt;strong&gt;Use of Higher Order N-grams&lt;/strong&gt; - BLEU uses higher order N-grams as an indirect measure of how well the translation is formed gramatically. They believe that checking the word order to measure level of grammaticality is a better account for the importance of grammaticality as a factor in the MT metric and result in better correlation with human judgements of translation quality.&lt;br /&gt;
+&lt;strong&gt;Lack of Explicit Word-matching Between Translation and Reference&lt;/strong&gt; - &lt;br /&gt;
+&lt;strong&gt;Use of Geometric Averaging of N-grams&lt;/strong&gt;- BLEU uses geometric averaging of n-grams which results in a score of zero whenever one component n-gram scores is zero&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;meteor-metric&quot;&gt;METEOR metric&lt;/h2&gt;
+&lt;p&gt;METEOR evaluates a translation by computing a score based on explicit word-to-word matches between the translation and a reference trasnlation. If more than one reference translation is available, the given translation is scored against each reference independently and the best score is reported.The alignment is a set mappings between a unigram in one string and a unigram in another string. Every unigram in the candidate translation must map to zero or one but not more than one unigram in the reference.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blogs/meteor.png&quot; alt=&quot;Image of alignment&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If there are two alignments with the same number of mappings, the alignment is chosen with the fewest crosses, that is, with fewer intersections of two mappings. From the two alignments shown, alignment (a) would be selected at this point.&lt;/p&gt;
+
+&lt;p&gt;The alignment is incrementally produced through a series of stages, each stage consisting of two distinct phases&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;first phase&lt;/strong&gt;
+A module lists all the posible unigram mappings between the two strings. Different modules map unigrams based on different criteria. The modules are as follows:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;exact module&lt;/strong&gt; maps two unigrams if they are exactly the same, eg “computer” is mapped to “computer” but not “computers”.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;porter stem&lt;/strong&gt; maps two unigrams if they are the stemmed using the &lt;em&gt;porter stemmer&lt;/em&gt;
+eg, “computer” matches to both “computer” and “computers”.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;WN synonymy&lt;/strong&gt; module maps two unigrams if they are synonyms of each other.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;second phase&lt;/strong&gt;
+The largest subset of these unigram mappings is selected such that the resulting set consitutes an alignment where each unigram maps to at mos one unigram in the other string.&lt;/p&gt;
+
+&lt;p&gt;Once all the stages have been run and a final alignment has been produced between the system translation and the reference translation, the METEOR score for this pair of translations is computed as follows:&lt;/p&gt;
+
+&lt;h2 id=&quot;unigram-precision-p&quot;&gt;unigram precision (P)&lt;/h2&gt;
+&lt;p&gt;Unigram precision (P) is computed as the ratio of the number of unigrams in the candidate translation that are also found in the reference translation to the number of unigrams in the candidate translation.&lt;/p&gt;
+
+&lt;h2 id=&quot;unigram-recall-r&quot;&gt;Unigram recall (R)&lt;/h2&gt;
+&lt;p&gt;Unigram recall (R) is computed as the ratio of the number of unigrams in the candidate translation that are also found in the reference translation to the number of unigrams in the reference translation.&lt;/p&gt;
+
+&lt;h2 id=&quot;fmean&quot;&gt;Fmean&lt;/h2&gt;
+&lt;p&gt;Next the Fmean is calculated by combining the precision and recall through a harmoni-mean which places most of the weight on the recall(9 times more than precision)&lt;/p&gt;
+
+\[F_{mean} = \frac{10PR}{R + 9P}\]
+
+&lt;p&gt;so far METOR is based on unigram matches, to take into account longer n-gram matches, METEOR computes a penalty for a given alignment. The penalty is computed as follows:&lt;/p&gt;
+
+\[Penalty = 0.5 * \left(\frac{chunks}{unigrams\_matched}\right)\]
+
+&lt;p&gt;The unigrams are grouped into the fewest possible chunks where a chunk is defined as a set of unigrams that are adjacent in the candidate and in the reference. The longer the adjascent mappings between the candidate and the reference, the fewer chunks there are. A translation that is identical to the reference will give just one chunk.&lt;/p&gt;
+
+&lt;p&gt;Finally, the METEOR score for the given alignment is computer as follows:&lt;/p&gt;
+
+\[Score = Fmean*(1-Penalty)\]
+
+&lt;p&gt;The algorithm first creates an alignment between two sentences which are the candidate translation string and the reference translation string.&lt;/p&gt;
+
+&lt;h1 id=&quot;lepor&quot;&gt;LEPOR&lt;/h1&gt;
+
+&lt;p&gt;This is the latest evaluation metric for machine translation that is said to yeild the state-of-the-art correlation with human judgements compared with the other classic metrics.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;LEPOR&lt;/strong&gt; focuses on combining two modified factor(sentence length penalty, n-gram position difference penalty) and two classic methodologies(precision and recall).&lt;/p&gt;
+
+&lt;p&gt;LEPOR is calculated as follows:
+\(LEPOR = LP \text{x} NPosPenal \text{x} Harmonic(\alpha R, \beta P)\)&lt;/p&gt;
+
+&lt;p&gt;We’ll look at the features below.&lt;/p&gt;
+
+&lt;h2 id=&quot;design-of-the-lepor-metric&quot;&gt;Design of the LEPOR metric&lt;/h2&gt;
+
+&lt;h3 id=&quot;length-penalty&quot;&gt;Length penalty&lt;/h3&gt;
+
+&lt;p&gt;In the above equation, \(LP\) means Length Penalty, which is used to penalize for both longer and shorter system outputs compared with the reference translations unlike BLEAU which only penalizes for shorter translations. It’s calculated as:&lt;/p&gt;
+
+\[\begin{equation}
+	LP=\begin{cases}
+	exp^{(1-\frac{c}{r})}, &amp;amp; \text{if $c&amp;lt; r$}\\
+	1, &amp;amp; \text{if $ c = r$}.\\
+	exp^{(1-\frac{c}{r})}, &amp;amp; \text{if $c&amp;gt; r$}.
+	\end{cases}
+	\end{equation}\]
+
+&lt;p&gt;This means that when the output length \(c\) of sentence is equal to that of the reference \(r\), LP will be 1 meaning no penalty. However when the output length \(c\) is larger or smaller than that of the reference one, LP will be less than 1 which means a penalty on the evaluation value of LEPOR.&lt;/p&gt;
+
+&lt;h3 id=&quot;n-gram-position-difference-penalty&quot;&gt;N-gram position difference penalty&lt;/h3&gt;
+
+&lt;p&gt;The \(NPosPenal\) is defined as:&lt;/p&gt;
+
+\[NPosPenal = e^{-NPD}\]
+
+&lt;p&gt;&lt;strong&gt;NPD&lt;/strong&gt; means n-gram position difference penalty. \(NPosPenal\) is designed to compare words order in the sentences between the reference translation and the output translation. NPD is defined as:&lt;/p&gt;
+
+\[NPD = \frac{1}{Length_{output}}\sum_{i=1}^{Length_{output}}|PD_i|\]
+
+&lt;p&gt;where \(Length_{output}\) represents the length of system output sentence and \(PD_i\) means the n-gram position D-value(difference value) of aligned words between output and reference sentences. Every word from both output translation and reference should be aligned only once. Let’s look at an example below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blogs/lepor_1.png&quot; alt=&quot;Image of Yaktocat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The example below shows the alignment of an output translation and a reference translation which we shall use to calculate $NPD$. A Context-dependent n-gram word alignment algorithm is used which you can find in the paper &lt;a href=&quot;https://www.aclweb.org/anthology/C12-2044.pdf&quot;&gt;here&lt;/a&gt;. The second step after alignment is calculating NDP. Start by labeling each word with its position number divided by the corresponding sentence length for normalization as shown below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blogs/lepor_2.png&quot; alt=&quot;Image of Yaktocat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We then use the \(NPD\) formular from above for calculation where we first take 1 divided by the length of the output sentence then that is multiplied by the sum of the n-gram position difference of each word which is the position of the reference translation subtracted from the output translation.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/images/blogs/lepor_3.png&quot; alt=&quot;Image of Yaktocat&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After calculating \(NPD\), the values of \(NPosPenal\) can be calculated&lt;/p&gt;
+
+&lt;h2 id=&quot;precision-and-recall&quot;&gt;Precision and recall&lt;/h2&gt;
+
+&lt;p&gt;From the Lepor fomular that was hsown above \(Harmonic(\alpha R, \beta P)\) means the Harmonic mean of \(\alpha R\) and \(\beta P\). 
+\(\alpha\) and \(\beta\) are two parameters which were designed to adjust the weight of R (recall) and P(precision). Precision and recall are calculated as:&lt;/p&gt;
+
+&lt;p&gt;\(P = \frac{common\_num}{system\_length}\) &lt;br /&gt;
+\(R = \frac{common\_num}{reference\_length}\)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;common_num&lt;/em&gt; represents the number of aligned(matching) words and marks appearing both in translations and references, &lt;em&gt;system_length&lt;/em&gt; and reference_length** specify the sentence length of the system output and reference respectively.&lt;/p&gt;
+
+&lt;p&gt;After getting all the variables in the LEPOR equation, we can now calculate the final LEPOR score and higher LEPOR value means the output sentence is closer to the references.&lt;/p&gt;</content><author><name>Cate Gitau</name><email>cgitau@aimsammi.org</email></author><category term="paper-summary" /><category term="machine-translation" /><category term="nlp" /></entry><entry><title type="html">Must Have 10 Data Science Books</title><link href="https://categitau.github.io/2018/05/01/must-have-10-data-science-books.html" rel="alternate" type="text/html" title="Must Have 10 Data Science Books" /><published>2018-05-01T00:00:00+00:00</published><updated>2018-05-01T00:00:00+00:00</updated><id>https://categitau.github.io/2018/05/01/must-have-10-data-science-books</id><content type="html" xml:base="https://categitau.github.io/2018/05/01/must-have-10-data-science-books.html">&lt;!-- ---
+title: 'Must Haves: 10 Data Science Books'
+author: categitau
+comments: true
+date: 2018-05-01 18:14:49+00:00
+permalink: /posts/2018/05/must-haves-10-data-science-books
+
+tags:
+- Data Science
+- Research
+--- --&gt;
+
+&lt;blockquote&gt;Data Science is both an art and a science. The science accords means to measure accuracy, significance, and data manipulation strategies. Art infuses creative concepts on problem solving techniques.”
+
+-Chris Orwa&lt;/blockquote&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;If you tour the World Wide Web today, you’ll come across tonnes of Data Science material. Ranging from books, articles, online tutorials, you name it. These can all get a little overwhelming and confusing. So, one may opt not to dig in; as finding the right book to help you understand basic concepts can be daunting.&lt;/p&gt;
+
+&lt;p&gt;I decided to do some research to find out at least 10 of the most helpful books every aspiring Data Scientist should lay their hands on. It is in these efforts that I interacted with various other professionals in the industry to discover the most relevant Data Science books to data scientists or anyone seeking a better understanding.&lt;/p&gt;
+
+&lt;p&gt;Success in data science is not the ability to build prediction models in Python or R but mainly driven by knowledge of the subject. You must have sound knowledge of how things are done and also what algorithms, tools and techniques are being used.&lt;/p&gt;
+
+&lt;p&gt;One of the ways you could get this knowledge is by reading books and being confident to start off in the field. I’ve displayed a mix of technical and non-technical books for you from my findings… Do note that the reviews and accounts are of the two experts I spoke to, the one and only &lt;strong&gt;Chris Orwa&lt;/strong&gt;(&lt;a href=&quot;http://www.blackorwa.co/&quot;&gt;&lt;strong&gt;Black Orwa&lt;/strong&gt;&lt;/a&gt;) - Head of AI at StepWise and the widely read and experienced&lt;a href=&quot;https://github.com/Shuyib&quot;&gt; &lt;strong&gt;Ben Mainye&lt;/strong&gt;&lt;/a&gt; of Africa’s Talking.&lt;/p&gt;
+
+&lt;h3 id=&quot;list-of-10-must-have-data-science-books&quot;&gt;List of 10 Must Have Data Science Books&lt;/h3&gt;
+
+&lt;h4 id=&quot;1-superforecasting-the-art-and-science-of-prediction-by-philip-e-tetlock-and-dan-gardner&quot;&gt;&lt;strong&gt;1) Superforecasting: The Art and Science of Prediction &lt;em&gt;By Philip E. Tetlock and Dan Gardner&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;I’ve heard that no list of forecasting books is complete without reference to &lt;strong&gt;Superforecasting, The Art and Science of Prediction&lt;/strong&gt;. This is definitely going into my ‘to-read’ library this year.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: right;&quot; src=&quot;/images/blogs/sup.png&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“…&lt;em&gt;Superforecasting has been my favorite Data Science book so far! Not just for algorithms, but in providing concepts on how to think and become a great forecaster. Philip Tetlock’s experience running the _&lt;a href=&quot;https://goodjudgment.com/&quot;&gt; Good Judgement Project&lt;/a&gt;&lt;/em&gt; is its basis._&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The American Intelligence community had become weary of their ability to predict world events. They had missed 9/11 attack besides incorrectly identified WMD in Iraq and Shah’s overthrow in Iran. So they turned to social scientist, Professor Philip E. Tetlock for help.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Philip Tetlock had done a research project in which he monitored the predictions of political pundits. When he tallied the data, it proved political pundits were not better than the general public in predicting geopolitical events. It is this research that caught the eye of IARPA (Intelligence Advanced Research Projects Activity). IARPA needed a similar analysis of their intelligence analyst.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The result was the Good Judgment Project. Philip Tetlock setup an experiment where ordinary citizens with access only to public information could compete against CIA analysts with access to confidential information in prediction geopolitical events.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Guess what? After the first two years of the experiment, the citizen team, with their little training, were 20 percent more accurate in predicting world events compared to the intelligence community. This outcome brought to fore the conclusion that good analysis comes from good thinking rather than more or privileged data. As a Data Scientist, this was a wake up call to debunk the notion that Big Data leads to better prediction.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The book proceeds to include interviews with top forecasters whom Philip refers to as super forecasters. They are the subject of the book. In introducing the theory of superforecasters, Tetlock also introduced the Brier Score. The Brier Score is a metric that measures the gap between forecasts and reality for each person. Brier score keeps tabs on how accurate a person’s predictions are over time.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;In Machine Learning, there’s the temptation to build a model and assume it will work in all circumstances. As such it would be fantastic to include a Brier Score to know how a model performs every time it makes a real-world prediction.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Over and above the technicalities, Tetlock also tackles the personalities of great forecasters. Most people who made accurate predictions were not experts in those field. They relied on good research to make conclusions. Experts sometime ignore research and rely on their experience which becomes a pitfall.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The amateurs were ready to make mistakes, while experts most times assume making mistakes is a sign of being less knowledge. Overall, the book is full of data science nuggets. You will learn of the origin of Randomized Control Trials (RCT) in medicine and the German army command structure in WW2 that made the highly effective (&lt;a href=&quot;https://en.wikipedia.org/wiki/Mission-type_tactics&quot;&gt;auftragstaktik&lt;/a&gt;__). In the end, the book helps to tie thinking and problems. A concept forgotten while running algorithms.&lt;/em&gt;” - &lt;strong&gt;Chris Orwa&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;2-the-signal-and-the-noise-why-so-many-predictions-fail-but-some-dont-by-nate-silver&quot;&gt;&lt;strong&gt;2) The Signal and the Noise: Why So Many Predictions Fail but Some Don’t&lt;/strong&gt;&lt;em&gt;. By Nate Silver&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;This is one of the highly recommended books online. I’ve had this book for the longest time and it’s about time I started on it and finished it. If you’re one of those people that doesn’t enjoy the mathematical basis that go behind data science, this book is for you!&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left;&quot; src=&quot;/images/blogs/signal.jpg&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;“…This possibly my second-best Data Science book. &lt;a href=&quot;https://en.wikipedia.org/wiki/Nate_Silver&quot;&gt;Nate Silver&lt;/a&gt; is an Economist who made a career performing statistical analysis on baseball matches. Otherwise known as &lt;a href=&quot;https://en.wikipedia.org/wiki/Sabermetrics&quot;&gt;Sabermetrics&lt;/a&gt;. In 2008, he turned his interest to politics and made accurate prediction for all States in the US except for one. He writes to give advice on how to make good predictions.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The book has overlapping concept’s with Tetlock’s Superforecasting book. It talks about the pitfall of Big Data and how political pundits make poor predictions. Nate’s book also adds information on how he was able to make accurate baseball predictions. For a statistical nerd, the details on determining a player’s performance is gold! In it, you will learn about&lt;a href=&quot;https://en.wikipedia.org/wiki/PECOTA&quot;&gt; PECOTA&lt;/a&gt;, the algorithm developed by Nate Silver to predict baseball matches outcome while working at KPMG.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nate Silver now runs an amazing data journalism website&lt;a href=&quot;http://fivethirtyeight.com/&quot;&gt; Five Thirty Eight&lt;/a&gt;.&lt;/em&gt;” - &lt;strong&gt;Chris Orwa&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;3-the-quants-how-a-new-breed-of-math-whizzes-conquered-wall-street-and-nearly-destroyed-it-by-scott-patterson&quot;&gt;&lt;strong&gt;3) The Quants: How a New Breed of Math Whizzes Conquered Wall Street and Nearly Destroyed&lt;/strong&gt; &lt;strong&gt;It&lt;/strong&gt;. &lt;em&gt;By Scott Patterson&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Quants&lt;/strong&gt; - Quantitative analysts. The Quants is suited for people with a non-maths background or a manager, executive or data analyst who is interested in learning how to make decisions using numbers &amp;amp; analysis, rather than intuition.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left;&quot; src=&quot;/images/blogs/quants.jpg&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“… &lt;em&gt;Once upon a time, I made my living from trading currencies. During this period, I came about this book. It talks about how probability theory was first applied to trading and used to beat the market.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Ed Thorp, a mathematician (PhD) who had applied Brownian motion to black jack experimented on the same concept on price volatility and hit a jackpot.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;During this period, it was believed that it was impossible to ‘beat the market’. A phrase coined due to the Efficient Market Hypothesis (EMH). EMH states that the current price of a stock factors in all available information hence making it impossible to make above average returns. Using his model and ability to predict volatility, Thorp realized many stocks that appeared to be mispriced. Thorp had stumbled upon a gold mine full of arbitrage opportunities. He could now short overpriced stocks.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The book ends with the 2009 market crash that was ostentatiously created by quants&lt;/em&gt;.” - &lt;strong&gt;Chris Orwa&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;4-black-swan-the-impact-of-the-highly-improbable-by-nassim-taleb&quot;&gt;&lt;strong&gt;4) Black Swan: The Impact of the Highly Improbable&lt;/strong&gt;. &lt;em&gt;By Nassim Taleb&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;This is another non-technical book about unpredictable events where you’ll get to learn the limits of statistical methods.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left;&quot; src=&quot;/images/blogs/black_swan.jpg&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“…&lt;em&gt;Black Swan explores the limits of statistics. Nassim Taleb, an ex-quant, develops a brilliant idea about certain events that are impossible to predict e.g the 9/11 attack. He refers to this event as a black swan in line with the thought among Europeans that swans were white until they discovered black swans in Australia. Using this metaphor, Taleb dives into life events where statistics fail.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;He has other books that compliment this title. They are:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;Fooled by Randomness&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Antifragile&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Bed of Procrustes&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;Skin in the Game&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;The Black Swan is important in helping Data Scientists understand that we cannot solve all problems with statistics. This could be as a result of inadequate understanding or possibly being too far out in the future.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Taleb builds a good concept of mediocristan and extremistan where he critics The Bell Curve and how quants apply it to every scenario. He writes, ‘Consequently, if we are in the domain of Extremistan, and we use analytical tools from Mediocristan for prediction, say risk management, we can face enormous surprises. Some of these surprises may be positive and some negative. Their impact will however most likely exceed what we are prepared for.’&lt;/em&gt;” - &lt;strong&gt;Chris Orwa&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;5-weapons-of-math-destruction-how-big-data-increases-inequality-and-threatens-democracy-by-cathy-oneil&quot;&gt;&lt;strong&gt;5) Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy&lt;/strong&gt;. &lt;em&gt;By Cathy O’Neil&lt;/em&gt;&lt;/h4&gt;
+
+&lt;p&gt;Weapons of Math Destruction has been labeled as being captivating and insightful. It talks about the increasing influence of machine learning to control the news we see, the jobs we can get and the politicians we vote for. Also a must read for me.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: right;&quot; src=&quot;/images/blogs/weapons.jpg&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“…&lt;em&gt;The book reads like a continuation of Ted Kaczynski’s manifesto ‘The Industrial Society and Its Future’.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Cathy focusses on machine learning and its use in coercing behaviour change as well as discriminating the poor and disadvantaged. From the examples provided in the book, there are three categories of Weapons of Math Destructions (WMD):&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;The first WMD, Poor Statistics -&lt;/strong&gt; These are incorrectly calculated stats used to infer human behaviour and performance. In them, is lack of understanding on interpretation or validation of certain statistics. A good example are proxy variables, such as geography used to infer purchase power, reoffending propensity et cetera.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;The second WMD, Misused Correct Statistics -&lt;/strong&gt; These seem to be the majority of the case in WMD. It is more of an ethical issue rather than machine taking over human lives. For instance when a company utilizes zip code to steer customers to high interest loans, that qualifies as unethical use of machine learning output and not necessarily anything wrong with the machine learning processes themselves.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;The last WMDs, Dataset -&lt;/strong&gt; From the book, certain attributes within data should never be used for prediction purposes. For instance race, gender, income and zip code. This is because they are likely to correlate with outputs connected with discrimination.&lt;/em&gt;” - &lt;strong&gt;Chris Orwa&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Here are some two other non-technical books that I thought you should also have:&lt;/p&gt;
+
+&lt;h4 id=&quot;6-predictive-analytics-the-power-to-predict-who-will-click-buy-lie-or-dieby-eric-siegel&quot;&gt;&lt;strong&gt;6) Predictive Analytics: The Power to Predict Who will Click Buy, Lie or Die. &lt;em&gt;By Eric Siegel&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left;&quot; src=&quot;/images/blogs/pred_analytics.jpg&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In &lt;a href=&quot;https://www.amazon.com/Predictive-Analytics-Power-Predict-Click/dp/1119145678/ref=pd_sim_14_3?_encoding=UTF8&amp;amp;psc=1&amp;amp;refRID=A60MNAEMYYXVEZH23GYX&quot;&gt;Predictive Analytics&lt;/a&gt;, Eric Siegel, a renowned expert in data analytics and former professor at Columbia University, explains to us how data scientists use data to help predict anything - from what you will buy, to where you will travel to when you’re likely to quit your job and much more.&lt;/p&gt;
+
+&lt;p&gt;This was one of my first non-technical data science book that I got for myself.. Sadly I’m still yet to finish it. Though, I still highly recommend it to anyone who wants to really understand what data science is all about. The book entails a plethora of real word examples. These examples can be generalized into a number of different applications throughout a company and has a tone of relevance to multiple business departments.&lt;/p&gt;
+
+&lt;h4 id=&quot;7-storytelling-with-data--a-data-visualization-guide-for-business-professionals-by-cole-nussbaumer-knaflic&quot;&gt;&lt;strong&gt;7) Storytelling With Data : A data Visualization Guide for Business professionals. By &lt;em&gt;Cole Nussbaumer Knaflic&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: right;&quot; src=&quot;/images/blogs/storytelling.jpeg&quot; width=&quot;200&quot; /&gt;
+&lt;em&gt;storytelling with data&lt;/em&gt; teaches you the fundamentals of data visualization and how to communicate effectively with data. You’ll discover the power of storytelling and the way to make data a pivotal point in your story. The lessons in this illuminative text are grounded in theory, but made accessible through numerous real-world examples—ready for immediate application to your next graph or presentation.&lt;/p&gt;
+
+&lt;p&gt;Another book I’ll recommend to those interested in finding insights from data through data visualization. Another ‘to read’ in 2018!&lt;/p&gt;
+
+&lt;h3 id=&quot;mathematicaltechnical-books&quot;&gt;Mathematical/Technical Books&lt;/h3&gt;
+
+&lt;h4 id=&quot;8-openintro-statistics-by-david-diez-christopher-barr-and-mine-çetinkaya-rundel&quot;&gt;&lt;strong&gt;8) OpenIntro Statistics. &lt;em&gt;By David Diez, Christopher Barr, and Mine Çetinkaya-Rundel&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Want to start getting your hands dirty with Statistics, then I highly recommend this book. All the source code that went into making this book is freely accessible online and all you need is some basic skills in R to run them&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: right;&quot; src=&quot;/images/blogs/open_intro.jpg&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“…&lt;em&gt;This book is available for free at&lt;/em&gt; &lt;a href=&quot;http://leanpub.com/&quot;&gt; leanpub.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;It was used as a book resource for the course Data Analysis and Statistical Inference in &lt;a href=&quot;http://coursera.org&quot;&gt;coursera.org&lt;/a&gt;. It begins by giving you an overview of data, probability, inferential techniques. These range from numerical data and categorical data, linear regression and multiple and logistic regression with numerous examples to walk you through the material.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The book and the course emphasize the need to learn for instance, to calculate hypothesis testing by hand and think about the problem as well as knowing how to code it in a programming language called R.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The team made a whole package where you can practice the concepts they cover which is available for download here&lt;a href=&quot;https://www.rdocumentation.org/packages/openintro/versions/1.7.1&quot;&gt; https://www.rdocumentation.org/packages/openintro/versions/1.7.1&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I learned statistics and more importantly, to be more data curious. This laid the foundation to me questioning a lot of things and doing a lot of observational studies and experiments. I recommend it if you are starting out, doing computer science, data science and genomic data science or just curious&lt;/em&gt;.” - &lt;strong&gt;Ben Mainye&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;9-introduction-to-machine-learning-with-python-a-guide-for-data-scientists-by-andreas-müller-and-sarah-guido&quot;&gt;&lt;strong&gt;9) Introduction to Machine Learning with Python: A guide for Data Scientists  &lt;em&gt;By Andreas Müller and Sarah Guido&lt;/em&gt;&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;This is a perfect book to get introduced to supervised and machine learning algorithms using python so as to make pretty good predictions. Will come in handy if you’re planning on getting into doing some &lt;a href=&quot;https://www.kaggle.com/&quot;&gt;Kaggle&lt;/a&gt; competitions.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float: left;&quot; src=&quot;/images/blogs/intro_ml.jpg&quot; width=&quot;200&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“…&lt;em&gt;As the title of the book says, it is a guide for data scientists.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The authors go through machine learning algorithms and concepts using examples. With an emphasis on data visualization to understand how the models make decision boundaries, for instance support vector machines and K-nearest neighbours. As a bonus, they discuss the strengths and weaknesses of several algorithms. You don’t need to be a pro at machine learning. You can just pick it up and start building your own models. I learned how machine learning algorithms work and how to implement them in my own work.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;All the work that I’ve done so far I’ve always used this book as reference. If you don’t believe me check my &lt;a href=&quot;https://github.com/Shuyib&quot;&gt;github&lt;/a&gt; repository. I recommend it because it was my favorite 2017 book and it has been my handbook while doing competitions in Kaggle and DrivenData.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Andreas Müller and Hugo Bowne Anderson also made a course about Supervised Learning With Sci-Kit Learn which  pumped me up further to get the book. It’s here: &lt;a href=&quot;https://www.datacamp.com/courses/supervised-learning-with-scikit-learn&quot;&gt;https://www.datacamp.com/courses/supervised-learning-with-scikit-learn&lt;/a&gt;. - &lt;strong&gt;Ben Mainye&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;10-deep-learning-with-python-by-françois-chollet&quot;&gt;&lt;strong&gt;10) Deep Learning with Python. &lt;em&gt;By François Chollet&lt;/em&gt;.&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;p&gt;Does deep learning tickle your fancy? Then this is a good book to get you started on building deep learning models using &lt;a href=&quot;https://en.wikipedia.org/wiki/Keras&quot;&gt;Keras&lt;/a&gt; which is a high-level neural network API that is written in Python. The author of this book is the creator of Keras. You can get this book &lt;a href=&quot;https://livebook.manning.com/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img style=&quot;float:  right;&quot; src=&quot;/images/blogs/dl_python.jpg&quot; width=&quot;300&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“… &lt;em&gt;François uses examples wrapped with theory to teach Deep Learning.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;He goes through deep learning in parts: Part One focuses on fundamentals of machine learning where you’ll learn the basics of machine learning experiments and how they’re transferable to other areas.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Part Two focuses on the practicals where you’ll apply the knowledge you’ve gained in the first part to real world datasets and new concepts are also presented – you’ll code a lot here.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I like the arrangement of the book, the practical exercises and the advice he gives as you go through the book. I learned to structure my machine learning experiments better and how to tune hyperparameters better especially for neural networks. Plus, i enjoyed chapter 7, 8 and 9 the most.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;I recommend the reader to get it because the advice the author gives about machine learning and deep learning is priceless. He even guarantees that you’ll become a Keras expert after reading his book. So get it!&lt;/em&gt;” - &lt;em&gt;&lt;strong&gt;Ben Mainye&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h4&gt;
+
+&lt;p&gt;This article has outlined some of the data science books that you need to have in your library to get you started with data science, machine learning and deep learning as well. If you don’t yet have your hands on any of these books then what are you waiting for?&lt;/p&gt;
+
+&lt;p&gt;Should you have any thoughts to add on the books mentioned or have other books that you’d like to recommend, you can comment below or find me on twitter&lt;a href=&quot;https://twitter.com/categitau_&quot;&gt; @categitau_&lt;/a&gt;. You can get some of these books at &lt;a href=&quot;https://prestigebookshop.com/&quot;&gt;Prestige Bookshop&lt;/a&gt; Nairobi, Kenya or on Amazon.&lt;/p&gt;
+
+&lt;p&gt;I’d like to give credit to &lt;a href=&quot;https://twitter.com/blackorwa?lang=en&quot;&gt;&lt;em&gt;Chris Orwa&lt;/em&gt;&lt;/a&gt; and&lt;a href=&quot;https://twitter.com/Shuyin_ben?lang=en&quot;&gt; &lt;em&gt;Ben Mainye&lt;/em&gt;&lt;/a&gt; for taking their time to give reviews of the books mentioned and the awesome&lt;a href=&quot;https://medium.com/@apondihazel&quot;&gt; Hazel Apondi&lt;/a&gt; for helping out with the editing of this article.&lt;/p&gt;</content><author><name>Cate Gitau</name><email>cgitau@aimsammi.org</email></author><category term="data-science" /><category term="research" /><category term="interviews" /><category term="books" /><summary type="html">&amp;lt;!– — title: ‘Must Haves: 10 Data Science Books’ author: categitau comments: true date: 2018-05-01 18:14:49+00:00 permalink: /posts/2018/05/must-haves-10-data-science-books</summary></entry><entry><title type="html">Fuzzy String Matching In Python</title><link href="https://categitau.github.io/2018/02/28/fuzzy-string-matching-in-python.html" rel="alternate" type="text/html" title="Fuzzy String Matching In Python" /><published>2018-02-28T00:00:00+00:00</published><updated>2018-02-28T00:00:00+00:00</updated><id>https://categitau.github.io/2018/02/28/fuzzy-string-matching-in-python</id><content type="html" xml:base="https://categitau.github.io/2018/02/28/fuzzy-string-matching-in-python.html">&lt;p&gt;As a data scientist, you are forced to retrieve information from various sources by either leveraging publicly available API’s, asking for data, or by simply scraping your own data from a web page. All this information is useful if we are able to combine it and not have any duplicates in the data. But how do we make sure that there are no duplicates?&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;I know … &lt;em&gt;“duh! you can just use a function that retrieves all the unique _information thus removing duplicates”&lt;/em&gt;. Well, that’s one way, but our function probably can’t tell that a name like &lt;em&gt;“Barack Obama”&lt;/em&gt; is the same as &lt;em&gt;“Barack H. Obama”&lt;/em&gt; right? (Assuming we were retrieving names of the most famous people in the world). We can clearly tell that these names are different but they are probably referring to the same person. So, how do we match these names?&lt;/p&gt;
+
+&lt;p&gt;This is where Fuzzy String Matching comes in. This post will explain what Fuzzy String Matching is together with its use cases and give examples using Python’s Library &lt;a href=&quot;https://pypi.python.org/pypi/fuzzywuzzy&quot;&gt;&lt;em&gt;Fuzzywuzzy&lt;/em&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;fuzzy-logic&quot;&gt;&lt;strong&gt;Fuzzy Logic&lt;/strong&gt;&lt;/h4&gt;
+
+&lt;blockquote&gt;Fuzzy(adjective): difficult to perceive; indistinct or vague
+
+-Wikipedia&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Fuzzy_logic&quot;&gt;Fuzzy logic&lt;/a&gt; is a form of multi-valued logic that deals with reasoning that is approximate rather than fixed and exact. Fuzzy logic values range between 1 and 0. i.e the value may range from completely true to completely false. In contrast, &lt;em&gt;&lt;strong&gt;Boolean Logic&lt;/strong&gt;&lt;/em&gt; is a two-valued logic: true or false usually denoted 1 and 0 respectively, that deals with reasoning that is fixed and exact. Fuzzy logic tends to reflect how people think and attempts to model our decision making hence it is now leading to new intelligent systems(expert systems).&lt;/p&gt;
+
+&lt;p&gt;So, if we are comparing two strings using fuzzy logic, we would be trying to answer the question &lt;em&gt;“How similar are string A and string B?”, and rephrasing it as “Are string A and String B the same?”&lt;/em&gt; when using the Boolean Logic.&lt;/p&gt;
+
+&lt;h4 id=&quot;fuzzy-string-matching&quot;&gt;Fuzzy String Matching&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Approximate_string_matching&quot;&gt;Fuzzy String Matching&lt;/a&gt;, also known as Approximate String Matching, is the process of finding strings that approximately match a pattern. The process has various applications such as &lt;em&gt;spell-checking&lt;/em&gt;, &lt;em&gt;DNA analysis and detection,&lt;/em&gt; spam detection, &lt;em&gt;plagiarism detection e.t.c&lt;/em&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;introduction-to-fuzzywuzzy-in-python&quot;&gt;Introduction to &lt;em&gt;Fuzzywuzzy&lt;/em&gt; in Python&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Fuzzywuzzy&lt;/strong&gt; is a python library that uses &lt;strong&gt;Levenshtein Distance&lt;/strong&gt; to calculate the differences between sequences and patterns that was developed and also open-sourced by &lt;a href=&quot;https://seatgeek.com/&quot;&gt;SeatGeek,&lt;/a&gt; a service that finds events from all over the internet and showcase them on one platform. The big problem they were facing was the labeling of the same events as stated on their &lt;a href=&quot;http://chairnerd.seatgeek.com/fuzzywuzzy-fuzzy-string-matching-in-python/&quot;&gt;blog&lt;/a&gt;. This is the same as the example I gave at the beginning of the post where an entity such as a person’s name can be labelled differently on different sources.&lt;/p&gt;
+
+&lt;h5 id=&quot;installation&quot;&gt;Installation&lt;/h5&gt;
+
+&lt;p&gt;To install the library, you can use pip:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fuzzywuzzy&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;pip&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;python&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Levenshtein&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h5 id=&quot;examples&quot;&gt;Examples&lt;/h5&gt;
+
+&lt;p&gt;First we have to import the fuzzywuzzy modules:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;fuzzywuzzy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;
+&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;fuzzywuzzy&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;process&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, we can get the similarity score of two strings by using the following methods; ratio() or partial_ratio():&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Catherine M Gitau&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Catherine Gitau&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;mi&quot;&gt;91&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;partial_ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Catherine M. Gitau&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Catherine Gitau&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You’re probably wondering why the scores are different. This is because the fuzz.ratio() method just calculates the edit distance between some ordering of the token in both input strings using the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;difflib.ratio.&lt;/code&gt; You can find out more about the difflib.ratio &lt;a href=&quot;https://docs.python.org/2/library/difflib.html#difflib.SequenceMatcher.ratio&quot;&gt;here&lt;/a&gt;. The &lt;strong&gt;&lt;em&gt;fuzz.partial_ratio()&lt;/em&gt;&lt;/strong&gt; takes in the shortest string, which in this case is “Catherine Gitau” (length 14) , then matches it with all the sub-strings of length(14) in “Catherine M. Gitau” which means matching with “Catherine Gitau” which gives 100%. You can play around with the strings until you get the gist.&lt;/p&gt;
+
+&lt;p&gt;What if we switched up two names in one string? In the following example, I’ve interchanged the name “Catherine Gitau” to “Gitau Catherine” .Let’s see the scores:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Catherine M Gitau&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Gitau Catherine&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;55&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;partial_ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Catherine M. Gitau&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Gitau Catherine&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;60&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We see that both methods are giving out low scores, this can be rectified by using &lt;strong&gt;&lt;em&gt;token_sort_ratio()&lt;/em&gt;&lt;/strong&gt; method. This method attempts to account for similar strings that are out of order. Example, if we used the above strings:&lt;/p&gt;
+
+&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;fuzz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;token_sort_ratio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Catherine Gitau M.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Gitau Catherine&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;94&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As you can see, we get a high score of 94.&lt;/p&gt;
+
+&lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h4&gt;
+
+&lt;p&gt;This article has introduced Fuzzy String Matching which is a well known problem that is built on Leivenshtein Distance. From what we have seen, it calculates how similar two strings are. This can also be calculated by finding out the number of operations needed to transform one string to the other .e.g with the name “Barack”, one might spell it as “Barac”. Only one operation is needed to correct this i.e adding a K at the end. You can try this out using the &lt;em&gt;stringdist&lt;/em&gt; library in &lt;strong&gt;r&lt;/strong&gt; as such:&lt;/p&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;adist&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Barack&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Barac&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;sources&quot;&gt;Sources&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://marcobonzanini.com/2015/02/25/fuzzy-string-matching-in-python/&quot;&gt;Fuzzy string matching in Python&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Till next time:)&lt;/p&gt;</content><author><name>Cate Gitau</name><email>cgitau@aimsammi.org</email></author><category term="data-science" /><category term="text-analysis" /><category term="nlp" /><summary type="html">As a data scientist, you are forced to retrieve information from various sources by either leveraging publicly available API’s, asking for data, or by simply scraping your own data from a web page. All this information is useful if we are able to combine it and not have any duplicates in the data. But how do we make sure that there are no duplicates?</summary></entry></feed>
