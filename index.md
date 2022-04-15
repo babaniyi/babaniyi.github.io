@@ -13,9 +13,8 @@ title:  👋 Hi I'm Babaniyi!
 I'm Babaniyi Olaniyi. I am deeply excited about the time we live in and the rate at which data is being generated and transformed as an asset hence i am keen to leverage my knowledge of data science and machine learning to grasp some of the underlying trends in retail, finance, consulting and industry.
 
 While you're still here feel free to..
-- Check out my [blog posts](https://categitau.github.io/posts/).
+- Check out my previous [blog posts](https://babaniyi.substack.com).
 - Look at some of the things I have worked on in [Projects](https://categitau.github.io/portfolio/) or on [![github](/images/github_icon.png)](https://github.com/babaniyi) 
-- Peep my [CV](https://categitau.github.io/cv/). 
 
 
 You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.png)](https://twitter.com/by_niyi) or &nbsp; &nbsp; &nbsp;[<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="22px">](https://www.linkedin.com/in/babaniyi/) if you'd like to collaborate on a project, comment on my blog posts or even just to say Hi 🙋 :) 
