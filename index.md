@@ -7,7 +7,7 @@
 #
 layout: page
 permalink: /
-title:  👋 Hi I'm Babaniyi!
+title:  👋 Hi, I'm Babaniyi!
 ---
 
 I'm Babaniyi Olaniyi, a Data Scientist and Machine Learning Engineer. I am deeply excited about the time we live in and the rate at which data is being generated and transformed as an asset hence i am keen to leverage my knowledge of data science and machine learning to grasp some of the underlying trends in retail, finance, consulting and industry.
