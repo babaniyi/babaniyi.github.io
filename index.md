@@ -7,13 +7,10 @@
 #
 layout: page
 permalink: /
-title:  👋 Welcome!
+title:  👋 Hi I'm Babaniyi!
 ---
 
-I'm Catherine Gitau and this is my personal website where I write about all things data science, machine learning, deep learning and NLP. 
-
-I currently work as a Data Scientist at Visa Inc. and working towards being a full-stack data scientist. I enjoy doing data science to generate business insights but also enjoy building products around them. Therefore, I'm aspiring to be a good Machine Learning Engineer so that I can easily build such products. I also do research on NLP, specifically applied to African langauges. So, if any one of these is what you're interested in, then you're at the right place!
-
+I'm Babaniyi Olaniyi. I am deeply excited about the time we live in and the rate at which data is being generated and transformed as an asset hence i am keen to leverage my knowledge of data science and machine learning to grasp some of the underlying trends in retail, finance, consulting and industry.
 
 While you're still here feel free to..
 - Check out my [blog posts](https://categitau.github.io/posts/).
@@ -22,7 +19,7 @@ While you're still here feel free to..
 - Peep my [CV](https://categitau.github.io/cv/). 
 
 
-You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.png)](https://twitter.com/categitau_) or &nbsp; &nbsp; &nbsp;[<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="22px">](https://www.linkedin.com/in/cate-gitau/) if you'd like to collaborate on a project, comment on my blog posts or even just to say Hi 🙋 :) 
+You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.png)](https://twitter.com/by_niyi) or &nbsp; &nbsp; &nbsp;[<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="22px">](https://www.linkedin.com/in/babaniyi/) if you'd like to collaborate on a project, comment on my blog posts or even just to say Hi 🙋 :) 
 
 *** 
 <center> <h3>Latest Posts</h3> </center>
@@ -37,17 +34,8 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 ***
 <center> <h3>Latest News</h3> </center>
 
-💻 *November 2021* - Joined [VISA.Inc](https://usa.visa.com/about-visa.html)
-
-💻 *September 1st 2021* - Launched this personal blog 🥳
-
-🗣️ *August 2021* - Presented at [LoResMT](https://sites.google.com/view/loresmt/) Workshop @ MT Summit 2021 on *Challenges and Advances in MT Systems for African Languages*
-
-‍💻 *June 2021* - Launched [Masakhane Web](http://translate.masakhane.io/), A Machine Translation platform for solely African Languages.
-
+💻 *Jan 2022* - Blog [Skyline: the needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
 📚 [Machine Learning Interviews Book](https://huyenchip.com/ml-interviews-book/)
-
-
