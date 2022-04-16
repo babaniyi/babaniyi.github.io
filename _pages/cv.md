@@ -19,7 +19,7 @@ redirect_from:
 <!-- --- -->
 
 # Education
-----
+---
 <table style="width:100%">
 <col width="9%">
 <col width="20">
@@ -33,7 +33,7 @@ redirect_from:
 <td markdown="1">
 [Autonomous University of Barcelona](https://uab.cat) and [Université Paris Pantheon-Sorbonne](https://www.pantheonsorbonne.fr/en) 08/20117 - 06/2019
 - MSc In Quantitative Economics
-- *Erasmus Mundus Scholarship, 2017*
+- Erasmus Mundus Scholarship, 2017
 </td> 
 </tr>
 
@@ -45,31 +45,32 @@ redirect_from:
 <td></td>
 <td markdown="1">
 [Kwara State University](https://kwasusite.kwasu.edu.ng/), 08/2012 - 06/2016 
-- BSc. Mathematics and Statistics
+- BSc. Mathematics and Statistics (First class honors)
 </td> 
 </tr>
 </table>
 
 
+
+<tr height="10"/>
 <tr style="border-bottom:1pt solid #eee">
 <td markdown="1">
 ![stanford-logo](/images/cv/stanford.png)
 </td>
 <td></td>
 <td markdown="1">
-[Stanford University](https://stanford.edu/)
+[Stanford University](https://www.stanford.edu/)
 - Statistics in Medicine Certificate, 2015
 - Statistical Learning Certificate, 2016
 </td> 
 </tr>
-</table>
 
 
 <!-- --- -->
 
 # Work Experiences
 
-----
+---
 
 <table style="width:100%">
 <col width="17%">
@@ -117,7 +118,7 @@ Noustique Perfumes/The Alchemist Atelier, 10/2019 - 04/2021
 <!-- ---- -->
 # Skills
 
----- 
+---
 
 <div class="container">
 
