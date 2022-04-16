@@ -23,7 +23,7 @@ My current interests are in applying machine and reinforcement learning to solve
 
 ***
 ### Timeline
-*July 2021 - Present:* Data Scientist @ Benshi AO
+*July 2021 - Present:* Data Scientist @ Benshi AI
 
 *May 2021 - June 2021:* BI Data Engineer @ eDreams ODIGEO
 
