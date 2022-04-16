@@ -14,7 +14,7 @@ I'm Babaniyi Olaniyi, a Data Scientist and Machine Learning Engineer. I am deepl
 
 While you're still here feel free to..
 - Check out my previous [blog posts](https://babaniyi.substack.com).
-- Look at some of the things I have worked on in [Projects](https://categitau.github.io/portfolio/) or on [![github](/images/github_icon.png)](https://github.com/babaniyi) 
+- Look at some of the things I have worked on in [Projects](https://babaniyi.github.io/portfolio/) or on [![github](/images/github_icon.png)](https://github.com/babaniyi) 
 
 
 You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.png)](https://twitter.com/by_niyi) or &nbsp; &nbsp; &nbsp;[<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="22px">](https://www.linkedin.com/in/babaniyi/) if you'd like to collaborate on a project, comment on my blog posts or even just to say Hi 🙋 :) 
