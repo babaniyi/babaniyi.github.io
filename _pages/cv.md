@@ -33,7 +33,7 @@ redirect_from:
 <td markdown="1">
 [Universitad de Autónoma, Barvcelona](https://uab.cat) and [Universite Paris, Panthéon-Sorbonne](https://www.pantheonsorbonne.fr/en), 08/2017 - 06/2019
 - MSc In Quantitative Economics [QEM](https://master-economics-qem.eu/)
-- Erasnus Mundus Scholarship recipient, 2017
+- Erasmus Mundus Scholarship recipient, 2017
 </td> 
 </tr>
 
@@ -157,7 +157,7 @@ DatasetDaily, 04/2020 - 10/2020
 #### Tools
 - Git 
 - LaTeX
-- Google Cloud Platform (GCP)
+- Google Cloud
 - Azure Databricks
 </div>
 
