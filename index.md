@@ -36,5 +36,5 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
-📚 [Machine Learning Interviews Book](https://huyenchip.com/ml-interviews-book/)
+📚 [Machine Learning Interviews Book](https://huyenchip.com/ml-interviews-book/) \
 📚 [Creating Confidence Intervals for Machine Learning Classifiers](https://sebastianraschka.com/blog/2022/confidence-intervals-for-ml.html)
