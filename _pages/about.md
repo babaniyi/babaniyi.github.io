@@ -15,7 +15,7 @@ I completed my Masters' in Quantitative Economics from the [Autonomous Universit
 
 I received the Erasmus Mundus scholarhsip grant of €42k in 2017 and was accepted to the Google Africa Developer Scholarship in 2021. Prior to that, I was awarded the Outstanding Academic Accomplishment award by Dr. Bukola Saraki Foundation in 2016, NIIT scholarship in 2015 and Kingshouse Learning Center to study Computer Engineering in 2012.
 
-My current interests are in applying machine and reinforcement learning to solve business problems, deploying recommendation systems and desinging experiments to serve customers at scale.
+My current interests are in applying machine and reinforcement learning to solve business problems, deploying recommendation systems and designing experiments to serve customers at scale.
 
 <!-- ![image alt >](/images/profile.jpeg) -->
 
