@@ -38,4 +38,6 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 <center> <h3>Recent Favourite Reads</h3> </center>
 📚 [Machine Learning Interviews Book](https://huyenchip.com/ml-interviews-book/) \
 📚 [Creating Confidence Intervals for Machine Learning Classifiers](https://sebastianraschka.com/blog/2022/confidence-intervals-for-ml.html) \
-📚 [Bandits for Recommender Systems](https://eugeneyan.com/writing/bandits/)
+📚 [Bandits for Recommender Systems](https://eugeneyan.com/writing/bandits/) \
+📚 [Multi-Armed Bandits and the Stitch Fix Experimentation Platform]([https://eugeneyan.com/writing/bandits/](https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/))
+
