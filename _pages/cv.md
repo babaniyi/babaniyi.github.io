@@ -31,7 +31,7 @@ redirect_from:
 </td>
 <td></td>
 <td markdown="1">
-[Universitad de Autónoma, Barvcelona](https://uab.cat) and [Universite Paris, Panthéon-Sorbonne](https://www.pantheonsorbonne.fr/en), 08/2017 - 06/2019
+[Universitad de Autónoma, Barcelona](https://uab.cat) and [Universite Paris, Panthéon-Sorbonne](https://www.pantheonsorbonne.fr/en), 08/2017 - 06/2019
 - MSc In Quantitative Economics [QEM](https://master-economics-qem.eu/)
 - Erasmus Mundus Scholarship recipient, 2017
 </td> 
