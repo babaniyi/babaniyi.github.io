@@ -39,5 +39,6 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 📚 [Machine Learning Interviews Book](https://huyenchip.com/ml-interviews-book/) \
 📚 [Creating Confidence Intervals for Machine Learning Classifiers](https://sebastianraschka.com/blog/2022/confidence-intervals-for-ml.html) \
 📚 [Bandits for Recommender Systems](https://eugeneyan.com/writing/bandits/) \
-📚 [Multi-Armed Bandits and the Stitch Fix Experimentation Platform](https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/)
+📚 [Multi-Armed Bandits and the Stitch Fix Experimentation Platform](https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/) \
+📚[Machine Learning System Design: Recommendation System for Restaurants](https://medium.datadriveninvestor.com/ml-system-design-case-recommend-restaurant-in-ubereats-baf5594608ea)
 
