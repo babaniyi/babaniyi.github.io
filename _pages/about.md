@@ -13,9 +13,9 @@ In the past, while working as a Freelance Data Scientist, I built a marketing at
 
 I completed my Masters' in Quantitative Economics from the [Autonomous University of Barcelona](https://uab.cat) and [University of Paris Pantheon-Sorbonne ](https://www.pantheonsorbonne.fr/en) under the Erasmus program.
 
-I received the Erasmus Mundus scholarship grant of €42k in 2017 and was accepted to the Google Africa Developer Scholarship in 2021. Prior to that, I was awarded the Outstanding Academic Accomplishment award by Dr. Bukola Saraki Foundation in 2016, NIIT scholarship in 2015 and Kingshouse Learning Center to study Computer Engineering in 2012.
+I received the `Erasmus Mundus` scholarship grant of €42k in 2017 and was accepted to the Google Africa Developer Scholarship in 2021. Prior to that, I was awarded the Outstanding Academic Accomplishment award by `Dr. Bukola Saraki Foundation` in 2016, `NIIT` scholarship in 2015 and `Kingshouse Learning Center` to study Computer Engineering in 2012.
 
-My current interests are in applying machine and reinforcement learning to solve business problems, deploying recommendation systems and designing experiments to serve customers at scale.
+My current interests are in applying machine to solve business problems. I particularly enjoy deploying recommendation systems, designing experiments and forecasting models to serve customers at scale.
 
 <!-- ![image alt >](/images/profile.jpeg) -->
 
@@ -23,20 +23,14 @@ My current interests are in applying machine and reinforcement learning to solve
 
 ***
 ### Timeline
-*July 2021 - Present:* Data Scientist @ Benshi AI
+July 2021 - Present: Data Scientist @ benshi.ai
 
-*May 2021 - June 2021:* BI Data Engineer @ eDreams ODIGEO
+May 2021 - June 2021: BI Data Engineer @ eDreams ODIGEO
 
-*Oct 2019 - Apr 2021:* Data and Business Intelligence Analyst @ The Alchemist Atelier
+Oct 2019 - Apr 2021: Data and Business Intelligence Analyst @ The Alchemist Atelier
 
-*Dec 2020 - Jan 2021:* Data Science Virtual Intern @ BCG Gamma
+Dec 2020 - Jan 2021: Data Science Virtual Intern @ BCG Gamma
 
-*July 2019 - Sept 2019:* Research Assistant @ Institut d'Análisi Económica (IAE CSIC)
+July 2019 - Sept 2019: Research Assistant @ Institut d'Análisi Económica (IAE CSIC)
 
-*Nov 2016 - Oct 2017:* Research Assistant @ Rivers State University of Science and Technology
-
-
-
-
-
-
+Nov 2016 - Oct 2017: Research Assistant @ Rivers State University of Science and Technology
