@@ -13,7 +13,7 @@ In the past, while working as a Freelance Data Scientist, I built a marketing at
 
 I completed my Masters' in Quantitative Economics from the [Autonomous University of Barcelona](https://uab.cat) and [University of Paris Pantheon-Sorbonne ](https://www.pantheonsorbonne.fr/en) under the Erasmus program.
 
-I received the `Erasmus Mundus` scholarship grant of €42k in 2017 and was accepted to the Google Africa Developer Scholarship in 2021. Prior to that, I was awarded the Outstanding Academic Accomplishment award by `Dr. Bukola Saraki Foundation` in 2016, `NIIT` scholarship in 2015 and `Kingshouse Learning Center` to study Computer Engineering in 2012.
+I received the `Erasmus Mundus` scholarship grant of €42k in 2017 and was accepted to the `Google Africa Developer` Program in 2021. Prior to that, I was awarded the Outstanding Academic Accomplishment award by `Dr. Bukola Saraki Foundation` in 2016, `NIIT` scholarship in 2015 and `Kingshouse Learning Center` to study Computer Engineering in 2012.
 
 My current interests are in applying machine to solve business problems. I particularly enjoy deploying recommendation systems, designing experiments and forecasting models to serve customers at scale.
 
