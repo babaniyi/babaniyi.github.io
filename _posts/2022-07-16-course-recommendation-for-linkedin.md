@@ -61,8 +61,8 @@ We can also train a classification model such that for a given pair of course-sk
 - *Data augmentation.* Leverage skill-correction graph to add more positive labelled data. For example, if SQL is highly relevant to Data Analysis skill then we can add Data analysis to training data as positive label.
 
 ## Evaluation (offline) metrics
-- **Skill coverage:** measure how many LinkedIn standardized skills are present in the mapping
-- **Precision and recall:** We treat course to skill mapping from human as ground truth, then evaluate the classification models using precision and recall.
+- *Skill coverage:* measure how many LinkedIn standardized skills are present in the mapping
+- *Precision and recall:* We treat course to skill mapping from human as ground truth, then evaluate the classification models using precision and recall.
 
 
 
