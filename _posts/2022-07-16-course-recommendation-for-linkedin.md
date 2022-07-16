@@ -18,12 +18,12 @@ tags:
 --- -->
 
 
-Lately, I have been reading books on machine learning and software system design. I have also been opportune to interview data scientists and machine learning engineers, one of my favorite question which is motivated from the book [Machine Learning System Design Interview](https://www.amazon.com/Machine-Learning-Design-Interview-System/dp/B09YQWX59Z/ref=sr_1_1?qid=1658002680&refinements=p_27%3AKhang+Pham&s=books&sr=1-1) is:
+I have been reading books on machine learning and software system design. I have also been opportune to interview data scientists and machine learning engineers, one of my favorite question which is motivated from the book [Machine Learning System Design Interview](https://www.amazon.com/Machine-Learning-Design-Interview-System/dp/B09YQWX59Z/ref=sr_1_1?qid=1658002680&refinements=p_27%3AKhang+Pham&s=books&sr=1-1) is:
 
 <blockquote> How do you Design a Machine Learning Solution for Course Recommendations on Linkedin Learning?
 </blockquote>
 
-It is important to never lose sight of the main goal of the course recommendation system which is to acquire new learners by showing them highly relevant courses.
+It is essential never to lose sight of the main goal of the course recommendation system which is to acquire new learners by showing them highly relevant courses.
 However, to do this, there are few challenges we may have, and they include **lack or insufficient labelled data** that contain user-course preferences. Ways to deal with this include:
 
 - *Collection of user activities data that include browsing and click history.* We can use these signals as implicit labels to train a model. It is also important to note that as we are building the Linkedin learning system, we don't have any engagement signals yet and this phenomena is referred to as the **cold start problem**.
