@@ -66,9 +66,9 @@ There are various techniques to build the mapping from scratch, among them are:
 
 
 # User to Skill Mapping
-1. <b>Member to skill via profile:</b> LinkedIn users can add skills to their profile by entering free-form text or choosing from existing standardized skills. This mapping us usually noisy and needs to be standardized. In practice, the coverage is not high since not many users provide this kind of data. We also train a supervised model *p(user_inputted_skill, standardized_skill)* to provide a score for the mapping.
+1. <strong>Member to skill via profile:</strong> LinkedIn users can add skills to their profile by entering free-form text or choosing from existing standardized skills. This mapping us usually noisy and needs to be standardized. In practice, the coverage is not high since not many users provide this kind of data. We also train a supervised model *p(user_inputted_skill, standardized_skill)* to provide a score for the mapping.
 
-2. <b>Member to skill using job title and industry:</b> To increase the coverage, we can use cohort-level mapping. For example, suppose Babs work in the retail industry and his job title is Machine Learning Engineer, if he didn't provide any skillset in his profile, we can infer his skills by taking the skillsets common to Machine Learning Engineers working in the retail industry and this is referred to as _cohort-based_ mapping. We then combine the profile-based mapping using weight combination with cohort-based mapping. The table below is an example of using the profile-based and cohort-based mapping to create a user-to-skill mapping.
+2. <strong>Member to skill using job title and industry:</strong> To increase the coverage, we can use cohort-level mapping. For example, suppose Babs work in the retail industry and his job title is Machine Learning Engineer, if he didn't provide any skillset in his profile, we can infer his skills by taking the skillsets common to Machine Learning Engineers working in the retail industry and this is referred to as _cohort-based_ mapping. We then combine the profile-based mapping using weight combination with cohort-based mapping. The table below is an example of using the profile-based and cohort-based mapping to create a user-to-skill mapping.
 
 
 | Skill       | Profile-based mapping | Weight      | Cohort-based mapping | Weight | Final mapping |
