@@ -56,7 +56,7 @@ We can also leverage LinkedIn skill taggers features to extract skill tags from 
 #### 3. Use Supervised model
 We can also train a classification model such that for a given pair of course-skill, it returns 1 if the pair is relevant and 0 otherwise. To do this, we have to collect samples from 1 and 2 above as positive training training class labels. We then take random samples from other data and treat them as negative labels. In addition, we create features for the model using course data (title, descrioption, categories, etc). However, this method has a major **drawback**, it relies heavily on the quality of the skill-taggers and one logistic regression model might not be able to capture the per-skill level effects.
 
-#### Use Semi-supervised learning
+#### 4. Use Semi-supervised learning
     - We learn a different model for each skill, as opposed to one common model for all (course, skill) pairs.
     - Data augmentation: Leverage skill-correction graph to add more positive labelled data. For example, if SQL is highly relevant to Data Analysis skill then we can add Data analysis to training data as positive label.
 
