@@ -24,14 +24,14 @@ Lately, I have been reading books on machine learning and software system design
 </blockquote>
 
 It is important to never lose sight of the main goal of the course recommendation system which is to acquire new learners by showing them highly relevant courses.
-However, to do this, there are few challenges we may have, and they include **Lack or insufficient labelled data** that contain user-course preferences. Ways to deal with this include:
+However, to do this, there are few challenges we may have, and they include <b>lack or insufficient labelled data</b> that contain user-course preferences. Ways to deal with this include:
 
-- *Collection of user activities data that include browsing and click history.* We can use these signals as implicit labels to train a model. It is also important to note that as we are building the Linkedin learning system, we don't have any engagement signals yet and this phenomena is referred to as the *Cold start problem*.
+- *Collection of user activities data that include browsing and click history.* We can use these signals as implicit labels to train a model. It is also important to note that as we are building the Linkedin learning system, we don't have any engagement signals yet and this phenomena is referred to as the <b>Cold start problem</b>.
 
 - *Collection of user responses filled during on-boarding process*, that is, we ask learners which skills they want to learn or improve. However, in practice this data is insufficient.
 
 
-To illustrate the idea behind the recommendation system we intend to create, let's create a hypothetical example of a learner - Babs. Suppose Babs has the following skills on his LinkedIn profile: Data analysis, Statistics, Big data. Assume we have two courses: Data Engineering and English literature, it makes sense that Data Engineering would be a better recommendation to Babs because it is more **relevant** to his skillset. 
+To illustrate the idea behind the recommendation system we intend to create, let's create a hypothetical example of a learner - Babs. Suppose Babs has the following skills on his LinkedIn profile: Data analysis, Statistics, Big data. Assume we have two courses: Data Engineering and English literature, it makes sense that Data Engineering would be a better recommendation to Babs because it is more <b>relevant</b> to his skillset. 
 
 This leads us to one idea: *we use skills as a way to measure relevance*. In other words, 
 
@@ -51,24 +51,24 @@ There are various techniques to build the mapping from scratch, among them are:
 
 2. *Leverage LinkedIn skill taggers.* We can also leverage LinkedIn skill taggers features to extract skill tags from course data.
 
-3. *Use Supervised model.* We can also train a classification model such that for a given pair of course-skill, it returns 1 if the pair is relevant and 0 otherwise. To do this, we have to collect samples from 1 and 2 above as positive training training class labels. We then take random samples from other data and treat them as negative labels. In addition, we create features for the model using course data (title, descrioption, categories, etc). However, this method has a major **drawback**, it relies heavily on the quality of the skill-taggers and one logistic regression model might not be able to capture the per-skill level effects.
+3. *Use Supervised model.* We can also train a classification model such that for a given pair of course-skill, it returns 1 if the pair is relevant and 0 otherwise. To do this, we have to collect samples from 1 and 2 above as positive training training class labels. We then take random samples from other data and treat them as negative labels. In addition, we create features for the model using course data (title, descrioption, categories, etc). However, this method has a major <b>drawback</b>, it relies heavily on the quality of the skill-taggers and one logistic regression model might not be able to capture the per-skill level effects.
 
 4. *Use Semi-supervised learning.* 
     - We learn a different model for each skill, as opposed to one common model for all (course, skill) pairs.
     - Data augmentation: Leverage skill-correction graph to add more positive labelled data. For example, if SQL is highly relevant to Data Analysis skill then we can add Data analysis to training data as positive label.
 
 ## Evaluation (offline) metrics
-- **Skill coverage:** measure how many LinkedIn standardized skills are present in the mapping
-- **Precision and recall:** We treat course to skill mapping from human as ground truth, then evaluate the classification models using precision and recall.
+- <b>Skill coverage:</b> measure how many LinkedIn standardized skills are present in the mapping
+- <b>Precision and recall:</b> We treat course to skill mapping from human as ground truth, then evaluate the classification models using precision and recall.
 
 
 
 
 
 # User to Skill Mapping
-1. **Member to skill via profile:** LinkedIn users can add skills to their profile by entering free-form text or choosing from existing standardized skills. This mapping us usually noisy and needs to be standardized. In practice, the coverage is not high since not many users provide this kind of data. We also train a supervised model *p(user_inputted_skill, standardized_skill)* to provide a score for the mapping.
+1. <b>Member to skill via profile:</b> LinkedIn users can add skills to their profile by entering free-form text or choosing from existing standardized skills. This mapping us usually noisy and needs to be standardized. In practice, the coverage is not high since not many users provide this kind of data. We also train a supervised model *p(user_inputted_skill, standardized_skill)* to provide a score for the mapping.
 
-2. **Member to skill using job title and industry:** To increase the coverage, we can use cohort-level mapping. For example, suppose Babs work in the retail industry and his job title is Machine Learning Engineer, if he didn't provide any skillset in his profile, we can infer his skills by taking the skillsets common to Machine Learning Engineers working in the retail industry and this is referred to as _cohort-based_ mapping. We then combine the profile-based mapping using weight combination with cohort-based mapping. The table below is an example of using the profile-based and cohort-based mapping to create a user-to-skill mapping.
+2. <b>Member to skill using job title and industry:</b> To increase the coverage, we can use cohort-level mapping. For example, suppose Babs work in the retail industry and his job title is Machine Learning Engineer, if he didn't provide any skillset in his profile, we can infer his skills by taking the skillsets common to Machine Learning Engineers working in the retail industry and this is referred to as _cohort-based_ mapping. We then combine the profile-based mapping using weight combination with cohort-based mapping. The table below is an example of using the profile-based and cohort-based mapping to create a user-to-skill mapping.
 
 
 | Skill       | Profile-based mapping | Weight      | Cohort-based mapping | Weight | Final mapping |
