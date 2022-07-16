@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: data-science system-design recsys interviews
+tags: data science system-design recsys interviews
 comments: true
 ---
 
