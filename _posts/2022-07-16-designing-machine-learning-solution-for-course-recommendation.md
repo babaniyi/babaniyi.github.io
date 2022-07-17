@@ -1,6 +1,6 @@
 ---
 layout: post
-tags: data science system-design recsys interviews
+tags: data-science system-design recsys interviews
 comments: true
 ---
 
@@ -9,7 +9,7 @@ title: 'Designing Machine Learning Solution for Course Recommendations'
 author: babaniyi
 comments: true
 date: 2022-07-16
-permalink: /posts/2022/07course-recommendation-for-linkedin
+permalink: /posts/2022/07/designing-machine-learning-solution-for-course-recommendation
 
 tags:
 - Data Science
