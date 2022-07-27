@@ -42,5 +42,5 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 📚 [Multi-Armed Bandits and the Stitch Fix Experimentation Platform](https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/) \
 📚 [Machine Learning System Design: Recommendation System for Restaurants](https://medium.datadriveninvestor.com/ml-system-design-case-recommend-restaurant-in-ubereats-baf5594608ea) \
 📚 [Data Distributions Shifts and Monitoring](https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html) \
-📚 [Bringing Storylines to Your Feed](https://engineering.linkedin.com/blog/2017/03/bringing-storylines-feed)
+📚 [How LinkedIn Brings Stories to Your Feed](https://engineering.linkedin.com/blog/2017/03/bringing-storylines-feed)
 
