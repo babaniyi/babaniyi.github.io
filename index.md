@@ -43,5 +43,6 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 📚 [Machine Learning System Design: Recommendation System for Restaurants](https://medium.datadriveninvestor.com/ml-system-design-case-recommend-restaurant-in-ubereats-baf5594608ea) \
 📚 [Data Distributions Shifts and Monitoring](https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html) \
 📚 [How LinkedIn Brings Stories to Your Feed](https://engineering.linkedin.com/blog/2017/03/bringing-storylines-feed)\
-📚 [Deep Learning for Understanding Consumer Histories and Predicting Order Propensities](https://engineering.zalando.com/posts/2016/10/deep-learning-for-understanding-consumer-histories.html)
+📚 [Deep Learning for Understanding Consumer Histories and Predicting Order Propensities](https://engineering.zalando.com/posts/2016/10/deep-learning-for-understanding-consumer-histories.html) \
+📚 [Uncommon Uses of Python in Commonly Used Libraries)(https://eugeneyan.com/writing/uncommon-python/)
 
