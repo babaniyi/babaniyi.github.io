@@ -5,8 +5,6 @@ permalink: /about/
 ---
 <img style="float: left; border-radius:50%" src="/images/profile.jpeg" width="200">
 
-Hi There 👋, I'm Babaniyi Olaniyi. A Data Scientist and Machine Learning Engineer experienced in building models and performing data analysis to transform them into insights for business decision making. Highly skilled in designing scalable, reliable & robust data pipelines to enable data-driven business decisions. 
-
 Currently, I am a Data Scientist at [Bensh AI](https://benshi.ai), I focus on applying machine learning to serve users at scale, from demand forecasting and experimentation models to building reinforcement learning systems for mobile health recommendations.
 
 In the past, while working as a Freelance Data Scientist, I built a marketing attribution model that helped an organization focus on marketing channels that were working increasing customer growth by 2%. Additionally, I built a customer segmentation model to determine how to communicate with different customer types at The Alchemist Atelier.
