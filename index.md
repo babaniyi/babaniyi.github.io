@@ -39,7 +39,7 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 <center> <h3>Recent Favourite Reads</h3> </center>
 📚 [Building a Data Team at a Mid-stage Startup](https://erikbern.com/2021/07/07/the-data-team-a-short-story.html) \
 📚 [Introduction to Streaming for Data Scientists](https://huyenchip.com/2022/08/03/stream-processing-for-data-scientists.html) \
-📚 [Uncommon Uses of Python in Commonly Used Libraries](https://eugeneyan.com/writing/uncommon-python)
+📚 [Uncommon Uses of Python in Commonly Used Libraries](https://eugeneyan.com/writing/uncommon-python) \
 📚 [Deep Learning for Understanding Consumer Histories](https://engineering.zalando.com/posts/2016/10/deep-learning-for-understanding-consumer-histories.html) \
 📚 [Data Distributions Shifts and Monitoring](https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html) \
 📚 [How LinkedIn Brings Stories to Your Feed](https://engineering.linkedin.com/blog/2017/03/bringing-storylines-feed)\
