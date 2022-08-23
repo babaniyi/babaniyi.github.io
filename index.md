@@ -37,6 +37,8 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
+🧵 [Multi Armed Bandit vs. A/B Tests in E-commence: Confidence Interval and Hypothesis Test Power Perspectives](https://dl.acm.org/doi/pdf/10.1145/3534678.3539144)\
+📖 [Adaptively Optimize Content Recommendation Using Multi Armed Bandit Algorithms in E-commerce](https://oars-workshop.github.io/2021/xiang.pdf)\
 📚 [Building a Data Team at a Mid-stage Startup](https://erikbern.com/2021/07/07/the-data-team-a-short-story.html) \
 📚 [Introduction to Streaming for Data Scientists](https://huyenchip.com/2022/08/03/stream-processing-for-data-scientists.html) \
 📚 [Uncommon Uses of Python in Commonly Used Libraries](https://eugeneyan.com/writing/uncommon-python) \
