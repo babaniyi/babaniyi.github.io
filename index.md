@@ -38,18 +38,17 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
 🧵[On the “Usefulness” of the Netflix Prize](https://amatriain.net/blog/on-the-usefulness-of-the-netflix-prize-403d360aaf2/)\
-🧵 [MAB vs. A/B Tests in E-commence: Confidence Interval and Hypothesis Test Power Perspectives](https://dl.acm.org/doi/pdf/10.1145/3534678.3539144)\
+🧵 [MAB vs. A/B Tests in E-commence: Confidence Interval and Hypothesis Test](https://dl.acm.org/doi/pdf/10.1145/3534678.3539144)\
 📖 [Adaptively Optimize Content Recommendation Using MAB Algorithms in E-commerce](https://oars-workshop.github.io/2021/xiang.pdf)\
-📚 [Building a Data Team at a Mid-stage Startup](https://erikbern.com/2021/07/07/the-data-team-a-short-story.html) \
-📚 [Introduction to Streaming for Data Scientists](https://huyenchip.com/2022/08/03/stream-processing-for-data-scientists.html) \
-📚 [Uncommon Uses of Python in Commonly Used Libraries](https://eugeneyan.com/writing/uncommon-python) \
-📚 [Deep Learning for Understanding Consumer Histories](https://engineering.zalando.com/posts/2016/10/deep-learning-for-understanding-consumer-histories.html) \
-📚 [Data Distributions Shifts and Monitoring](https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html) \
-📚 [How LinkedIn Brings Stories to Your Feed](https://engineering.linkedin.com/blog/2017/03/bringing-storylines-feed)\
-📚 [Creating Confidence Intervals for Machine Learning Classifiers](https://sebastianraschka.com/blog/2022/confidence-intervals-for-ml.html) \
-📚 [Bandits for Recommender Systems](https://eugeneyan.com/writing/bandits/) \
-📚 [Multi-Armed Bandits and the Stitch Fix Experimentation Platform](https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/) \
-📚 [Machine Learning System Design: Recommendation System for Restaurants](https://medium.datadriveninvestor.com/ml-system-design-case-recommend-restaurant-in-ubereats-baf5594608ea)
+🏗️ [Building a Data Team at a Mid-stage Startup](https://erikbern.com/2021/07/07/the-data-team-a-short-story.html) \
+🌩️ [Introduction to Streaming for Data Scientists](https://huyenchip.com/2022/08/03/stream-processing-for-data-scientists.html) \
+🕴️ [Deep Learning for Understanding Consumer Histories](https://engineering.zalando.com/posts/2016/10/deep-learning-for-understanding-consumer-histories.html) \
+💻 [Data Distributions Shifts and Monitoring](https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html) \
+🏪 [How LinkedIn Brings Stories to Your Feed](https://engineering.linkedin.com/blog/2017/03/bringing-storylines-feed)\
+🎰 [Creating Confidence Intervals for Machine Learning Classifiers](https://sebastianraschka.com/blog/2022/confidence-intervals-for-ml.html) \
+🎰 [Bandits for Recommender Systems](https://eugeneyan.com/writing/bandits/) \
+🎰 [Multi-Armed Bandits and the Stitch Fix Experimentation Platform](https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/) \
+🥘 [Machine Learning System Design: Recommendation System for Restaurants](https://medium.datadriveninvestor.com/ml-system-design-case-recommend-restaurant-in-ubereats-baf5594608ea)
 
 
 
