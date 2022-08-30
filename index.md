@@ -33,11 +33,11 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 ***
 <center> <h3>Latest News</h3> </center>
 
-💻 *Jan 2022* - Blog [Skyline: the needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)
+💻 Jan 2022 - Blog [Skyline: A needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
-🧵[On the “Usefulness” of the Netflix Prize](https://amatriain.net/blog/on-the-usefulness-of-the-netflix-prize-403d360aaf2/)
+🧵[On the “Usefulness” of the Netflix Prize](https://amatriain.net/blog/on-the-usefulness-of-the-netflix-prize-403d360aaf2/)\
 🧵 [MAB vs. A/B Tests in E-commence: Confidence Interval and Hypothesis Test Power Perspectives](https://dl.acm.org/doi/pdf/10.1145/3534678.3539144)\
 📖 [Adaptively Optimize Content Recommendation Using MAB Algorithms in E-commerce](https://oars-workshop.github.io/2021/xiang.pdf)\
 📚 [Building a Data Team at a Mid-stage Startup](https://erikbern.com/2021/07/07/the-data-team-a-short-story.html) \
