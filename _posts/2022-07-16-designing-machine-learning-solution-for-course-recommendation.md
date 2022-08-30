@@ -86,5 +86,5 @@ The explanation above should be sufficient for an interview. I did not delve int
 
 
 # Reference
-[Machine Learning System Design Interview by Khang Pham](https://www.amazon.com/Machine-Learning-Design-Interview-System/dp/B09YQWX59Z/ref=sr_1_1?qid=1658002680&refinements=p_27%3AKhang+Pham&s=books&sr=1-1)
+[Machine Learning System Design Interview by Khang Pham](https://www.amazon.com/Machine-Learning-Design-Interview-System/dp/B09YQWX59Z/ref=sr_1_1?qid=1658002680&refinements=p_27%3AKhang+Pham&s=books&sr=1-1)\
 [Personalized Recommendations in Linkedin Learning](https://engineering.linkedin.com/blog/2016/12/personalized-recommendations-in-linkedin-learning)
