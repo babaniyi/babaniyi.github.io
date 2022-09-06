@@ -31,6 +31,6 @@ Dec 2020 - Jan 2021: Data Science Virtual Intern @ BCG Gamma
 
 July 2019 - Sept 2019: Research Assistant @ Institut d'Análisi Económica (IAE CSIC)
 
-Nov 2016 - Oct 2017: Research Assistant @ Rivers State University of Science and Technology (RSUST)
+Nov 2016 - Oct 2017: Research Assistant @ Rivers State University of Science and Technology
 
-Oct 2014 - June 2016: Undergraduate Research and Teaching Assistant @ Kwara State University (KWASU)
+Oct 2014 - June 2016: Undergraduate TA & RA @ Kwara State University
