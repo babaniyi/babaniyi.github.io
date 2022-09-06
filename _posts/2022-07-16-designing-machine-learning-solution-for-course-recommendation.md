@@ -20,7 +20,8 @@ tags:
 
 I have been reading books on machine learning and software system design. I have also been opportune to interview data scientists and machine learning engineers, one of my favorite question which is motivated from the book [Machine Learning System Design Interview](https://www.amazon.com/Machine-Learning-Design-Interview-System/dp/B09YQWX59Z/ref=sr_1_1?qid=1658002680&refinements=p_27%3AKhang+Pham&s=books&sr=1-1) is:
 
-<blockquote> How do you Design a Machine Learning Solution for Course Recommendations on Linkedin Learning?
+
+<blockquote> Suppose you are a Data scientist at LinkedIn, how would design a machine learning solution that would recommend courses to users on Linkedin Learning?
 </blockquote>
 
 It is essential never to lose sight of the main goal of the course recommendation system which is to acquire new learners by showing them highly relevant courses.
