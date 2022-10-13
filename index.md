@@ -37,6 +37,7 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
+👨‍🏫 [EDA with Golang GOTA](https://www.freecodecamp.org/news/exploratory-data-analysis-in-go-with-gota/)\
 🏛️ [Conquering Cohort Analysis with Kaplan-Meier Estimates](https://whoisnnamdi.com/how-to-conquer-cohort-analysis/)\
 🚸 [Propensity Score Matching with Python](https://towardsdatascience.com/a-hands-on-introduction-to-propensity-score-use-for-beginners-856302b632ac)\
 📆 [Everyday Data Science to Optimize your Life](https://andrewnc.github.io/blog/everyday_data_science.html)\
