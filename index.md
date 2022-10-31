@@ -37,6 +37,8 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
+🏋️ [Uplift modeling in Python](https://towardsdatascience.com/uplift-modeling-e38f96b1ef60)\
+🧑‍🤝‍🧑 [Uplift Modeling: predictions for optimized marketing campaigns](https://pbiecek.github.io/xai_stories/story-uplift-marketing1.html)\
 👨‍🏫 [EDA with Golang GOTA](https://www.freecodecamp.org/news/exploratory-data-analysis-in-go-with-gota/)\
 🏛️ [Conquering Cohort Analysis with Kaplan-Meier Estimates](https://whoisnnamdi.com/how-to-conquer-cohort-analysis/)\
 🚸 [Propensity Score Matching with Python](https://towardsdatascience.com/a-hands-on-introduction-to-propensity-score-use-for-beginners-856302b632ac)\
