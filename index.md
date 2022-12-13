@@ -33,10 +33,11 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 ***
 <center> <h3>Latest News</h3> </center>
 
-💻 Jan 2022 - Blog [Skyline: A needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)
+🪡 Jan 2022 - Blog [Skyline: A needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
+💻 [Research Software Engineering in Python](https://merely-useful.tech/py-rse/index.html)\
 🧑‍🤝‍🧑 [How LinkedIn Suggests "People You May Know"](https://engineering.linkedin.com/blog/2021/optimizing-pymk-for-equity-in-network-creation)\
 🏋️ [Uplift modeling in Python](https://towardsdatascience.com/uplift-modeling-e38f96b1ef60)\
 🧑‍🤝‍🧑 [Uplift Modeling: predictions for optimized marketing campaigns](https://pbiecek.github.io/xai_stories/story-uplift-marketing1.html)\
