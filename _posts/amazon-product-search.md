@@ -27,9 +27,11 @@ The system that does this hardlifting is my focus in this article, that is, I ex
 
 
 <figure>
+    <center>
     <img src="../images/blogs/img_search_text_query.png" 
          alt="Search image using text">
-    <figcaption>Figure 1.1: Searching images with a text query</figcaption>
+    </center>
+    <figcaption><center> Figure 1.1: Searching images with a text query </center></figcaption>
 </figure>
 
 ## Basic requirements
@@ -45,9 +47,11 @@ To summarize the problem statement, we are designing an image search system that
 As shown in Figure 1.2 below, the search system takes a text query as input and outputs a ranked list of images sorted by their relevance to the text query.
 
 <figure>
+    <center>
     <img src="../images/blogs/img_search_text_input.png" 
          alt="Search input-output">
-    <figcaption>Figure 1.2: Image search system's input-output</figcaption>
+    </center>
+    <figcaption><center> Figure 1.2: Image search system's input-output </center></figcaption>
 </figure>
 
 This kind of problem is known as a ranking problem. In general, the goal of ranking problems is to rank a collection of items such as images, websites, products, etc., based on their relevance to a query, so that more relevant items appear higher in the search results. Many ML applications, such as recommendation systems, search engines, document retrieval, and online advertising, can be framed as ranking problems. 
@@ -55,9 +59,11 @@ This kind of problem is known as a ranking problem. In general, the goal of rank
 In order to determine the relevance between an image and a text query, we utilize both image visual content and the image's textual data. An overview of the design can be seen in Figure 1.3.
 
 <figure>
+    <center>
     <img src="../images/blogs/img_search_text_overview.png" 
          alt="Overview, search system">
-    <figcaption>Figure 1.3: High-level overview of the search system</figcaption>
+    </center>
+    <figcaption><center> Figure 1.3: High-level overview of the search system </center></figcaption>
 </figure>
 
 
@@ -72,9 +78,11 @@ This technique is not based on machine-learning hence it is fast as there's no t
 
 
 <figure>
+    <center>
     <img src="../images/blogs/img_search_text_txt.png" 
          alt="Text search">
-    <figcaption>Figure 1.4: Text search</figcaption>
+    </center>
+    <figcaption><center> Figure 1.4: Text search </center></figcaption>
 </figure>
 
 
@@ -83,16 +91,26 @@ This component outputs a list of images after receiving a text query as input. B
 
 In representation learning, a model is trained to turn data like images and texts into representations referred to as embeddings. Another way to describe it is that the model converts the images and text queries into points in the embedding space, an N-dimensional space. These embeddings are trained so that nearby embeddings in the embedding space exist for similar images [1]. 
 
-It is important to note that in this approach, the text query and image are encoded separately using two encoders. 
-First, we use a machine learning model which does the image encoding that generates an embedding vector for all the images of the products available. Figure 1.5 illustrates how similar images are mapped onto two points in close proximity within the embedding space.
-
-Then, we use a text encoder that generates an embedding vector from the text. Finally, we calculate the similarity score between the image and text embedding using a dot product of their representation.
+The text query and image are encoded individually using two encoders in this method. This is significant because words and images must be translated into numerical representations that computers can understand, known as "embeddings," since computers only comprehend numerical data. In order to create an embedding vector for all of the images of the products that are currently accessible, we first apply a machine learning model to encode the images. Figure 1.5 illustrates how similar images are mapped onto two points in close proximity within the embedding space. The text encoder we employ creates an embedding vector from the text after that. Lastly, we use a dot product of their representation to determine the similarity score between the image and text embedding.
 
 <figure>
+    <center>
     <img src="../images/blogs/img_search_text_embed.png" 
          alt="Image embedding example">
-    <figcaption>Figure 1.5: Similar images in the embedding space</figcaption>
+    </center>
+    <figcaption><center> Figure 1.5: Similar images in the embedding space </center></figcaption>
 </figure>
+
+We compute the dot product between the text and each image in the embedding space, then rank the images according to their similarity scores in order to determine which images are most visually and semantically comparable to the text query.
+
+<figure>
+     <center>
+        <img src="../images/blogs/img_search_text_ml_input.png" 
+         alt="Ml model's input-output embedding example">
+    </center>
+        <figcaption> <center>Figure 1.6: ML model's input-output </center></figcaption>
+</figure>
+
 
 # References
 1. Ali Aminian & Alex Xu (2023). *Machine Learning System Design Interview*
