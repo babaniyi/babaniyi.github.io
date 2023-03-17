@@ -15,15 +15,16 @@ tags:
 - ML System design
 - Search
 
-On e-commerce sites like Amazon, there may be millions of different things to choose from. For instance, a customer on Amazon could type in "casual shirt for winter" and receive a list of available shirts. A system has been set up in the background that retrieves images related to the user's query, ranks them according to their similarity to the query, and then shows them to the user.
-
-In this post, I describe how to create a search system that works in a manner similar to that of e-commerce platforms by taking a user's text query and returning a list of relevant photos.
-
---- -->
-
+* Basic intro
 The number of products available on ecommerce platforms like Amazon, Alibaba, Ebay can be huge and can grow into hundred of thousands if not millions. For instance, on Amazon a user may input **casual shirt for summer**, then a list of shirts that are available are returned to the user. In simple terms, what happens in the background is that, a system has been put in place that retrieves images similar to the user's query, ranks them based on the similarities to the query and then displays them to the user. 
 
 The system that does this hardlifting is my focus in this article, that is, I explain how to design a product search system similar to the one used by leading e-commerce platforms that takes a user's text query and returns a list of images that are relevant to the text query.
+
+--- -->
+On e-commerce sites like Amazon, there may be millions of different products to choose from. For instance, a customer on Amazon could type in *"casual shirt for summer"* and receive a list of available shirts. A system has been set up in the background that retrieves images related to the user's query, ranks them according to their similarity to the query, and then shows them to the user.
+
+In this post, I describe how to create a search system that works in a manner similar to that of e-commerce platforms by taking a user's text query and returning a list of relevant product images.
+
 
 
 <figure>
@@ -35,7 +36,7 @@ The system that does this hardlifting is my focus in this article, that is, I ex
 </figure>
 
 ## Basic requirements
-To summarize the problem statement, we are designing an image search system that retrieves images similar to the user query, ranks them based on their similarities to the text query, and then displays them to the user. We make some basic assumptions which includes:
+To summarize the problem statement, we are designing an image search system that retrieves images similar to the user query, ranks them based on their similarities to the text query, and then displays them to the user. For simplicity, we make some basic assumptions which includes:
 
 1. For simplicity, we assume a user can only input text queries (images or videos queries are not allowed).
 1. We do not need to personalize the result of the search system. 
