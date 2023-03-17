@@ -113,8 +113,60 @@ We compute the dot product between the text and each image in the embedding spac
 </figure>
 
 
+
+# 2. Data Preparation for Training
+
+## 2.1. Data engineering
+We assume we are given an annotated dataset to train and evaluate the model. We could have users, image and user-image interactions data. 
+
+### 2.1.1. Images
+The system stores images of products currently in-stock or available and their metadata. Table 1.1 shows a simplified example of image metadata
+
+| Image ID    | Upload time |  Manual tags|
+| ----------- | ----------- | -----------|  
+| 10          | 105743135 | cotton, polo
+| 193          | 1958351341 | long-sleeve, flannel, polyester
+Table 1.1: Image metadata 
+
+
+### 2.1.2. User-image interactions data
+Interaction data contains different typese of user interactions. This kind of data could help provide information on the kind of queries that user input and how they interact with it. The primary types of interactions are clicks, impressions and purchases (conversion, add-to-cart, etc) which however could be noisy. We will talk on this later, Table 1.2 shows a simplified example of user-image interaction metadata.
+
+|  User ID      | Text query |  Displayed image ID | Interaction type | Timestamp |
+| -----------   | -----------    | -----------     |    -----------   | ----------- |
+| 10            | White cotton polo |  9   | Click | 1658451365 
+| 193           | Men's long sleeve summer flannel shirt |  15  | Click | 1648452360 
+| 104           | Women blouse perfect for winter|  7543  | Purchase | 1748452261
+| 1345          |Children christmas wear for winter with red cap |  15  | Click | 1848451367
+<center> Table 1.2: User-image interaction data </center>
+
+
+## 2.2 Feature engineering
+Almost all machine learning algorithms accept only numeric input valuese. Unstructureed data such as texts and images need to be converted into a numerical representation during this step. We present how to prepare the text and image data for the model.
+
+### 2.1. Preparing the text data
+As shown in Figure 1.7, text is typically represented asa numerical vector using three steps: text normalisation, tokenization, and token to IDs [5]
+
+<figure>
+     <center>
+        <img src="../images/blogs/img_search_text_num_vector.png" 
+         alt="Tex in numerical vector">
+    </center>
+        <figcaption> <center>Figure 1.7: Represent a text with a numerical vector </center></figcaption>
+</figure>
+
+#### **Text normalisation**
+Tokens are a basic meaningful unit of a sentence or a document. They can consist of words, phrases, subwords, or characters 
+Normalization is the process of converting a token into its base form. It is helpful in reducing the number of unique tokens present in the text, removing the variations in a text and cleaning it by removing redundant information.
+
+
+
+
+
+
 # References
 1. Ali Aminian & Alex Xu (2023). *Machine Learning System Design Interview*
 2. Full Text Search with MongoDB. https://www.mongodb.com/basics/full-text-search
 3. How To Improve Database Searches with Full-Text Search. https://www.digitalocean.com/community/tutorials/how-to-improve-database-searches-with-full-text-search-in-mysql-5-6-on-ubuntu-16-04
-4. Elastic Search. https://www.elastic.co/elasticsearch/
+4. Elastic Search. https://www.elastic.co/elasticsearch
+5. Preprocessing text data. https://huggingface.co/docs/transformers/preprocessing
