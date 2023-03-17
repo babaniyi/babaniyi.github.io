@@ -130,7 +130,9 @@ Table 1.1: Image metadata
 
 
 ### 2.1.2. User-image interactions data
-Interaction data contains different typese of user interactions. This kind of data could help provide information on the kind of queries that user input and how they interact with it. The primary types of interactions are clicks, impressions and purchases (conversion, add-to-cart, etc) which however could be noisy. We will talk on this later, Table 1.2 shows a simplified example of user-image interaction metadata.
+Many kinds of user interactions are contained in interaction data. The type of queries users enter and their interactions with it may be revealed by this kind of data. Clicks, impressions, and purchases (conversion, add-to-cart, etc.) are the three main sorts of interactions, albeit they could be noisy. Table 1.2 displays a condensed example of user-image interaction metadata; we shall discuss this further.
+
+
 
 |  User ID      | Text query |  Displayed image ID | Interaction type | Timestamp |
 | -----------   | -----------    | -----------     |    -----------   | ----------- |
@@ -142,7 +144,7 @@ Interaction data contains different typese of user interactions. This kind of da
 
 
 ## 2.2 Feature engineering
-Almost all machine learning algorithms accept only numeric input valuese. Unstructureed data such as texts and images need to be converted into a numerical representation during this step. We present how to prepare the text and image data for the model.
+Nearly all algorithms for machine learning only accept numeric input values. During this step, unstructured data like texts and images must be transformed into a numerical representation. We outline the process for getting the text and image data ready for the model.
 
 ### 2.1. Preparing the text data
 As shown in Figure 1.7, text is typically represented asa numerical vector using three steps: text normalisation, tokenization, and token to IDs [5]
