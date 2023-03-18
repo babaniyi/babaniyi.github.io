@@ -178,13 +178,18 @@ Tokenization is breaking the raw text into small chunks. Tokenization breaks the
 #### **Tokens to IDs mapping**
 Once we have tokens, we need to convert them to numerical values. This can done using Lookup table or hashing.
 
-- **Lookup table:** In this method, each unique token is mapped to an ID. Next, a lookup table is created to store these 1:1 mappings. Lookup tables has its strengths which includes speed as it is easy to convert tokens to IDs and also convert the IDs back to tokens using a reverse index table. However, downside is that it stores the table in a memory hence having a large number of tokens requires huge memory space. Also, it cannot handle neew or unseen words properly.
+- **Lookup table:** In this method, each unique token is mapped to an ID. Next, a lookup table is created to store these 1:1 mappings. Lookup tables has its strengths which includes speed as it is easy to convert tokens to IDs and also convert the IDs back to tokens using a reverse index table. However, downside is that it stores the table in a memory hence having a large number of tokens requires huge memory space. Also, it cannot handle new or unseen words properly.
 
-- **Hashing:** Compared to lookup tables, hashing also known as "feature hashing", or "hashing trick" is a memomery efficient method that uses hash function to obtain IDs, without keeping a lookup table. We know that as models are trained with corpus with larger sizes, it produces vocabularies that take more and more memory space to store. For efficiency purposes, these lookup tables are stored in RAM for quick token-id mapping and can slow down the operations once their size gets too big. By using a hashing, we can get rid of such memory-consuming vocabularies entirely and a hash function is used for token-id mapping instead. With a given string, a hash function is capable of returning a numerical value, a hash value, that’s unique to that string and use it as token id. Since there’s no fix-sized vocabulary involved, all tokens can now be assigned to a number, no matter the model has seen it before or not. The downside is that after hashing, we cannot convert IDs back to tokens.
+- **Hashing:** Compared to lookup tables, hashing also known as "feature hashing", or "hashing trick" is a memory efficient method that uses hash function to obtain IDs, without keeping a lookup table. We know that as models are trained with corpus with larger sizes, it produces vocabularies that take more and more memory space to store [6]. For efficiency purposes, these lookup tables are stored in RAM for quick token-id mapping and can slow down the operations once their size gets too big. By using a hashing, we can get rid of such memory-consuming vocabularies entirely and a hash function is used for token-id mapping instead. With a given string, a hash function is capable of returning a numerical value, a hash value, that’s unique to that string and use it as token id. Since there’s no fix-sized vocabulary involved, all tokens can now be assigned to a number, no matter the model has seen it before or not [6]. The downside is that after hashing, we cannot convert IDs back to tokens.
 
 
 ## 2.2 Preparing image data
+In the earlier section 1, we explained the goal is to design an image search system that retrieves images similar a user's text query, rank them based on their similarities to the text query, and then display them to the user. Since the model returns an image as output, we need to preprocess all the images of the products available in system. The most common image preprocessing operations are [1]:
 
+- **Resizing:** Models usally require fixed image sizes (e.g. $224 * 224$)
+- **Scaling:** Scale pixel values of each image to be in the range of 0 and 1
+- **Z-score standardization:** Scale pixel values to have a mean of 0 and variabce of 1
+- **Consistent color mode:** Ensure images have a consistent color mode (e.g. RGB or CMYK)
 
 
 # References
@@ -193,3 +198,4 @@ Once we have tokens, we need to convert them to numerical values. This can done 
 3. How To Improve Database Searches with Full-Text Search. https://www.digitalocean.com/community/tutorials/how-to-improve-database-searches-with-full-text-search-in-mysql-5-6-on-ubuntu-16-04
 4. Elastic Search. https://www.elastic.co/elasticsearch
 5. Preprocessing text data. https://huggingface.co/docs/transformers/preprocessing
+6. An Overview of Text Representation in NLP. https://towardsdatascience.com/an-overview-for-text-representations-in-nlp-311253730af1
