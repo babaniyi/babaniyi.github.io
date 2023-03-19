@@ -347,3 +347,4 @@ To construct a data point, we randomly choose a text query - image pair and $n-1
 8. Word2Vec.https://www.tensorflow.org/tutorials/text/word2vec
 9. ResNet. https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html
 10. SimCLR. https://arxiv.org/abs/2002.05709
+11. System Design for Recommendations and Search. https://eugeneyan.com/writing/system-design-for-discovery/
