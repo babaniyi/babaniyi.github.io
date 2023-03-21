@@ -364,7 +364,7 @@ Figure 2.1 visualises the system architecture, we see the model takes text query
 
 To cite this content, please use:
 
-> Olaniyi, B (Mar 2023). Designing a Recommendation System for Search in E-Commerce. babaniyi.com. https://babaniyi.com/writing/system-design-for-search-ecommerce
+> Olaniyi, B (Mar 2023). Designing a Recommendation System for Search in E-Commerce. babaniyi.com. https://babaniyi.com/2023/03/22/writing/system-design-for-search-ecommerce
 
 
 
@@ -375,7 +375,7 @@ To cite this content, please use:
   journal = {babaniyi.com},
   year    = {2023},
   month   = {Mar},
-  url     = {https://babaniyi.com/writing/system-design-for-search-ecommerce}
+  url     = {https://babaniyi.com/2023/03/22/writing/system-design-for-search-ecommerce}
 }
 ```
 
