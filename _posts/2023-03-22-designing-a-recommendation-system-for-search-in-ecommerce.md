@@ -402,11 +402,11 @@ BoW is a simple method that computes sentence representations fast, but has the 
 
 <b>Term Frequency Inverse Document Frequency (TF-IDF)</b>. In this method, we give every word a relative frequency coding with respect to the current sentence and the whole document [[7]](#references)
 
-Term Frequency: Is the occurrence of the current word in the current sentence with respect to the total number of words in the current sentence.
+<b>Term Frequency:</b> Is the occurrence of the current word in the current sentence with respect to the total number of words in the current sentence.
 
 $$ tf_{ij} = \frac{n_{i,j}}{\sum_{k}n_{i,j}}$$
 
-Inverse Data Frequency: Log of Total number of words in the whole data corpus with respect to the total number of sentences containing the current word.
+<b>Inverse Data Frequency:</b> Log of Total number of words in the whole data corpus with respect to the total number of sentences containing the current word.
 
 $$ idf(w) = log \big(\frac{N}{df_{t}}\big)$$
 
