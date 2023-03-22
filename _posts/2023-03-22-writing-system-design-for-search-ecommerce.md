@@ -301,12 +301,12 @@ For encoding images, we propose using neural networks because it has proven to b
 In order to retrieve images similar to the text query, a model must learn representations (embedding) during training. In this section, we discuss how to train the text and image encoder using **contrastive learning** [[10]](#references). In this approach, we train a model to distinguish between similar `<text query, image>` pair from dissimilar ones. In other words, we provide the model with a *<text query, image>* pair, one similar pair , and a few disimilar pair. During training, the model learns to produce representations in which similar text query - image pair resemble the pair, than other pairs.
 
 ### **Constructing the dataset**
-As described earlier, each data point used for training contains a query-image pair, a positive query-image pair that's similar to the pair, and $n-1$ negative pairs that are dissimilar to the pair. The ground truth label of the data point is thee index of the positive text query-image pair. As Figure 2.0 depicts, along with a query-image pair ($k$), we have $n$ other images of which one is similar to the $k$ (casual men's beach summer shirt) and the other $n-1$ images are dissimilar. The ground truth label for this data point is the index of the positive image, which is $3$ (the third image among the $n$ images in Figure 2.0)
+As described earlier, each data point used for training contains a query-image pair, a positive query-image pair that's similar to the pair, and $n-1$ negative pairs that are dissimilar to the pair. The ground truth label of the data point is thee index of the positive text query-image pair. As Figure 2.0 depicts, along with a query-image pair ($q$), we have $n$ other images of which one is similar to the $q$ (casual men's beach summer shirt) and the other $n-1$ images are dissimilar. The ground truth label for this data point is the index of the positive image, which is $3$ (the third image among the $n$ images in Figure 2.0)
 
 <figure>
      <center>
         <img src="../images/blogs/img_search_text_training_data.png" 
-         alt="Training data">
+         alt="Training data point">
     </center>
         <figcaption> <center>Figure 2.0: Training data point </center></figcaption>
 </figure>
@@ -334,7 +334,7 @@ Figure 2.1 visualises the system architecture, we see the model takes text query
 
 <figure>
      <center>
-        <img src="../images/blogs/img_search_text_model_input_2.png" 
+        <img src="../images/blogs/img_search_text_model_input_3.png" 
          alt="Embedding model and loss calculation">
     </center>
         <figcaption> <center>Figure 2.1: Model input-output and loss computation </center></figcaption>
@@ -344,12 +344,65 @@ Figure 2.1 visualises the system architecture, we see the model takes text query
 
 
 # 4. Evaluation
+Evaluating the performance of the predictions is a critical step and this section focuses on this. The evaluation merics can be classified into offline and online metrics. [Aminian & Alex Xu (2023)](#references) covered this in-depth which would I summarised in the subsequent subsections.
 
 
 ## 4.1. Offline metrics
+Offline metrics are the metrics that evaluate the performance of the model and they are typically not business related (in the sense that they do not measure KPIs business about such as click-through rate etc.) but are still useful to evaluate the model's performance on an evaluation data. Offline metrics suitable for this problem are Precision@k, mAP, Recall@k, Mean reciprocal rank (MRR).
 
+### Precision@k
+This metric measures the proportion of relevant items among the top $k$ items in the ranked output list. In the evaluation dataset, a given text query is associated with only one positive image since we are using a contrastive learning approach. That means the numerator of the precision@k formula is at most $1$ which leads to low precision@k values. 
+
+$$ \text{precision@k} = \frac{\text{Number of relevant images among the top $k$ images in the ranked list}}{k}$$
+
+For instance, for a given text query, even if we rank its associatd images at the top of the list, the precision@5 is only $\frac{1}{5}= 20\%$. Due to this limitation, precision metrics, such as precision@k and mAP are not suitable.
+
+
+### Recall@k
+This metric measures the ratio between the number of relevant images in the search results and the total number of relevant images.
+
+$$ \text{recall@k} = \frac{\text{Number of relevant images among the top $k$ images}}{\text{Total number of relevant images}}$$
+
+Since we are using contrastive learning (one similar query-image pair and other dissimilar images), the denominator (total number of relevant images)  is always 1. Hencee, we can surmise the recall@k formula is the following:
+
+$$
+\left\{ 
+  \begin{array}{ c l }
+    \text{recall@$k$}=1 & \quad \textrm{if the relevant image is among the top $k$ images} \\
+    0                 & \quad \textrm{otherwise}
+  \end{array}
+\right.
+$$
+
+This metric measures a model's ability to find the associated image for a given text text query however, despite being intuitive and easy to derive, this metric is not without its faults which includes:
+
+- It depends on the choice of $k$ and choosing the right $k$ could be challenging.
+- When the relevant image is not among the $k$ videos in the output list, recall@k is always $0$. For instance, suppose a model X ranks a relevant image at place 15, and another model Y ranks the same image at place 20. If we use recall@10 to measure the quality of both models, both would have a recall@10 $= 0$, even though model X is better than model Y. 
+
+
+### Mean Reciprocal Rank (MRR)
+This metric measures the qualitty of the model by averaging the rank of the first relevant image in the search result where $m$ is the total number of output lists and $rank_{i}$ refers to the rank of the first relevant image in the $i^{th}$ ranked output list.
+
+$$
+MRR = \frac{1}{m} \sum_{i=1}^{m}\frac{1}{rank_{i}}
+$$
+
+This metric adrresses the limitations of recall@k and can be used as our **offline metric**.
 
 ## 4.2. Online metrics
+In this section, we explore some commonly used online metrics for measuring how quickly users can discover product images they like. Online metrics are metrics tied to a user's activity that can be translated to business outcomes, they include click-through rate (CTR), average duration spent on suggested images, average revenue from suggested images, etc.
+
+### Click-through rate (CTR)
+This metric shows how often users click on the displayed images. CTR can be calculated using the formula:
+
+$$
+CTR = \frac{\text{Number of clicked images}}{\text{Total number of suggested images}}
+$$
+
+A high CTR indicates that users click on the suggested images often, however it does not indicate or track whether the clicked images are relevant or not. 
+
+### Average duration spent on the suggested images
+This metric shows captures how engaged users are with the recommended images. Duration varies according to business objective, it could be daily, weekly, monthly time measures in minutes or even hours. When the search system is accurate, we expect this metric to increase.
 
 
 
@@ -378,6 +431,14 @@ To cite this content, please use:
   url     = {https://babaniyi.com/2023/03/22/writing/system-design-for-search-ecommerce}
 }
 ```
+
+
+
+
+
+
+
+
 
 # References
 1. Ali Aminian & Alex Xu (2023). *Machine Learning System Design Interview*
