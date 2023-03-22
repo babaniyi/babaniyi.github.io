@@ -4,7 +4,7 @@ tags: data-science system-design search
 comments: true
 excerpt: ""
 ---
-
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.jsconfig=TeX-AMS-MML_HTMLorMML"></script>
 
 <!-- ---
 title: 'Designing a Recommendation System for Search in E-Commerce'
@@ -238,7 +238,7 @@ Normalization is the process of converting a token into its base form. It is hel
 #### Tokenization
 Tokenization is breaking the raw text into small chunks. Tokenization breaks the raw text into words, sentences called tokens. Tokenization helps in interpreting the meaning of the text by analyzing the sequence of the words. For example, the text `"Brown chelsea leather boots perfect for winter"` can be tokenized to `["Brown", "chelsea", "leather", "boots", "perfect", "for", "winter"]`. If the text is split into words using some separation technique it is called *word tokenization* and same separation done for sentences is called *sentence tokenization*. There are various tokenization techniques available which can be applicable based on the language and purpose of modeling, they include:
 
-- \\(\textbf{Subword tokenization:}\\) This process split text into subwords (n-gram characters). In this method, the most often used words are assigned distinctive identifiers, and the less frequently used terms are divided into smaller words that best express the meaning on their own. As an illustration, if the word *"dark"* occurs frequently in a text, it will be given a unique ID, but the terms *"darker"* and *"darkest"*, which are uncommon and appear less frequently in a text, will be divided into subwords such as "dark", "er", and "est". This aids in preventing the language model from learning "darker" and "darkest" as two distinct terms and enables the training process to detect the unknown words in the data set. There are various kinds of subword tokenization, including Byte-Pair Encoding (BPE), WordPiece, Unigram Language Model, SentencePiece.
+- \\( \textbf{Subword tokenization:} \\) This process split text into subwords (n-gram characters). In this method, the most often used words are assigned distinctive identifiers, and the less frequently used terms are divided into smaller words that best express the meaning on their own. As an illustration, if the word *"dark"* occurs frequently in a text, it will be given a unique ID, but the terms *"darker"* and *"darkest"*, which are uncommon and appear less frequently in a text, will be divided into subwords such as "dark", "er", and "est". This aids in preventing the language model from learning "darker" and "darkest" as two distinct terms and enables the training process to detect the unknown words in the data set. There are various kinds of subword tokenization, including Byte-Pair Encoding (BPE), WordPiece, Unigram Language Model, SentencePiece.
 
 - **White Space Tokenization:** In this process entire text is split into words by splitting them from whitespaces. This is the fastest tokenization technique but works only for languages like English in which the white space breaks apart the sentence into meaningful words.
 
@@ -527,11 +527,13 @@ This metric measures a model's ability to find the associated image for a given 
 
 
 ### Mean Reciprocal Rank (MRR)
-This metric measures the quality of the model by averaging the rank of the first relevant image in the search result where \(m\) is the total number of output lists and \(rank_{i}\) refers to the rank of the first relevant image in the \(i^{th}\) ranked output list.
+This metric measures the quality of the model by averaging the rank of the first relevant image in the search result where \(m\) is the total number of output lists and \\ (rank\_{i} \\) refers to the rank of the first relevant image in the \\( i^{th} \\) ranked output list.
 
-\[
+\\[
 MRR = \frac{1}{m} \sum_{i=1}^{m}\frac{1}{rank_{i}}
-\]
+\\]
+
+\\[ MRR = \frac{1}{m} \sum\_{i=1}^{m}\frac{1}{rank\_{i}} \\]
 
 This metric adrresses the limitations of recall@k and can be used as our **offline metric**.
 
