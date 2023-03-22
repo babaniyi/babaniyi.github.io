@@ -29,7 +29,7 @@ In this post, I describe how to create a search system that works in a manner si
 
 <figure>
     <center>
-    <img src="../images/blogs/img_search_text_query.png" 
+    <img src="/images/blogs/img_search_text_query.png" 
          alt="Search image using text">
     </center>
     <figcaption><center> Figure 1.1: Searching images with a text query </center></figcaption>
@@ -50,7 +50,7 @@ As shown in Figure 1.2, the search system takes a text query as input and output
 
 <figure>
     <center>
-    <img src="../images/blogs/img_search_text_input.png" 
+    <img src="/images/blogs/img_search_text_input.png" 
          alt="Search input-output">
     </center>
     <figcaption><center> Figure 1.2: Image search system's input-output </center></figcaption>
@@ -62,7 +62,7 @@ In order to determine the relevance between an image and a text query, we utiliz
 
 <figure>
     <center>
-    <img src="../images/blogs/img_search_text_overview.png" 
+    <img src="/images/blogs/img_search_text_overview.png" 
          alt="Overview of the search system">
     </center>
     <figcaption><center> Figure 1.3: High-level overview of the search system </center></figcaption>
@@ -80,7 +80,7 @@ This technique is not based on machine-learning hence it is fast as there's no t
 
 <figure>
     <center>
-    <img src="../images/blogs/img_search_text_txt.png" 
+    <img src="/images/blogs/img_search_text_txt.png" 
          alt="Text search">
     </center>
     <figcaption><center> Figure 1.4: Text search </center></figcaption>
@@ -96,7 +96,7 @@ The text query and image are encoded individually using two encoders in this met
 
 <figure>
     <center>
-    <img src="../images/blogs/img_search_text_embed.png" 
+    <img src="/images/blogs/img_search_text_embed.png" 
          alt="Image embedding example">
     </center>
     <figcaption><center> Figure 1.5: Similar images in the embedding space </center></figcaption>
@@ -106,7 +106,7 @@ We compute the dot product between the text and each image in the embedding spac
 
 <figure>
      <center>
-        <img src="../images/blogs/img_search_text_ml_input.png" 
+        <img src="/images/blogs/img_search_text_ml_input.png" 
          alt="Ml model's input-output embedding example">
     </center>
         <figcaption> <center>Figure 1.6: ML model's input-output </center></figcaption>
@@ -151,7 +151,7 @@ As shown in Figure 1.7, text is typically represented asa numerical vector using
 
 <figure>
      <center>
-        <img src="../images/blogs/img_search_text_num_vector.png" 
+        <img src="/images/blogs/img_search_text_num_vector.png" 
          alt="Tex in numerical vector">
     </center>
         <figcaption> <center>Figure 1.7: Represent a text with a numerical vector </center></figcaption>
@@ -206,7 +206,7 @@ A typical text encoder's input and output are shown in Figure 1.8.
 
 <figure>
      <center>
-        <img src="../images/blogs/img_search_text_txt_encoder.png" 
+        <img src="/images/blogs/img_search_text_txt_encoder.png" 
          alt="Text encoder input-output">
     </center>
         <figcaption> <center>Figure 1.8: Text encoder's input-output </center></figcaption>
@@ -291,7 +291,7 @@ For encoding images, we propose using neural networks because it has proven to b
 
 <figure>
      <center>
-        <img src="../images/blogs/img_search_text_img_model.png" 
+        <img src="/images/blogs/img_search_text_img_model.png" 
          alt="Image model">
     </center>
         <figcaption> <center>Figure 1.9: An image embedding model </center></figcaption>
@@ -307,7 +307,7 @@ As described earlier, each data point used for training contains a query-image p
 
 <figure>
      <center>
-        <img src="../images/blogs/img_search_text_training_data_2.png" 
+        <img src="/images/blogs/img_search_text_training_data_2.png" 
          alt="Training data point">
     </center>
         <figcaption> <center>Figure 2.0: Training data point </center></figcaption>
@@ -336,7 +336,7 @@ Figure 2.1 visualises the system architecture, we see the model takes text query
 
 <figure>
      <center>
-        <img src="../images/blogs/img_search_text_model_input_3.png" 
+        <img src="/images/blogs/img_search_text_model_input_3.png" 
          alt="Embedding model and loss calculation">
     </center>
         <figcaption> <center>Figure 2.1: Model input-output and loss computation </center></figcaption>
@@ -413,7 +413,7 @@ At serving time, the system displays a ranked list of product images relevant to
 
 <figure>
      <center>
-        <img src="../images/blogs/img_search_text_ml_sys_design.png" 
+        <img src="/images/blogs/img_search_text_ml_sys_design.png" 
          alt="ML System design">
     </center>
         <figcaption> <center>Figure 2.2: Complete ML system design inspired by Ali Aminian & Alex Xu (2023) </center></figcaption>
@@ -434,7 +434,7 @@ To define the nearest neighbor search more formally, given a text query $q$ and 
 
 <figure>
      <center>
-        <img src="../images/blogs/img_search_text_top4.png" 
+        <img src="/images/blogs/img_search_text_top4.png" 
          alt="Retrieving the top 4 results of a given text query">
     </center>
         <figcaption> <center>Figure 2.3: Retrieving the top 4 results of a given text query </center></figcaption>
