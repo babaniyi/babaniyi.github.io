@@ -2,6 +2,7 @@
 layout: post
 tags: data-science system-design search
 comments: true
+excerpt: ""
 ---
 
 
@@ -72,7 +73,7 @@ In order to determine the relevance between an image and a text query, we utiliz
 
 
 ## 1.1 Text search
-Images that have titles, descriptions, or tags that are the most comparable to the text query are displayed as the results of the **text search**. When a user enters in a text query like *casual shirts for summer*, Figure 1.4 demonstrates how text search functions. Using full-text search in a database is one method to find the image description that matches the text query the most.
+Images that have titles, descriptions, or tags that are the most comparable to the text query are displayed as the results of the <b>text search</b>. When a user enters in a text query like *casual shirts for summer*, Figure 1.4 demonstrates how text search functions. Using full-text search in a database is one method to find the image description that matches the text query the most.
 
 Full-text search (FTS) is the process of searching a portion of text within a large collection of electronically recorded text data and providing results that include part or all of the terms in the search [[2]](#references). It retrieves documents that don’t perfectly match the search criteria. Documents here refers to database entities containing textual data. 
 
