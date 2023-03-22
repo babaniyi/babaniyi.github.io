@@ -238,7 +238,7 @@ Normalization is the process of converting a token into its base form. It is hel
 #### Tokenization
 Tokenization is breaking the raw text into small chunks. Tokenization breaks the raw text into words, sentences called tokens. Tokenization helps in interpreting the meaning of the text by analyzing the sequence of the words. For example, the text `"Brown chelsea leather boots perfect for winter"` can be tokenized to `["Brown", "chelsea", "leather", "boots", "perfect", "for", "winter"]`. If the text is split into words using some separation technique it is called *word tokenization* and same separation done for sentences is called *sentence tokenization*. There are various tokenization techniques available which can be applicable based on the language and purpose of modeling, they include:
 
-- **Subword tokenization:** This process split text into subwords (n-gram characters). In this method, the most often used words are assigned distinctive identifiers, and the less frequently used terms are divided into smaller words that best express the meaning on their own. As an illustration, if the word *"dark"* occurs frequently in a text, it will be given a unique ID, but the terms *"darker"* and *"darkest"*, which are uncommon and appear less frequently in a text, will be divided into subwords such as "dark", "er", and "est". This aids in preventing the language model from learning "darker" and "darkest" as two distinct terms and enables the training process to detect the unknown words in the data set. There are various kinds of subword tokenization, including Byte-Pair Encoding (BPE), WordPiece, Unigram Language Model, SentencePiece.
+- \\(\textbf{Subword tokenization:}\\) This process split text into subwords (n-gram characters). In this method, the most often used words are assigned distinctive identifiers, and the less frequently used terms are divided into smaller words that best express the meaning on their own. As an illustration, if the word *"dark"* occurs frequently in a text, it will be given a unique ID, but the terms *"darker"* and *"darkest"*, which are uncommon and appear less frequently in a text, will be divided into subwords such as "dark", "er", and "est". This aids in preventing the language model from learning "darker" and "darkest" as two distinct terms and enables the training process to detect the unknown words in the data set. There are various kinds of subword tokenization, including Byte-Pair Encoding (BPE), WordPiece, Unigram Language Model, SentencePiece.
 
 - **White Space Tokenization:** In this process entire text is split into words by splitting them from whitespaces. This is the fastest tokenization technique but works only for languages like English in which the white space breaks apart the sentence into meaningful words.
 
@@ -405,11 +405,11 @@ BoW is a simple method that computes sentence representations fast, but has the 
 
 **Term Frequency:** Is the occurrence of the current word in the current sentence with respect to the total number of words in the current sentence.
 
-\[ tf_{ij} = \frac{n_{i,j}}{\sum_{k}n_{i,j}}\]
+\\[ tf_{ij} = \frac{n_{i,j}}{\sum_{k}n_{i,j}}\\]
 
 **Inverse Data Frequency:** Log of Total number of words in the whole data corpus with respect to the total number of sentences containing the current word.
 
-\[ idf(w) = log \big(\frac{N}{df_{t}}\big)\]
+\\[ idf(w) = log \big(\frac{N}{df_{t}}\big)\\]
 
 TF-IDF is a numerical statistic intended to reflect how important a word is to a document in a collection or corpus. It creates the same sentence-word matrix like in BoW but it normalizes the matrix based on the frequency of words. Since TF-IDF gives less weight to frequent words, its representations are usually better than BoW. However, it has its drawbacks such as: it does not consider the order of words in a sentence, the obtained representations are sparse and does not even capture the semantic meaning of the sentence.
 
