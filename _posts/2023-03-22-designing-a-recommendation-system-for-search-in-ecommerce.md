@@ -4,6 +4,7 @@ tags: data-science system-design search
 comments: true
 ---
 
+
 <!-- ---
 title: 'Designing a Recommendation System for Search in E-Commerce'
 author: babaniyi
@@ -616,8 +617,7 @@ Thanks to Ali Aminian & Alex Xu (2023) for their book as it inspired and provide
 
 To cite this content, please use:
 
-> Olaniyi, Babaniyi (Mar 2023). Designing a Recommendation System for Search in E-Commerce. babaniyi.com. https://babaniyi.com/2023/03/22/writing/system-design-for-search-ecommerce
-
+> Olaniyi, Babaniyi (Mar 2023). Designing a Recommendation System for Search in E-Commerce. babaniyi.com. https://www.babaniyi.com/2023/03/22/designing-a-recommendation-system-for-search-in-ecommerce.html
 
 
 ```
