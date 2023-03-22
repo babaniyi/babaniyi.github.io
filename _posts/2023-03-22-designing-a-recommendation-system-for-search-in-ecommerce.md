@@ -244,7 +244,7 @@ Tokenization is breaking the raw text into small chunks. Tokenization breaks the
 
 - \\(\textbf{Dictionary Based Tokenization:}\\) In this method the tokens are found based on the tokens already existing in the dictionary. If the token is not found, then special rules are used to tokenize it. It is an advanced technique compared to whitespace tokenizer.
 
-- \\(\textbf{Rule Based Tokenization:}\\ In this technique, a set of rules are created for the specific problem. The tokenization is done based on the rules. For example creating rules bases on grammar for particular language.
+- \\(\textbf{Rule Based Tokenization:}\\) In this technique, a set of rules are created for the specific problem. The tokenization is done based on the rules. For example creating rules bases on grammar for particular language.
 
 
 #### Tokens to IDs mapping
@@ -258,7 +258,7 @@ Once we have tokens, we need to convert them to numerical values. This can done 
 ## 2.2 Preparing image data
 In the earlier section [1](#1-overview-of-the-search-system), we explained the goal is to design an image search system that retrieves images similar a user's text query, rank them based on their similarities to the text query, and then display them to the user. Since the model returns an image as output, we need to preprocess catalog images. The most common image preprocessing operations are [[1]](#references):
 
-- \\(\textbf{Resizing:}\\) Models usally require fixed image sizes (e.g. \(224 * 224\))
+- \\(\textbf{Resizing:}\\) Models usally require fixed image sizes (e.g. \\(224 * 224\\))
 - \\(\textbf{Scaling:}\\) Scale pixel values of each image to be in the range of 0 and 1
 - \\(\textbf{Z-score standardization:}\\) Scale pixel values to have a mean of 0 and variabce of 1
 - \\(\textbf{Consistent color mode:}\\) Ensure images have a consistent color mode (e.g. RGB or CMYK)
@@ -472,9 +472,9 @@ Ranking is a slower—but more precise—step to score and rank top candidates. 
 The goal of the training is to optimize the model parameters so that similar text query - image pairs have embeddings close to each other in the embedding space. Ranking can be modeled as a learning-to-rank or classification task, with the latter being more commonly seen. In this article, we are proposing using deep learning deep learning where the final output layer is a softmax over a catalog of images. We could also use a sigmoid predicting the likelihood of user interaction (e.g., click, purchase) for each query-image pair. The loss computation steps can be summarised as follows:
 
 - \\(\textbf{Generate embeddings:}\\) Use text and image encoders to generate the embeddings for the search query and catalog images.
-- \\(\textbf{Compute similarities: \\) Compute the similarities beetween the text query's embedding and the catalog image embeddings. There are different measures of similarites we could use and they have their pros and cons, examples include dot product, cosine similarity, euclidean distance among others. 
-- \\( \textbf{Softmax function: \\) This is applied over the computed distances to ensure the values sum up to one, by so doing we can interpret the similarity values as probabilities.
-- \\( \textbf{Cross-entropy: \\) Cross-entropy measures how close the predicted probabilities are to the ground trith labels. When the predicted probabilities are close to the ground truthm it shows the embeddings can distinguish the positive query-image pair from the negative ones.
+- \\(\textbf{Compute similarities:}\\) Compute the similarities beetween the text query's embedding and the catalog image embeddings. There are different measures of similarites we could use and they have their pros and cons, examples include dot product, cosine similarity, euclidean distance among others. 
+- \\(\textbf{Softmax function:}\\) This is applied over the computed distances to ensure the values sum up to one, by so doing we can interpret the similarity values as probabilities.
+- \\(\textbf{Cross-entropy:}\\) Cross-entropy measures how close the predicted probabilities are to the ground trith labels. When the predicted probabilities are close to the ground truthm it shows the embeddings can distinguish the positive query-image pair from the negative ones.
 
 Figure 2.1 visualises the system architecture, we see the model takes text query as input, produces embedding for this query, compute the similarity between this embedding and the embedding of each image in the catalog. 
 
@@ -513,25 +513,14 @@ This metric measures the ratio between the number of relevant images in the sear
      \text{recall@k} = \frac{\text{Number of relevant images among the top \\(k\\) images}}{\text{Total number of relevant images}} 
 \\]
 
-Since we are using contrastive learning (one similar query-image pair and other dissimilar images), the denominator (total number of relevant images)  is always 1. Hencee, we can surmise the recall@k formula is the following:
-
-\\[
-\left\{ 
-  \begin{array}{ c l }
-    \text{recall@\\(k\\)}=1 & \quad \textrm{if the relevant image is among the top \\(k\\) images} \\
-    0                 & \quad \textrm{otherwise}
-  \end{array}
-\right.
-\\]
-
-This metric measures a model's ability to find the associated image for a given text text query however, despite being intuitive and easy to derive, this metric is not without its faults which includes:
+Since we are using contrastive learning (one similar query-image pair and other dissimilar images), the denominator (total number of relevant images)  is always 1. Hence, we can surmise the recall@k formula is equal to 1 if the relevant image is among the top \\(k\\) images else it's 0. This metric measures a model's ability to find the associated image for a given text text query however, despite being intuitive and easy to derive, this metric is not without its faults which includes:
 
 - It depends on the choice of \\(k\\) and choosing the right \\(k\\) could be challenging.
 - When the relevant image is not among the \\(k\\) images in the output list, recall@k is always \\(0\\). For instance, suppose a model X ranks a relevant image at place 15, and another model Y ranks the same image at place 20. If we use recall@10 to measure the quality of both models, both would have a recall@10 = 0, even though model X is better than model Y. 
 
 
 ### Mean Reciprocal Rank (MRR)
-This metric measures the quality of the model by averaging the rank of the first relevant image in the search result where \\(m\\) is the total number of output lists and \\(rank\{i}\\) refers to the rank of the first relevant image in the \\(i^{th}\\) ranked output list.
+This metric measures the quality of the model by averaging the rank of the first relevant image in the search result where \\(m\\) is the total number of output lists and \\(rank_{i}\\) refers to the rank of the first relevant image in the \\(i^{th}\\) ranked output list.
 
 \\[
 MRR = \frac{1}{m} \sum_{i=1}^{m}\frac{1}{rank_{i}}
