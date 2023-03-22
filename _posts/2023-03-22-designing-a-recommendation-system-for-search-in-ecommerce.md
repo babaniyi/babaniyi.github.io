@@ -90,7 +90,7 @@ This technique is not based on machine-learning hence it is fast as there's no t
 
 
 ## 1.2. Image visual search
-This component outputs a list of images after receiving a text query as input. Based on how closely the text query and the image resemble each other, the images are ranked. **Representation learning** is a method that is frequently used to do this.
+This component outputs a list of images after receiving a text query as input. Based on how closely the text query and the image resemble each other, the images are ranked. <b>Representation learning</b> is a method that is frequently used to do this.
 
 In representation learning, a model is trained to turn data like images and texts into representations referred to as embeddings. Another way to describe it is that the model converts the images and text queries into points in the embedding space, an N-dimensional space. These embeddings are trained so that nearby embeddings in the embedding space exist for similar images [[1]](#references). 
 
@@ -229,38 +229,38 @@ As shown in Figure 1.7, text is typically represented asa numerical vector using
 </figure>
 
 
-#### **Text normalisation**
+#### Text normalisation
 Tokens are a basic meaningful unit of a sentence or a document. They can consist of words, phrases, subwords, or characters.
 Normalization is the process of converting a token into its base form. It is helpful in reducing the number of unique tokens present in the text, removing the variations in a text and cleaning it by removing redundant information. Basic methods for text normalization includes: converting all letters to lowercase to retain the meanings of words, trimming whitespaces, remove accent marks, lemmatization and stemming, removing punction marks, etc.
 
 
-#### **Tokenization**
-Tokenization is breaking the raw text into small chunks. Tokenization breaks the raw text into words, sentences called tokens. Tokenization helps in interpreting the meaning of the text by analyzing the sequence of the words. For example, the text *"Brown chelsea leather boots perfect for winter"* can be tokenized to *["Brown", "chelsea", "leather", "boots", "perfect", "for", "winter"]*. If the text is split into words using some separation technique it is called *word tokenization* and same separation done for sentences is called *sentence tokenization*. There are various tokenization techniques available which can be applicable based on the language and purpose of modeling, they include:
+#### Tokenization
+Tokenization is breaking the raw text into small chunks. Tokenization breaks the raw text into words, sentences called tokens. Tokenization helps in interpreting the meaning of the text by analyzing the sequence of the words. For example, the text `"Brown chelsea leather boots perfect for winter"` can be tokenized to `["Brown", "chelsea", "leather", "boots", "perfect", "for", "winter"]`. If the text is split into words using some separation technique it is called *word tokenization* and same separation done for sentences is called *sentence tokenization*. There are various tokenization techniques available which can be applicable based on the language and purpose of modeling, they include:
 
-- **Subword tokenization:** This process split text into subwords (n-gram characters). In this method, the most often used words are assigned distinctive identifiers, and the less frequently used terms are divided into smaller words that best express the meaning on their own. As an illustration, if the word *"dark"* occurs frequently in a text, it will be given a unique ID, but the terms *"darker"* and *"darkest"*, which are uncommon and appear less frequently in a text, will be divided into subwords such as "dark", "er", and "est". This aids in preventing the language model from learning "darker" and "darkest" as two distinct terms and enables the training process to detect the unknown words in the data set. There are various kinds of subword tokenization, including Byte-Pair Encoding (BPE), WordPiece, Unigram Language Model, SentencePiece.
+- <b>Subword tokenization:</b> This process split text into subwords (n-gram characters). In this method, the most often used words are assigned distinctive identifiers, and the less frequently used terms are divided into smaller words that best express the meaning on their own. As an illustration, if the word *"dark"* occurs frequently in a text, it will be given a unique ID, but the terms *"darker"* and *"darkest"*, which are uncommon and appear less frequently in a text, will be divided into subwords such as "dark", "er", and "est". This aids in preventing the language model from learning "darker" and "darkest" as two distinct terms and enables the training process to detect the unknown words in the data set. There are various kinds of subword tokenization, including Byte-Pair Encoding (BPE), WordPiece, Unigram Language Model, SentencePiece.
 
-- **White Space Tokenization:** In this process entire text is split into words by splitting them from whitespaces. This is the fastest tokenization technique but works only for languages like English in which the white space breaks apart the sentence into meaningful words.
+- <b>White Space Tokenization:</b> In this process entire text is split into words by splitting them from whitespaces. This is the fastest tokenization technique but works only for languages like English in which the white space breaks apart the sentence into meaningful words.
 
-- **Dictionary Based Tokenization:** In this method the tokens are found based on the tokens already existing in the dictionary. If the token is not found, then special rules are used to tokenize it. It is an advanced technique compared to whitespace tokenizer.
+- <b>Dictionary Based Tokenization:</b> In this method the tokens are found based on the tokens already existing in the dictionary. If the token is not found, then special rules are used to tokenize it. It is an advanced technique compared to whitespace tokenizer.
 
-- **Rule Based Tokenization:** In this technique, a set of rules are created for the specific problem. The tokenization is done based on the rules. For example creating rules bases on grammar for particular language.
+- <b>Rule Based Tokenization:</b> In this technique, a set of rules are created for the specific problem. The tokenization is done based on the rules. For example creating rules bases on grammar for particular language.
 
 
-#### **Tokens to IDs mapping**
+#### Tokens to IDs mapping
 Once we have tokens, we need to convert them to numerical values. This can done using Lookup table or hashing.
 
-- **Lookup table:** In this method, each unique token is mapped to an ID. Next, a lookup table is created to store these 1:1 mappings. Lookup tables has its strengths which includes speed as it is easy to convert tokens to IDs and also convert the IDs back to tokens using a reverse index table. However, downside is that it stores the table in a memory hence having a large number of tokens requires huge memory space. Also, it cannot handle new or unseen words properly.
+- <b>Lookup table:</b> In this method, each unique token is mapped to an ID. Next, a lookup table is created to store these 1:1 mappings. Lookup tables has its strengths which includes speed as it is easy to convert tokens to IDs and also convert the IDs back to tokens using a reverse index table. However, downside is that it stores the table in a memory hence having a large number of tokens requires huge memory space. Also, it cannot handle new or unseen words properly.
 
-- **Hashing:** Compared to lookup tables, hashing also known as "feature hashing", or "hashing trick" is a memory efficient method that uses hash function to obtain IDs, without keeping a lookup table. We know that as models are trained with corpus with larger sizes, it produces vocabularies that take more and more memory space to store [[6]](#references). For efficiency purposes, these lookup tables are stored in RAM for quick token-id mapping and can slow down the operations once their size gets too big. By using a hashing, we can get rid of such memory-consuming vocabularies entirely and a hash function is used for token-id mapping instead. With a given string, a hash function is capable of returning a numerical value, a hash value, that’s unique to that string and use it as token id. Since there’s no fix-sized vocabulary involved, all tokens can now be assigned to a number, no matter the model has seen it before or not [[6]](#references). The downside is that after hashing, we cannot convert IDs back to tokens.
+- <b>Hashing:</b> Compared to lookup tables, hashing also known as "feature hashing", or "hashing trick" is a memory efficient method that uses hash function to obtain IDs, without keeping a lookup table. We know that as models are trained with corpus with larger sizes, it produces vocabularies that take more and more memory space to store [[6]](#references). For efficiency purposes, these lookup tables are stored in RAM for quick token-id mapping and can slow down the operations once their size gets too big. By using a hashing, we can get rid of such memory-consuming vocabularies entirely and a hash function is used for token-id mapping instead. With a given string, a hash function is capable of returning a numerical value, a hash value, that’s unique to that string and use it as token id. Since there’s no fix-sized vocabulary involved, all tokens can now be assigned to a number, no matter the model has seen it before or not [[6]](#references). The downside is that after hashing, we cannot convert IDs back to tokens.
 
 
 ## 2.2 Preparing image data
 In the earlier section [1](#1-overview-of-the-search-system), we explained the goal is to design an image search system that retrieves images similar a user's text query, rank them based on their similarities to the text query, and then display them to the user. Since the model returns an image as output, we need to preprocess catalog images. The most common image preprocessing operations are [[1]](#references):
 
-- **Resizing:** Models usally require fixed image sizes (e.g. $224 * 224$)
-- **Scaling:** Scale pixel values of each image to be in the range of 0 and 1
-- **Z-score standardization:** Scale pixel values to have a mean of 0 and variabce of 1
-- **Consistent color mode:** Ensure images have a consistent color mode (e.g. RGB or CMYK)
+- <b>Resizing:</b> Models usally require fixed image sizes (e.g. $224 * 224$)
+- <b>Scaling:</b> Scale pixel values of each image to be in the range of 0 and 1
+- <b>Z-score standardization:</b> Scale pixel values to have a mean of 0 and variabce of 1
+- <b>Consistent color mode:</b> Ensure images have a consistent color mode (e.g. RGB or CMYK)
 
 
 
@@ -285,14 +285,14 @@ A typical text encoder's input and output are shown in Figure 1.8.
 
 The text encoder converts texts into a vector representation. For example, if two separate sentencs have similar meanings, their embeddings are more similar. To build the text encoder, two broad categories are widely available: *statistical methods* and *machine learning based methods*. 
 
-### **Statistical methods**
+### Statistical methods
 These methods rely on statistics to convert meaningful text into number (vector) representation. Three popular methods are:
 - Index-Based Encoding
 - Bag of Words (BoW)
 - Term Frequency Inverse Document Frequency (TF-IDF)
 
-**Index-Based Encoding**. 
-As the name implies requires all the unique words in a document, then it assigns an index. For instance, suppose we have the following 3 sentences namely *["Men's long-sleeve summer flannel shirt", "White cotton polo", "Women blouse perfect for winter"]*. Then our corpus (collection of unique words in a document) would look like this *["men", "long-sleeve", "summer", "flannel", "shirt", "white", "cotton", "polo", "women", "blouse", "perfect", "for", "winter"]*
+<b>Index-Based Encoding</b>.
+As the name implies requires all the unique words in a document, then it assigns an index. For instance, suppose we have the following 3 sentences namely `["Men's long-sleeve summer flannel shirt", "White cotton polo", "Women blouse perfect for winter"]`. Then our corpus (collection of unique words in a document) would look like this `["men", "long-sleeve", "summer", "flannel", "shirt", "white", "cotton", "polo", "women", "blouse", "perfect", "for", "winter"]`.
 
 We assign an index to each word like: "men": 1, "cotton": 2, "summer":3, "white": 4, "polo": 5 and so on. Now that we have assigned a unique index to all the words so that based on the index we can uniquely identify them and replace the words in each sentence with their respective indexes. The text query *"White cotton polo"* becomes [4, 2, 5] which is understandable to any machine.
 
@@ -302,15 +302,15 @@ Now as we can see the first sentence (*"Men's long-sleeve summer flannel shirt"*
 
 To add the extra word, recall while assigning indexes we started from $1$ not $0$. We use $0$ as our padding index. This also means that we are appending nothing to our actual sentence as 0 doesn’t represent any specific word, hence the integrity of our sentences are intact
 
-**Bag of Words (BoW)**. BoW is another form of encoding where we use the whole data corpus to encode our sentences. BoW models sentence-word occurreences by creating a matrix with rows representing senetences and columns representing word appearance or frequencies.
+<b>Bag of Words (BoW)</b>. BoW is another form of encoding where we use the whole data corpus to encode our sentences. BoW models sentence-word occurreences by creating a matrix with rows representing senetences and columns representing word appearance or frequencies.
 
 Suppose, our data corpus consist of the following:
 
 <center>["men", "long-sleeve", "summer", "flannel", "shirt", "white", "cotton", "polo", "women", "blouse", "perfect", "for", "winter"] </center>
 
 There are 2 kinds of BoW:
-1. Binary BoW: We encode 1 or 0 for each word appearing or non-appearing in the sentence. We do consider the frequency of the word appearing in that sentence.
-2. BoW: We consider the frequency of each word occurring in that sentence.
+1. <b>Binary BoW:</b> We encode 1 or 0 for each word appearing or non-appearing in the sentence. We do consider the frequency of the word appearing in that sentence.
+2. <b>BoW:</b> We consider the frequency of each word occurring in that sentence.
 
 An example of BoW is shown in Table 1.3
 
@@ -400,7 +400,7 @@ BoW is a simple method that computes sentence representations fast, but has the 
 - The obtained representation does not capture the semantic and contextual meaning of the sentence. For exampole, two sentences with the same meaning but different words have a totally different represntation.
 - The representation vector is sparse. The size of the representation vector is equal to the total number of unique tokens we have. This number is usually large, so each sentem¡nce is mostly filled with zeroes.
 
-**Term Frequency Inverse Document Frequency (TF-IDF)**. In this method, we give every word a relative frequency coding with respect to the current sentence and the whole document [[7]](#references)
+<b>Term Frequency Inverse Document Frequency (TF-IDF)</b>. In this method, we give every word a relative frequency coding with respect to the current sentence and the whole document [[7]](#references)
 
 Term Frequency: Is the occurrence of the current word in the current sentence with respect to the total number of words in the current sentence.
 
@@ -415,16 +415,16 @@ TF-IDF is a numerical statistic intended to reflect how important a word is to a
 In summary, statistical methods for text encoding are usually fast however they do not capture the contextual meaning of sentences. ML-based methods which we will discuss next address these issues.
 
 
-### **Machine learning-based methods**
+### Machine learning-based methods
 In these methods, an ML model converts sentences into meaningful word embeddings so that the distance between two embeddings reflects the semantic similarity of the corresponding words. For example, if two words such as "cotton" and "wool", are semantically similar, their embeddings are close in the embedding space.
 
 There are various ML-based approaches for transforming texts into word embeddings, examples include: Word2Vec, GloVe, Transformer-based architectures.
 
-**Word2Vec:** word2vec [[8]](#references) is not a singular algorithm, rather, it is a family of model architectures and optimizations that can be used to learn word embeddings from large datasets. Word2vec is a shallow, two-layer Artificial Neural Network that processes text by converting them into numeric "vectorized" words. It’s input is a large word corpus and output a vector space, usually hundreds of dimensions, with each unique word in the corpus represented with that vector space generated. It is used to reconstruct linguistic contexts of words into numbers. Word vectors are positioned in the vector space in such a way that the words that share common contexts are located in close proximity to one another in that multidimensional space, in layman terms the words that almost mean the same will be placed together.
+<b>Word2Vec:</b> word2vec [[8]](#references) is not a singular algorithm, rather, it is a family of model architectures and optimizations that can be used to learn word embeddings from large datasets. Word2vec is a shallow, two-layer Artificial Neural Network that processes text by converting them into numeric "vectorized" words. It’s input is a large word corpus and output a vector space, usually hundreds of dimensions, with each unique word in the corpus represented with that vector space generated. It is used to reconstruct linguistic contexts of words into numbers. Word vectors are positioned in the vector space in such a way that the words that share common contexts are located in close proximity to one another in that multidimensional space, in layman terms the words that almost mean the same will be placed together.
 
 There are two methods for learning representations of words in word2vec:
 - <b>Continuous bag-of-words model:</b> predicts the middle word based on surrounding context words. The context consists of a few words before and after the current (middle) word. This architecture is called a bag-of-words model as the order of words in the context is not important.
-- <b>Continuous skip-gram model:<b> predicts words within a certain range before and after the current word in the same sentence. 
+- <b>Continuous skip-gram model:</b> predicts words within a certain range before and after the current word in the same sentence. 
 
 We will not explain in detail the other ML-based approaches for transforming texts.
 
@@ -442,7 +442,7 @@ For encoding images, we propose using neural networks because it has proven to b
 
 
 ## 3.2. Model Training
-In order to retrieve images similar to the text query, a model must learn representations (embedding) during training. In this section, we discuss how to train the text and image encoder using **contrastive learning** [[10]](#references). In this approach, we train a model to distinguish between similar `<text query, image>` pair from dissimilar ones. In other words, we provide the model with a *<text query, image>* pair, one similar pair , and a few disimilar pair. During training, the model learns to produce representations in which similar text query - image pair resemble the pair, than other pairs.
+In order to retrieve images similar to the text query, a model must learn representations (embedding) during training. In this section, we discuss how to train the text and image encoder using <b>contrastive learning</b> [[10]](#references). In this approach, we train a model to distinguish between similar `<text query, image>` pair from dissimilar ones. In other words, we provide the model with a *<text query, image>* pair, one similar pair , and a few disimilar pair. During training, the model learns to produce representations in which similar text query - image pair resemble the pair, than other pairs.
 
 
 ### Constructing the dataset
@@ -460,8 +460,8 @@ As described earlier, each data point used for training contains a query-image p
 
 To construct a data point, we randomly choose a text query - image pair and $n-1$ negative text queries since our input is the text query. To select a positive image, we have the following options:
 
-- **Use human judgement:** Here, we rely on humans manually finding similar search query-image pairs. The advantage is that we have accurate correctly labelled data however it is time-consuming and expensive.
-- **Use interactions such as user clicks, purchases as proxy for similarity:** This approach does not require manual and can generate data automatically when a user interacts (clicks, purchase) an image. We assume similarity is based on interaction dara and the interacted image is similar to the search query. However, interactions data is very noisy as users sometimes click on images even when it is not similar to thee text query. Also, the data is very sparse and these problems in turn leads to poor performance.
+- <b>Use human judgement:</b> Here, we rely on humans manually finding similar search query-image pairs. The advantage is that we have accurate correctly labelled data however it is time-consuming and expensive.
+- <b>Use interactions such as user clicks, purchases as proxy for similarity:</b> This approach does not require manual and can generate data automatically when a user interacts (clicks, purchase) an image. We assume similarity is based on interaction dara and the interacted image is similar to the search query. However, interactions data is very noisy as users sometimes click on images even when it is not similar to thee text query. Also, the data is very sparse and these problems in turn leads to poor performance.
 
 
 ## 3.3 Ranking and loss computation
@@ -470,10 +470,10 @@ Ranking is a slower—but more precise—step to score and rank top candidates. 
 ### Loss function selection
 The goal of the training is to optimize the model parameters so that similar text query - image pairs have embeddings close to each other in the embedding space. Ranking can be modeled as a learning-to-rank or classification task, with the latter being more commonly seen. In this article, we are proposing using deep learning deep learning where the final output layer is a softmax over a catalog of images. We could also use a sigmoid predicting the likelihood of user interaction (e.g., click, purchase) for each query-image pair. The loss computation steps can be summarised as follows:
 
-- **Generate embeddings:** Use text and image encoders to generate the embeddings for the search query and catalog images.
-- **Compute similarities:** Compute the similarities beetween the text query's embedding and the catalog image embeddings. There are different measures of similarites we could use and they have their pros and cons, examples include dot product, cosine similarity, euclidean distance among others. 
-- **Softmax function:** This is applied over the computed distances to ensure the values sum up to one, by so doing we can interpret the similarity values as probabilities.
-- **Cross-entropy:** Cross-entropy measures how close the predicted probabilities are to the ground trith labels. When the predicted probabilities are close to the ground truthm it shows the embeddings can distinguish the positive query-image pair from the negative ones.
+- <b>Generate embeddings:</b> Use text and image encoders to generate the embeddings for the search query and catalog images.
+- <b>Compute similarities:</b> Compute the similarities beetween the text query's embedding and the catalog image embeddings. There are different measures of similarites we could use and they have their pros and cons, examples include dot product, cosine similarity, euclidean distance among others. 
+- <b>Softmax function:</b> This is applied over the computed distances to ensure the values sum up to one, by so doing we can interpret the similarity values as probabilities.
+- <b>Cross-entropy:</b> Cross-entropy measures how close the predicted probabilities are to the ground trith labels. When the predicted probabilities are close to the ground truthm it shows the embeddings can distinguish the positive query-image pair from the negative ones.
 
 Figure 2.1 visualises the system architecture, we see the model takes text query as input, produces embedding for this query, compute the similarity between this embedding and the embedding of each image in the catalog. 
 
@@ -532,7 +532,7 @@ $$
 MRR = \frac{1}{m} \sum_{i=1}^{m}\frac{1}{rank_{i}}
 $$
 
-This metric adrresses the limitations of recall@k and can be used as our **offline metric**.
+This metric adrresses the limitations of recall@k and can be used as our <b>offline metric</b>.
 
 ## 4.2. Online metrics
 In this section, we explore some commonly used online metrics for measuring how quickly users can discover product images they like. Online metrics are metrics tied to a user's activity that can be translated to business outcomes, they include click-through rate (CTR), average duration spent on suggested images, average revenue from suggested images, etc.
