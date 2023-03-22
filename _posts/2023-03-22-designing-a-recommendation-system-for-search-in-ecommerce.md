@@ -21,7 +21,7 @@ The number of products available on ecommerce platforms like Amazon, Alibaba, Eb
 The system that does this hardlifting is my focus in this article, that is, I explain how to design a product search system similar to the one used by leading e-commerce platforms that takes a user's text query and returns a list of images that are relevant to the text query.
 
 --- -->
-On e-commerce sites like Amazon, there may be millions of different products to choose from. For instance, a customer on Amazon could type in *"casual shirt for summer"* and receive a list of available shirts. A system has been set up in the background that retrieves images related to the user's query, ranks them according to their similarity to the query, and then shows them to the user.
+On e-commerce sites like Amazon, there may be millions of different products to choose from. For instance, a customer on Amazon could type in `"casual shirt for summer"` and receive a list of available shirts. A system has been set up in the background that retrieves images related to the user's query, ranks them according to their similarity to the query, and then shows them to the user.
 
 In this post, I describe how to create a search system that works in a manner similar to that of e-commerce platforms by taking a user's text query and returning a list of relevant product images.
 
@@ -55,6 +55,7 @@ As shown in Figure 1.2, the search system takes a text query as input and output
     </center>
     <figcaption><center> Figure 1.2: Image search system's input-output </center></figcaption>
 </figure>
+
 
 This kind of problem is known as a ranking problem. In general, the goal of ranking problems is to rank a collection of items such as images, websites, products, etc., based on their relevance to a query, so that more relevant items appear higher in the search results. Many ML applications, such as recommendation systems, search engines, document retrieval, and online advertising, can be framed as ranking problems. 
 
@@ -122,10 +123,35 @@ We assume we are given an annotated dataset to train and evaluate the model. We 
 ### 2.1.1. Images
 The system stores catalog items and their metadata. Table 1.1 shows a simplified example of image metadata
 
+<!-- ---
 | Image ID    | Upload time |  Manual tags|
 | ----------- | ----------- | -----------|  
 | 10          | 105743135 | cotton, polo
 | 193          | 1958351341 | long-sleeve, flannel, polyester
+--->
+
+<table>
+  <thead>
+    <tr>
+      <th>Image ID</th>
+      <th>Upload time</th>
+      <th>Manual tags</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10</td>
+      <td>105743135</td>
+      <td>cotton, polo</td>
+    </tr>
+    <tr>
+      <td>193</td>
+      <td>1958351341</td>
+      <td>long-sleeve, flannel, polyester</td>
+    </tr>
+  </tbody>
+</table>
+
 Table 1.1: Image metadata 
 
 
@@ -133,13 +159,57 @@ Table 1.1: Image metadata
 Many kinds of user interactions are contained in interaction data. The type of queries users enter and their interactions with it may be revealed by this kind of data. Clicks, impressions, and purchases (conversion, add-to-cart, etc.) are the three main sorts of interactions, albeit they could be noisy. Table 1.2 displays a condensed example of user-image interaction metadata; we shall discuss this further.
 
 
-
+<!-- ---
 |  User ID      | Text query |  Displayed image ID | Interaction type | Timestamp |
 | -----------   | -----------    | -----------     |    -----------   | ----------- |
 | 10            | White cotton polo |  9   | Click | 1658451365 
 | 193           | Men's long sleeve summer flannel shirt |  15  | Click | 1648452360 
 | 104           | Women blouse perfect for winter|  7543  | Purchase | 1748452261
 | 1345          |Children christmas wear for winter with red cap |  15  | Click | 1848451367
+<center> Table 1.2: User-image interaction data </center>
+--->
+
+<table>
+  <thead>
+    <tr>
+      <th>User ID</th>
+      <th>Text query</th>
+      <th>Displayed image ID</th>
+      <th>Interaction type</th>
+      <th>Timestamp</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10</td>
+      <td>White cotton polo</td>
+      <td>9</td>
+      <td>Click</td>
+      <td>1658451365</td>
+    </tr>
+    <tr>
+      <td>193</td>
+      <td>Men's long sleeve summer flannel shirt</td>
+      <td>15</td>
+      <td>Click</td>
+      <td>1648452360</td>
+    </tr>
+    <tr>
+      <td>104</td>
+      <td>Women blouse perfect for winter</td>
+      <td>7543</td>
+      <td>Purchase</td>
+      <td>1748452261</td>
+    </tr>
+    <tr>
+      <td>1345</td>
+      <td>Children christmas wear for winter with red cap</td>
+      <td>15</td>
+      <td>Click</td>
+      <td>1848451367</td>
+    </tr>
+  </tbody>
+</table>
 <center> Table 1.2: User-image interaction data </center>
 
 
@@ -244,14 +314,86 @@ There are 2 kinds of BoW:
 An example of BoW is shown in Table 1.3
 
 
-
+<!-- ---
 |                                           | men | long-sleeve | summer| flannel | shirt | white| cotton | polo| women |blouse | perfect | for | winter |
 | --------                                  | --- | --- |---| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | men's long-sleeve summer flannel shirt    | 1| 1| 1| 1 | 1 | 0| 0 | 0| 0 | 0 | 0 | 0 | 0 |
 | women white cotton polo shirt             | 0| 0| 0| 0 | 1 | 1| 1 | 1| 1 | 0 | 0 | 0 | 0 |
 | for women cotton blouse perfect for winter   | 0| 0| 0| 0 | 0 | 0| 1 | 0| 1 | 1 | 1 | 2 | 1 |
 <center> Table 1.3: BoW representatiion of different sentences </center>
+--->
 
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>men</th>
+      <th>long-sleeve</th>
+      <th>summer</th>
+      <th>flannel</th>
+      <th>shirt</th>
+      <th>white</th>
+      <th>cotton</th>
+      <th>polo</th>
+      <th>women</th>
+      <th>blouse</th>
+      <th>perfect</th>
+      <th>for</th>
+      <th>winter</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>men's long-sleeve summer flannel shirt</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>women white cotton polo shirt</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>for women cotton blouse perfect for winter</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>2</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+
+<center> Table 1.3: BoW representatiion of different sentences </center>
+
+<br>
 BoW is a simple method that computes sentence representations fast, but has the following limitations [[1]](#references):
 - It does not consider the order of words in a sentence. For example, *"fitted shirts for tall men"* and *"tall men for fitted shirts"* would have the same BoW representation
 - The obtained representation does not capture the semantic and contextual meaning of the sentence. For exampole, two sentences with the same meaning but different words have a totally different represntation.
@@ -499,13 +641,13 @@ To cite this content, please use:
 
 # References
 1. Ali Aminian & Alex Xu (2023). Machine Learning System Design Interview.
-2. Full Text Search with MongoDB. https://www.mongodb.com/basics/full-text-search
-3. How To Improve Database Searches with Full-Text Search. https://www.digitalocean.com/community/tutorials/how-to-improve-database-searches-with-full-text-search-in-mysql-5-6-on-ubuntu-16-04
-4. Elastic Search. https://www.elastic.co/elasticsearch
-5. Preprocessing text data. https://huggingface.co/docs/transformers/preprocessing
-6. An Overview of Text Representation in NLP. https://towardsdatascience.com/an-overview-for-text-representations-in-nlp-311253730af1
-7. NLP text encoding. https://medium.com/analytics-vidhya/nlp-text-encoding-a-beginners-guide-fa332d715854#:~:text=Text%20encoding%20is%20a%20process,out%20the%20context%20of%20sentences.
-8. Word2Vec.https://www.tensorflow.org/tutorials/text/word2vec
-9. ResNet. https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html
-10. A Simple Framework for Contrastive Learning of Visual Representations. https://arxiv.org/abs/2002.05709
-11. Yan, Ziyou. (Jun 2021). System Design for Recommendations and Search. eugeneyan.com. https://eugeneyan.com/writing/system-design-for-discovery/.
+2. [Full Text Search with MongoDB](https://www.mongodb.com/basics/full-text-search)
+3. [How To Improve Database Searches with Full-Text Search](https://www.digitalocean.com/community/tutorials/how-to-improve-database-searches-with-full-text-search-in-mysql-5-6-on-ubuntu-16-04)
+4. [Elastic Search](https://www.elastic.co/elasticsearch)
+5. [Preprocessing text data](https://huggingface.co/docs/transformers/preprocessing)
+6. [An Overview of Text Representation in NLP](https://towardsdatascience.com/an-overview-for-text-representations-in-nlp-311253730af1)
+7. [NLP text encoding](https://medium.com/analytics-vidhya/nlp-text-encoding-a-beginners-guide-fa332d715854#:~:text=Text%20encoding%20is%20a%20process,out%20the%20context%20of%20sentences.)
+8. [Word2Vec](https://www.tensorflow.org/tutorials/text/word2vec)
+9. [ResNet](https://www.cv-foundation.org/openaccess/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html)
+10. [A Simple Framework for Contrastive Learning of Visual Representations](https://arxiv.org/abs/2002.05709)
+11. [Yan, Ziyou. (Jun 2021). System Design for Recommendations and Search](https://eugeneyan.com/writing/system-design-for-discovery/.)
