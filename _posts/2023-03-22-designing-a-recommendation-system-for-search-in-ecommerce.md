@@ -627,7 +627,7 @@ To cite this content, please use:
   journal = {babaniyi.com},
   year    = {2023},
   month   = {Mar},
-  url     = {https://babaniyi.com/2023/03/22/writing/system-design-for-search-ecommerce}
+  url     = {https://www.babaniyi.com/2023/03/22/designing-a-recommendation-system-for-search-in-ecommerce.html}
 }
 ```
 
