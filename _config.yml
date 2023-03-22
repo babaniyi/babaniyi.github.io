@@ -70,7 +70,6 @@ disqus:
 
 url: https://babaniyi.github.io
 
-markdown: spaceship
 
 plugins:
  - jekyll-feed
