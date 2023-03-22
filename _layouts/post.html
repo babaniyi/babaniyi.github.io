@@ -33,8 +33,8 @@ layout: default
       </span>
   </header>
 
+
   <span class="ert">
-    <i class="fas fa-bookmark"></i> 
     <abbr title="Estimated reading time">Est. reading time</abbr>
     {% assign words_total = page.content | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
     {% assign words_without_code = page.content | replace: '<pre class="highlight">', '<!--' | replace: '</pre>', '-->' | replace: '<script type="math/tex">', '' | replace: '<script type="math/tex; mode=display">', '' | replace: '</script>', '' | strip_html | number_of_words %}
@@ -47,6 +47,7 @@ layout: default
 
     {% assign ert = words | divided_by:250 | at_least: 1 %}
     {{ ert }} minute{% if ert != 1 %}s{% endif %}
+    <br/>
   </span>
   
 
