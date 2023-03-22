@@ -35,6 +35,7 @@ In this post, I describe how to create a search system that works in a manner si
     <figcaption><center> Figure 1.1: Searching images with a text query </center></figcaption>
 </figure>
 
+
 ## Basic requirements
 To summarize the problem statement, we are designing an image search system that retrieves images similar to the user query, ranks them based on their similarities to the text query, and then displays them to the user. For simplicity, we make some basic assumptions which includes:
 
@@ -45,7 +46,7 @@ To summarize the problem statement, we are designing an image search system that
 
 
 # 1. Overview of the search system
-As shown in Figure 1.2 below, the search system takes a text query as input and outputs a ranked list of images sorted by their relevance to the text query.
+As shown in Figure 1.2, the search system takes a text query as input and outputs a ranked list of images sorted by their relevance to the text query.
 
 <figure>
     <center>
@@ -183,7 +184,7 @@ Once we have tokens, we need to convert them to numerical values. This can done 
 
 
 ## 2.2 Preparing image data
-In the earlier section [1](#1-overview-of-the-search-system), we explained the goal is to design an image search system that retrieves images similar a user's text query, rank them based on their similarities to the text query, and then display them to the user. Since the model returns an image as output, we need to preprocess catalod images. The most common image preprocessing operations are [[1]](#references):
+In the earlier section [1](#1-overview-of-the-search-system), we explained the goal is to design an image search system that retrieves images similar a user's text query, rank them based on their similarities to the text query, and then display them to the user. Since the model returns an image as output, we need to preprocess catalog images. The most common image preprocessing operations are [[1]](#references):
 
 - **Resizing:** Models usally require fixed image sizes (e.g. $224 * 224$)
 - **Scaling:** Scale pixel values of each image to be in the range of 0 and 1
@@ -196,7 +197,7 @@ In the earlier section [1](#1-overview-of-the-search-system), we explained the g
 # 3. Model Development
 
 ## 3.1. Embedding Model Selection
-As discussed in the [Overview of the search system](#1-overview-of-the-search-system) and visualised in [Figure 1.6](#12-image-visual-search), text queries are converted into emebeddings by a text encoder, and images are converted  into embeddings by an image encoder. In this section, we examine possible model architectures for each encoder.
+As discussed in the [Overview of the search system](#1-overview-of-the-search-system) and visualised in [Figure 1.6](#12-image-visual-search), text queries are converted into embeddings by a text encoder, and images are converted  into embeddings by an image encoder. In this section, we examine possible model architectures for each encoder.
 
 
 
@@ -211,7 +212,7 @@ A typical text encoder's input and output are shown in Figure 1.8.
         <figcaption> <center>Figure 1.8: Text encoder's input-output </center></figcaption>
 </figure>
 
-The text encoder converts text into a vector representation. For example, if two separate sentencs have similar meanings, their embeddings are mote similar. To build the text encoder, two broad categories are widely available: *statistical methods* and *machine learning based methods*. 
+The text encoder converts texts into a vector representation. For example, if two separate sentencs have similar meanings, their embeddings are more similar. To build the text encoder, two broad categories are widely available: *statistical methods* and *machine learning based methods*. 
 
 ### **Statistical methods**
 These methods rely on statistics to convert meaningful text into number (vector) representation. Three popular methods are:
@@ -222,7 +223,7 @@ These methods rely on statistics to convert meaningful text into number (vector)
 **Index-Based Encoding**. 
 As the name implies requires all the unique words in a document, then it assigns an index. For instance, suppose we have the following 3 sentences namely *["Men's long-sleeve summer flannel shirt", "White cotton polo", "Women blouse perfect for winter"]*. Then our corpus (collection of unique words in a document) would look like this *["men", "long-sleeve", "summer", "flannel", "shirt", "white", "cotton", "polo", "women", "blouse", "perfect", "for", "winter"]*
 
-Then we assign an index to each word like: "men": 1, "cotton": 2, "summer":3, "white": 4, "polo": 5 and so on. Now that we have assigned a unique index to all the words so that based on the index we can uniquely identify them and replace the words in each sentence with their respective indexes. The text query *"White cotton polo"* becomes [4, 2, 5] which is understandable to any machine.
+We assign an index to each word like: "men": 1, "cotton": 2, "summer":3, "white": 4, "polo": 5 and so on. Now that we have assigned a unique index to all the words so that based on the index we can uniquely identify them and replace the words in each sentence with their respective indexes. The text query *"White cotton polo"* becomes [4, 2, 5] which is understandable to any machine.
 
 But there is an issue which needs to be addressed first and that is the consistency of the input. Our input needs to be of the same length as our model, it cannot vary. It might vary in the real world but needs to be taken care of when we are using it as input to our model.
 
@@ -271,7 +272,7 @@ TF-IDF is a numerical statistic intended to reflect how important a word is to a
 In summary, statistical methods for text encoding are usually fast however they do not capture the contextual meaning of sentences. ML-based methods which we will discuss next address these issues.
 
 
-### **ML-based methods**
+### **Machine learning-based methods**
 In these methods, an ML model converts sentences into meaningful word embeddings so that the distance between two embeddings reflects the semantic similarity of the corresponding words. For example, if two words such as "cotton" and "wool", are semantically similar, their embeddings are close in the embedding space.
 
 There are various ML-based approaches for transforming texts into word embeddings, examples include: Word2Vec, GloVe, Transformer-based architectures.
@@ -280,7 +281,7 @@ There are various ML-based approaches for transforming texts into word embedding
 
 There are two methods for learning representations of words in word2vec:
 - Continuous bag-of-words model: predicts the middle word based on surrounding context words. The context consists of a few words before and after the current (middle) word. This architecture is called a bag-of-words model as the order of words in the context is not important.
-- Continuous skip-gram model: predicts words within a certain range before and after the current word in the same sentence. A worked example of this is given below.
+- Continuous skip-gram model: predicts words within a certain range before and after the current word in the same sentence. 
 
 We will not explain in detail the other ML-based approaches for transforming texts.
 
@@ -300,12 +301,13 @@ For encoding images, we propose using neural networks because it has proven to b
 ## 3.2. Model Training
 In order to retrieve images similar to the text query, a model must learn representations (embedding) during training. In this section, we discuss how to train the text and image encoder using **contrastive learning** [[10]](#references). In this approach, we train a model to distinguish between similar `<text query, image>` pair from dissimilar ones. In other words, we provide the model with a *<text query, image>* pair, one similar pair , and a few disimilar pair. During training, the model learns to produce representations in which similar text query - image pair resemble the pair, than other pairs.
 
-### **Constructing the dataset**
-As described earlier, each data point used for training contains a query-image pair, a positive query-image pair that's similar to the pair, and $n-1$ negative pairs that are dissimilar to the pair. The ground truth label of the data point is thee index of the positive text query-image pair. As Figure 2.0 depicts, along with a query-image pair ($q$), we have $n$ other images of which one is similar to the $q$ (casual men's beach summer shirt) and the other $n-1$ images are dissimilar. The ground truth label for this data point is the index of the positive image, which is $3$ (the third image among the $n$ images in Figure 2.0)
+
+### Constructing the dataset
+As described earlier, each data point used for training contains a query-image pair, a positive query-image pair that's similar to the pair, and $n-1$ negative pairs that are dissimilar to the pair. The ground truth label of the data point is the index of the positive text query-image pair. As Figure 2.0 depicts, along with a query-image pair ($q$), we have $n$ other images of which one is similar to the $q$ (casual men's beach summer shirt) and the other $n-1$ images are dissimilar. The ground truth label for this data point is the index of the positive image, which is $3$ (the third image among the $n$ images in Figure 2.0)
 
 <figure>
      <center>
-        <img src="../images/blogs/img_search_text_training_data.png" 
+        <img src="../images/blogs/img_search_text_training_data_2.png" 
          alt="Training data point">
     </center>
         <figcaption> <center>Figure 2.0: Training data point </center></figcaption>
@@ -313,24 +315,24 @@ As described earlier, each data point used for training contains a query-image p
 
 
 
-To construct a data point, we randomly choose a text query - image pair and $n-1$ negative text queries since our input is the text query. To select a positive image, we have the following three options:
+To construct a data point, we randomly choose a text query - image pair and $n-1$ negative text queries since our input is the text query. To select a positive image, we have the following options:
 
-- Use human judgement: Here, we rely on humans manually finding similar search query-image pairs. The advantage is that we have accurate correctly labelled data however it is time-consuming and expensive.
-- Use interactions such as user clicks, purchases as proxy for similarity: This approach does not require manual and can generate data automatically when a user interacts (clicks, purchase) an image. We assume similarity is based on interaction dara and the interacted image is similar to the search query. However, interactions data is very noisy as users sometimes click on images even when it is not similar to thee text query. Also, the data is very sparse and these problems in turn leads to poor performance.
+- **Use human judgement:** Here, we rely on humans manually finding similar search query-image pairs. The advantage is that we have accurate correctly labelled data however it is time-consuming and expensive.
+- **Use interactions such as user clicks, purchases as proxy for similarity:** This approach does not require manual and can generate data automatically when a user interacts (clicks, purchase) an image. We assume similarity is based on interaction dara and the interacted image is similar to the search query. However, interactions data is very noisy as users sometimes click on images even when it is not similar to thee text query. Also, the data is very sparse and these problems in turn leads to poor performance.
 
 
 ## 3.3 Ranking and loss computation
 Ranking is a slower—but more precise—step to score and rank top candidates. As we’re processing fewer items (i.e., hundreds instead of millions), we have room to add features that would have been infeasible in the retrieval step (due to compute and latency constraints). Such features include item and user data, and contextual information. We can also use more sophisticated models with more layers and parameters [[11]](#references).
 
-### **Loss function selection**
-The goal of the training is to optimize the model parameters so that similar text query - image pairs have embeddings close to each other in the embedding space. Ranking can be modeled as a learning-to-rank or classification task, with the latter being more commonly seen. In this article, we are proposing using deep learning deep learning where the final output layer is a softmax over a catalog of images. We could aslo use a sigmoid predicting the likelihood of user interaction (e.g., click, purchase) for each query-image pair. The loss computation steps can be summarised as follows:
+### Loss function selection
+The goal of the training is to optimize the model parameters so that similar text query - image pairs have embeddings close to each other in the embedding space. Ranking can be modeled as a learning-to-rank or classification task, with the latter being more commonly seen. In this article, we are proposing using deep learning deep learning where the final output layer is a softmax over a catalog of images. We could also use a sigmoid predicting the likelihood of user interaction (e.g., click, purchase) for each query-image pair. The loss computation steps can be summarised as follows:
 
 - **Generate embeddings:** Use text and image encoders to generate the embeddings for the search query and catalog images.
-- **Compute similarities:** Compute the similarities beetween the text query's embedding and the catalog image embeddings 
+- **Compute similarities:** Compute the similarities beetween the text query's embedding and the catalog image embeddings. There are different measures of similarites we could use and they have their pros and cons, examples include dot product, cosine similarity, euclidean distance among others. 
 - **Softmax function:** This is applied over the computed distances to ensure the values sum up to one, by so doing we can interpret the similarity values as probabilities.
 - **Cross-entropy:** Cross-entropy measures how close the predicted probabilities are to the ground trith labels. When the predicted probabilities are close to the ground truthm it shows the embeddings can distinguish the positive query-image pair from the negative ones.
 
-Figure 2.1 visualises the system architecture, we see the model takes text query as input, produces embedding for this query, compute the similarity between this embedding and the embedding of each image in the catalog. There are different measures of similarites we could use and they have their pros and cons, examples include dot product, cosine similarity, euclidean distance among others.
+Figure 2.1 visualises the system architecture, we see the model takes text query as input, produces embedding for this query, compute the similarity between this embedding and the embedding of each image in the catalog. 
 
 <figure>
      <center>
@@ -348,7 +350,7 @@ Evaluating the performance of the predictions is a critical step and this sectio
 
 
 ## 4.1. Offline metrics
-Offline metrics are the metrics that evaluate the performance of the model and they are typically not business related (in the sense that they do not measure KPIs business about such as click-through rate etc.) but are still useful to evaluate the model's performance on an evaluation data. Offline metrics suitable for this problem are Precision@k, mAP, Recall@k, Mean reciprocal rank (MRR).
+Offline metrics are the metrics that evaluate the performance of the model and they are typically not business related (in the sense that they do not measure KPIs business care about such as click-through rate) but are still useful to evaluate the model's performance on an evaluation data. Offline metrics suitable for this problem are Precision@k, mAP, Recall@k, Mean reciprocal rank (MRR).
 
 ### Precision@k
 This metric measures the proportion of relevant items among the top $k$ items in the ranked output list. In the evaluation dataset, a given text query is associated with only one positive image since we are using a contrastive learning approach. That means the numerator of the precision@k formula is at most $1$ which leads to low precision@k values. 
@@ -377,11 +379,11 @@ $$
 This metric measures a model's ability to find the associated image for a given text text query however, despite being intuitive and easy to derive, this metric is not without its faults which includes:
 
 - It depends on the choice of $k$ and choosing the right $k$ could be challenging.
-- When the relevant image is not among the $k$ videos in the output list, recall@k is always $0$. For instance, suppose a model X ranks a relevant image at place 15, and another model Y ranks the same image at place 20. If we use recall@10 to measure the quality of both models, both would have a recall@10 $= 0$, even though model X is better than model Y. 
+- When the relevant image is not among the $k$ images in the output list, recall@k is always $0$. For instance, suppose a model X ranks a relevant image at place 15, and another model Y ranks the same image at place 20. If we use recall@10 to measure the quality of both models, both would have a recall@10 $= 0$, even though model X is better than model Y. 
 
 
 ### Mean Reciprocal Rank (MRR)
-This metric measures the qualitty of the model by averaging the rank of the first relevant image in the search result where $m$ is the total number of output lists and $rank_{i}$ refers to the rank of the first relevant image in the $i^{th}$ ranked output list.
+This metric measures the quality of the model by averaging the rank of the first relevant image in the search result where $m$ is the total number of output lists and $rank_{i}$ refers to the rank of the first relevant image in the $i^{th}$ ranked output list.
 
 $$
 MRR = \frac{1}{m} \sum_{i=1}^{m}\frac{1}{rank_{i}}
@@ -407,17 +409,72 @@ This metric shows captures how engaged users are with the recommended images. Du
 
 
 # 5. Serving
+At serving time, the system displays a ranked list of product images relevant to a given text query. Figure 2.2 shows the prediction pipeline, text and image indexing pipeline. We will discuss each pipeline in detail.
 
-## 5.1. Image indexing pipeline
+<figure>
+     <center>
+        <img src="../images/blogs/img_search_text_ml_sys_design.png" 
+         alt="ML System design">
+    </center>
+        <figcaption> <center>Figure 2.2: Complete ML system design inspired by Ali Aminian & Alex Xu (2023) </center></figcaption>
+</figure>
 
-##  5.2. Prediction pipeline
+
+## 5.1. Prediction pipeline
+This pipeline consists of:
+- Image visual search
+- Text search
+- Fusing layer
+- Re-ranking service based on business rrequirements
+
+### Image visual search
+This component encodes the search text query and uses the nearest neighbor service to find the most similar image embeddings to the text query embedding.
+To define the nearest neighbor search more formally, given a text query $q$ and a set of other points $S$, it finds the closest points to $q$ in $S$. Note that a text query embedding is a point in N-dimensional space, where N is the size of the embedding vector. Figure 2.23 shows the top 4 nearest neighborsr of text query $q$. We denote the text query as $q$, and other product images as $x$.
+
+
+<figure>
+     <center>
+        <img src="../images/blogs/img_search_text_top4.png" 
+         alt="Retrieving the top 4 results of a given text query">
+    </center>
+        <figcaption> <center>Figure 2.3: Retrieving the top 4 results of a given text query </center></figcaption>
+</figure>
+
+
+### Text search
+Using Elasticsearch or MongoDB Atlas search, this component finds catalog images with titles and tags that are similar to the text query.
+
+### Fusing layer
+This component takes two different list of relevant product images from the previous two steps and combine them into a new list of images.
+
+The fusing layer can implemented in two ways, the easiest of which is to re-rank images based on the weighted sum of their predicted relevance scores [[1]](#references). An Alternative is to train a machine learning model that predicts the likelihood of user interaction (e.g., click, purchase) of each image based on user's history of activities and re-rank the displayed images. However, this approach is more expensive because it requires model training. Also, it is slower at serving hence the previous approach is preferred.
+
+
+## 5.2. Image indexing pipeline
+A trained image encoder is used to compute image embeddings, which are then indexed. All images on the catalog are indexed by nearest neighbor services to improve search performance. Another responsibility of the indexing service is to keep the index table updated. For example, when a new product is added to the catalog, the service indexes the embedding of the new product to make it discoverable by the nearest neighbor search.
+
+[[1]](#references) Indexing increases memory usage because we store the embeddings of the entire catalog images in an index table. There are different nearest neighbor (NN) algorithms such as Exact nearest neighbor and Approximate nearest neighbor (ANN). However, we won't be describing them. In addition, various optimizations are available to reduce memory usages such as vector quantization, product quantization which we won't discuss either.
+
 
 ## 5.3 Text indexing pipeline
+Elasticsearch is used by this component to index titles, manually created tags, and automatically produced tags. In most cases, when users upload product images, they include tags to aid in image identification. But what if they don't manually enter tags? One choice is to generate tags using a standalone model. This element, which we refer to as the "auto-tagger," uses a model to produce tags. The auto-tagger, is particularly useful when a product image lacks manual tags. Although these tags make more noise than manual tags, they are nonetheless useful.
 
+# Conclusion
+It's vital to keep in mind that while we have simplified the system design for product search in e-commerce platforms, it is actually considerably more complex. Other elements such as adding popularity and freshness, increasing product features and user interaction, expanding text queries to support other languages, etc. were not included in this design.
+
+[[11]](#references) provides an overview of the offline-online, retrieval-ranking pattern for search and recommendations used by major companies such as Alibaba, Facebook, LinkedIn, etc. They also distinguish the latency-constrained online systems from the less-demanding offline systems, and split the online process into retrieval and ranking steps. 
+
+
+<br>
+<br>
+
+## Citation 
+
+Thanks to Ali Aminian & Alex Xu (2023) for their book as it inspired and provided the framework for this article.
 
 To cite this content, please use:
 
-> Olaniyi, B (Mar 2023). Designing a Recommendation System for Search in E-Commerce. babaniyi.com. https://babaniyi.com/2023/03/22/writing/system-design-for-search-ecommerce
+> Olaniyi, Babaniyi (Mar 2023). Designing a Recommendation System for Search in E-Commerce. babaniyi.com. https://babaniyi.com/2023/03/22/writing/system-design-for-search-ecommerce
 
 
 
@@ -441,7 +498,7 @@ To cite this content, please use:
 
 
 # References
-1. Ali Aminian & Alex Xu (2023). *Machine Learning System Design Interview*
+1. Ali Aminian & Alex Xu (2023). Machine Learning System Design Interview.
 2. Full Text Search with MongoDB. https://www.mongodb.com/basics/full-text-search
 3. How To Improve Database Searches with Full-Text Search. https://www.digitalocean.com/community/tutorials/how-to-improve-database-searches-with-full-text-search-in-mysql-5-6-on-ubuntu-16-04
 4. Elastic Search. https://www.elastic.co/elasticsearch
