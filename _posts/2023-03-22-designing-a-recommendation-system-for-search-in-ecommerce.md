@@ -76,7 +76,7 @@ Images that have titles, descriptions, or tags that are the most comparable to t
 
 Full-text search (FTS) is the process of searching a portion of text within a large collection of electronically recorded text data and providing results that include part or all of the terms in the search [[2]](#references). It retrieves documents that don’t perfectly match the search criteria. Documents here refers to database entities containing textual data. 
 
-You may enhance a FTS with search tools like fuzzy-text and synonyms in addition to looking for specific keywords. As a result, while searching with a phrase like "pasta," the results could also include "Fettuccine Carbonara" or "Bacon and pesto flatbread" in addition to dishes like "Pasta with meatballs". This implies that, for example, if a user searches for "cats and dogs," an application supported by FTS may be able to return results that include simply "cats" or "dogs," the words in a different order ("dogs and cats," or "cat"), or alternative spellings of the terms ("dog," or "cat") [[3]](#references). Applications can better infer the user's intent thanks to this, which speeds up the return of relevant results.
+You may enhance a FTS with search tools like fuzzy-text and synonyms in addition to looking for specific keywords. This implies that, for example, if a user searches for "cats and dogs," an application supported by FTS may be able to return results that include simply "cats" or "dogs," the words in a different order ("dogs and cats," or "cat"), or alternative spellings of the terms ("dog," or "cat") [[3]](#references). Applications can better infer the user's intent thanks to this, which speeds up the return of relevant results.
 This technique is not based on machine-learning hence it is fast as there's no training cost involved. Many search engine companies use search engines such as Elasticsearch [[4]](#references), MongoDB Atlas Search [[2]](#references) to return the results of text queries similar to the  catalog queries as seen in Figure 1.4.
 
 
@@ -230,7 +230,7 @@ As shown in Figure 1.7, text is typically represented asa numerical vector using
 
 
 #### **Text normalisation**
-Tokens are a basic meaningful unit of a sentence or a document. They can consist of words, phrases, subwords, or characters 
+Tokens are a basic meaningful unit of a sentence or a document. They can consist of words, phrases, subwords, or characters.
 Normalization is the process of converting a token into its base form. It is helpful in reducing the number of unique tokens present in the text, removing the variations in a text and cleaning it by removing redundant information. Basic methods for text normalization includes: converting all letters to lowercase to retain the meanings of words, trimming whitespaces, remove accent marks, lemmatization and stemming, removing punction marks, etc.
 
 
@@ -423,8 +423,8 @@ There are various ML-based approaches for transforming texts into word embedding
 **Word2Vec:** word2vec [[8]](#references) is not a singular algorithm, rather, it is a family of model architectures and optimizations that can be used to learn word embeddings from large datasets. Word2vec is a shallow, two-layer Artificial Neural Network that processes text by converting them into numeric "vectorized" words. It’s input is a large word corpus and output a vector space, usually hundreds of dimensions, with each unique word in the corpus represented with that vector space generated. It is used to reconstruct linguistic contexts of words into numbers. Word vectors are positioned in the vector space in such a way that the words that share common contexts are located in close proximity to one another in that multidimensional space, in layman terms the words that almost mean the same will be placed together.
 
 There are two methods for learning representations of words in word2vec:
-- Continuous bag-of-words model: predicts the middle word based on surrounding context words. The context consists of a few words before and after the current (middle) word. This architecture is called a bag-of-words model as the order of words in the context is not important.
-- Continuous skip-gram model: predicts words within a certain range before and after the current word in the same sentence. 
+- <b>Continuous bag-of-words model:</b> predicts the middle word based on surrounding context words. The context consists of a few words before and after the current (middle) word. This architecture is called a bag-of-words model as the order of words in the context is not important.
+- <b>Continuous skip-gram model:<b> predicts words within a certain range before and after the current word in the same sentence. 
 
 We will not explain in detail the other ML-based approaches for transforming texts.
 
