@@ -37,6 +37,7 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
+🩹 [Debugging AI With Adversarial Validation](https://hamel.dev/blog/posts/drift/#fnref3)\
 💻 [Research Software Engineering in Python](https://merely-useful.tech/py-rse/index.html)\
 🧑‍🤝‍🧑 [How LinkedIn Suggests "People You May Know"](https://engineering.linkedin.com/blog/2021/optimizing-pymk-for-equity-in-network-creation)\
 🏋️ [Uplift modeling in Python](https://towardsdatascience.com/uplift-modeling-e38f96b1ef60)\
