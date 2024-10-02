@@ -10,8 +10,7 @@ permalink: /
 title:  👋 Hi, I'm Babaniyi!
 ---
 
-I'm Babaniyi Olaniyi, a Data Scientist and Machine Learning Engineer. I am very interested in using my expertise of data science and machine learning to understand some of the underlying patterns in retail, banking, consulting, and industry. I am also very thrilled about the moment we live in and the rate at which data is being generated and utilized as an asset.
-
+I'm Babaniyi Olaniyi, a Data Scientist and Machine Learning Engineer.
 
 While you're still here feel free to..
 - Check out my previous [blog posts](https://babaniyi.substack.com).
@@ -34,6 +33,7 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 <center> <h3>Latest News</h3> </center>
 
 🪡 Jan 2022 - Blog [Skyline: A needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)
+📲 - Project [Can LLMs Power Product Recommendations?](https://github.com/babaniyi/LLMs-for-RecSys)
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
