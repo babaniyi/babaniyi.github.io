@@ -7,7 +7,7 @@
 #
 layout: page
 permalink: /
-title:  👋 Hi, I'm Babaniyi!
+title:  Welcome to Babaniyi's blog!
 ---
 
 I'm Babaniyi Olaniyi, a Data Scientist and Machine Learning Engineer.
@@ -30,10 +30,9 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 </ul>
 
 ***
-<center> <h3>Latest News</h3> </center>
-
-🪡 Jan 2022 - Blog [Skyline: A needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)\
-📲 - Project [Can LLMs Power Product Recommendations?](https://github.com/babaniyi/LLMs-for-RecSys)
+<center> <h3>Latest Projects</h3> </center>
+📱 Sep 2024 - [Can LLMs Power Product Recommendations?](https://github.com/babaniyi/LLMs-for-RecSys)
+🪡 Jan 2022 - [Skyline: A needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)\
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
