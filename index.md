@@ -31,7 +31,7 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 
 ***
 <center> <h3>Latest Projects</h3> </center>
-📱 Sep 2024 - [Can LLMs Power Product Recommendations?](https://github.com/babaniyi/LLMs-for-RecSys)
+📱 Sep 2024 - [Can LLMs Power Product Recommendations?](https://github.com/babaniyi/LLMs-for-RecSys)\
 🪡 Jan 2022 - [Skyline: A needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)\
 
 *** 
