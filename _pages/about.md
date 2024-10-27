@@ -21,7 +21,7 @@ My current interests are in applying machine learning to solve business problems
 
 ***
 ### Timeline
-Feb 2023 - Present: Senior Data Scientist @ ZF Group
+Feb 2023 - Sep 2024: Senior Data Scientist @ ZF Group
 
 July 2021 - Jan 2023: Data Scientist @ benshi.ai
 
