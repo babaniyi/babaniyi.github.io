@@ -17,7 +17,7 @@ While you're still here feel free to..
 - Look at some of the things I have worked on in [Projects](https://babaniyi.github.io/portfolio/) or on [![github](/images/github_icon.png)](https://github.com/babaniyi) 
 
 
-You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.png)](https://twitter.com/by_niyi) or &nbsp; &nbsp; &nbsp;[<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="22px">](https://www.linkedin.com/in/babaniyi/) if you'd like to collaborate on a project, comment on my blog posts or even just to say Hi 🙋 :) 
+You can contact me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.png)](https://twitter.com/by_niyi) or &nbsp; &nbsp; &nbsp;[<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="22px">](https://www.linkedin.com/in/babaniyi/) if you'd like to collaborate on a project, comment on my blog posts or even to say Hi 🙋) 
 
 *** 
 <center> <h3>Latest Posts</h3> </center>
@@ -32,16 +32,16 @@ You can reach out to me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.p
 ***
 <center> <h3>Latest Projects</h3> </center>
 📱 Sep 2024 - [Can LLMs Power Product Recommendations?](https://github.com/babaniyi/LLMs-for-RecSys)\
-🪡 Jan 2022 - [Skyline: A needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)\
+🪡 Jan 2022 - [Skyline: A needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
+🧠 [Understanding Multimodal LLMs](https://magazine.sebastianraschka.com/p/understanding-multimodal-llms)\
 🩹 [Debugging AI With Adversarial Validation](https://hamel.dev/blog/posts/drift/#fnref3)\
 💻 [Research Software Engineering in Python](https://merely-useful.tech/py-rse/index.html)\
 🧑‍🤝‍🧑 [How LinkedIn Suggests "People You May Know"](https://engineering.linkedin.com/blog/2021/optimizing-pymk-for-equity-in-network-creation)\
 🏋️ [Uplift modeling in Python](https://towardsdatascience.com/uplift-modeling-e38f96b1ef60)\
 🧑‍🤝‍🧑 [Uplift Modeling: predictions for optimized marketing campaigns](https://pbiecek.github.io/xai_stories/story-uplift-marketing1.html)\
-👨‍🏫 [EDA with Golang GOTA](https://www.freecodecamp.org/news/exploratory-data-analysis-in-go-with-gota/)\
 🏛️ [Conquering Cohort Analysis with Kaplan-Meier Estimates](https://whoisnnamdi.com/how-to-conquer-cohort-analysis/)\
 🚸 [Propensity Score Matching with Python](https://towardsdatascience.com/a-hands-on-introduction-to-propensity-score-use-for-beginners-856302b632ac)\
 📆 [Everyday Data Science to Optimize your Life](https://andrewnc.github.io/blog/everyday_data_science.html)\
