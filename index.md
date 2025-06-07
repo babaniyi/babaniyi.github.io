@@ -10,7 +10,7 @@ permalink: /
 title:  Welcome to Babaniyi's blog!
 ---
 
-I'm Babaniyi Olaniyi, a Data Scientist and Machine Learning Engineer.
+Welcome to my blog! I write about data science, machine learning, and my projects.
 
 While you're still here feel free to..
 - Check out my previous [blog posts](https://babaniyi.substack.com).
@@ -22,7 +22,7 @@ You can contact me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.png)](
 *** 
 <center> <h3>Latest Posts</h3> </center>
 <ul>
-  {% for post in site.posts %}
+  {% for post in site.posts limit:5 %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
