@@ -83,7 +83,7 @@ I provide recommendation about the type of movies a film production company woul
 [Customer spend, Satisfaction and Segmentation using Machine learning](https://babaniyi.medium.com/customer-spend-satisfaction-and-segmentation-using-machine-learning-techniques-15822b60f5b)
   
 This study proposes ways drive customer spending using information from customers and applying machine learning methods without spending money on advertising and marketing. The dataset for this study was generously provided by Olist, the largest department store in Brazilian marketplaces. 
-- In this study, first, customer segmentation is done by grouping customers into groups based on similar behaviours (such as purchasing, demographics, etc.). This is important because customers have different needs and, as Olist’s customer base grows, it becomes difficult understanding the individual needs of each one of them. Hence, with segmentation I identified customers’ needs and differences in groups and act on them. 
+- In this study, first, customer segmentation is done by grouping customers into groups based on similar behaviours (such as purchasing, demographics, etc.). This is important because customers have different needs and, as Olist's customer base grows, it becomes difficult understanding the individual needs of each one of them. Hence, with segmentation I identified customers' needs and differences in groups and act on them. 
 - Second, I identified satisfied and dissatisfied customers using satisfaction ratings, then I developed a model that predicts if a customer will be satisfied or not based on their purchase patterns and demographics
 - Finally, I developed a model for predicting customer spend (that is, the total amount a consumer will spend on each transaction).
 
@@ -95,5 +95,23 @@ This study proposes ways drive customer spending using information from customer
 <col width="20%">
 <col width="10">
 <col >
+
+<tr height="25"/>
+<tr style="border-bottom:1pt solid #eee" >
+<td markdown="1">
+![llms-recsys](/images/projects/llms-recsys.png){:class="img-shadow"}
+</td>
+<td markdown="1">
+[LLMs for Recommender Systems](https://github.com/babaniyi/LLMs-for-RecSys)
+
+This project involves fine-tuning a pre-trained GPT-2 model to generate personalized product recommendations based on product reviews and metadata. It explores the use of large language models (LLMs) in the context of recommendation systems, providing insights into user preferences and enhancing the recommendation process.
+
+- **Objective**: Generate personalized product recommendations.
+- **Techniques**: Fine-tuning GPT-2, handling product reviews and metadata.
+- **Outcome**: Improved recommendation accuracy and user satisfaction.
+
+</td> 
+</tr>
+</table>
 
 
