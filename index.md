@@ -36,7 +36,7 @@ You can contact me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.png)](
 
 *** 
 <center> <h3>Recent Favourite Reads</h3> </center>
-[Nobody Gets Promoted for Simplicity](https://terriblesoftware.org/2026/03/03/nobody-gets-promoted-for-simplicity/)\
+📖 [Nobody Gets Promoted for Simplicity](https://terriblesoftware.org/2026/03/03/nobody-gets-promoted-for-simplicity/)\
 🧠 [Understanding Multimodal LLMs](https://magazine.sebastianraschka.com/p/understanding-multimodal-llms)\
 🩹 [Debugging AI With Adversarial Validation](https://hamel.dev/blog/posts/drift/#fnref3)\
 💻 [Research Software Engineering in Python](https://merely-useful.tech/py-rse/index.html)\
