@@ -121,7 +121,9 @@ title: Babs Olaniyi
       <p class="card-meta">ML systems and practice</p>
       <h3>Production data science</h3>
       <ul class="reading-list">
+        <li><a href="https://terriblesoftware.org/2026/03/03/nobody-gets-promoted-for-simplicity/">Nobody Gets Promoted for Simplicity</a></li>
         <li><a href="https://hamel.dev/blog/posts/drift/#fnref3">Debugging AI With Adversarial Validation</a></li>
+        <li><a href="https://merely-useful.tech/py-rse/index.html">Research Software Engineering in Python</a></li>
         <li><a href="https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html">Data Distribution Shifts and Monitoring</a></li>
         <li><a href="https://huyenchip.com/2022/08/03/stream-processing-for-data-scientists.html">Introduction to Streaming for Data Scientists</a></li>
         <li><a href="https://erikbern.com/2021/07/07/the-data-team-a-short-story.html">Building a Data Team at a Mid-stage Startup</a></li>
