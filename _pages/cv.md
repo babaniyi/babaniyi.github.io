@@ -9,8 +9,8 @@ redirect_from:
 
 <section class="resume-hero">
   <p class="eyebrow">CV</p>
-  <h1>Babaniyi Olaniyi</h1>
-  <p class="lead">Senior Data Scientist profile, currently working as a Data Scientist in Barcelona, Spain.</p>
+  <h1>Babs Olaniyi</h1>
+  <p class="lead">Senior Data Scientist and AI/ML Engineer based in Barcelona, Spain.</p>
   <div class="inline-links">
     <a href="mailto:horlaneyee@gmail.com">Email</a>
     <a href="https://www.linkedin.com/in/babaniyi/">LinkedIn</a>
@@ -22,7 +22,7 @@ redirect_from:
 <section class="content-section">
   <h2>Summary</h2>
   <p>
-    Data scientist and machine learning practitioner with 5+ years of experience solving problems in pricing, e-commerce, retail, and healthcare. I have built systems for pricing optimization, revenue leakage detection, demand forecasting, mobile health engagement, survival analysis, recommender systems, and experimentation.
+    Senior Data Scientist and Machine Learning Engineer with 6+ years of experience applying data science and statistical techniques to problems in pricing, e-commerce, retail, and healthcare. I have built systems for pricing optimization, revenue leakage detection, demand forecasting, inventory planning, mobile health engagement, survival analysis, recommender systems, and experimentation.
   </p>
 </section>
 
@@ -35,9 +35,9 @@ redirect_from:
         <span>ZF Group | Barcelona | 2023 - Present</span>
       </div>
       <ul>
-        <li>Developed pricing leakage detection logic that identified customer price arbitrage and helped prevent significant revenue loss.</li>
-        <li>Built machine learning models for optimal pricing, improving gross profit compared with baseline pricing scenarios.</li>
-        <li>Led data-driven work to identify and correct customer pricing errors, contributing to large revenue recovery opportunities.</li>
+        <li>Developed pricing leakage detection logic that identified customer price arbitrage and exposed loopholes linked to more than EUR10M in revenue loss exposure.</li>
+        <li>Built machine learning models for optimal pricing, improving gross profit by 20% compared with baseline pricing scenarios.</li>
+        <li>Led data-driven work to identify and correct customer pricing errors, contributing to EUR30M in revenue impact.</li>
       </ul>
     </article>
     <article>
@@ -46,9 +46,9 @@ redirect_from:
         <span>Benshi AI | Barcelona | 2021 - 2023</span>
       </div>
       <ul>
-        <li>Forecasted demand for more than 50,000 medications for Indonesian pharmacy networks, helping reduce patient wait times.</li>
+        <li>Forecasted demand for more than 50,000 medications for Indonesian pharmacy networks, helping reduce patient wait times by about 20 minutes.</li>
         <li>Improved mobile health app engagement using censoring models, churn prediction, and experiments around user actions.</li>
-        <li>Built recommender systems for pharmacy purchasing decisions and survival models for learning and certification engagement.</li>
+        <li>Built recommender systems for pharmacy purchasing decisions and survival models for learning and certification engagement, contributing to measurable engagement and revenue improvements.</li>
         <li>Mentored data scientists, supported recruitment, and translated technical results for product and policy stakeholders.</li>
       </ul>
     </article>

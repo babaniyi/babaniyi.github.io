@@ -223,7 +223,8 @@ a {
 }
 
 .card-grid,
-.skill-columns {
+.skill-columns,
+.case-study-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
@@ -235,6 +236,7 @@ a {
 }
 
 .feature-card,
+.case-study,
 .skill-columns > div,
 .resume-list article,
 .publication-list article,
@@ -246,11 +248,20 @@ a {
 }
 
 .feature-card h3,
+.case-study h3,
 .skill-columns h3,
 .resume-list h3,
 .publication-list h3,
 .project-card h2 {
   margin-top: 0;
+}
+
+.case-study {
+  border-top: 4px solid var(--site-accent);
+}
+
+.case-study h3 {
+  font-size: 23px;
 }
 
 .split-section {
@@ -279,6 +290,14 @@ a {
 
 .clean-list--plain li {
   display: block;
+}
+
+.evidence-list {
+  margin: 18px 0 0 18px;
+}
+
+.evidence-list li {
+  margin-bottom: 8px;
 }
 
 .tag-cloud {
@@ -353,6 +372,34 @@ a {
   gap: 18px;
 }
 
+.article-list {
+  display: grid;
+  gap: 14px;
+}
+
+.article-list article {
+  border-bottom: 1px solid var(--site-line);
+  padding-bottom: 14px;
+}
+
+.article-list span {
+  color: var(--site-muted);
+  display: block;
+  font-size: 14px;
+  font-weight: 750;
+  margin-bottom: 4px;
+}
+
+.article-list h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.article-list p {
+  color: var(--site-muted);
+  margin-bottom: 0;
+}
+
 .project-card--wide {
   display: grid;
   grid-template-columns: 260px minmax(0, 1fr);
@@ -376,6 +423,7 @@ a {
   .intro,
   .section-grid,
   .card-grid,
+  .case-study-grid,
   .card-grid--two,
   .skill-columns,
   .split-section,

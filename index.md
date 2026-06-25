@@ -1,15 +1,15 @@
 ---
 layout: page
 permalink: /
-title: Babaniyi Olaniyi
+title: Babs Olaniyi
 ---
 
 <section class="hero">
   <div class="hero__content">
-    <p class="eyebrow">Senior Data Scientist</p>
-    <h1>Data science for pricing, recommendation systems, experimentation, and health technology.</h1>
+    <p class="eyebrow">Senior Data Scientist / AI-ML Engineer</p>
+    <h1>Machine learning systems for pricing, recommendations, experimentation, and health analytics.</h1>
     <p class="lead">
-      I am Babaniyi Olaniyi, a Senior Data Scientist currently working as a Data Scientist. I build machine learning systems that turn messy product, commercial, and health data into decisions people can use.
+      I am Babs Olaniyi, a data scientist and machine learning engineer based in Barcelona. I build models, experiments, and data products that help teams improve pricing, inventory decisions, user engagement, and healthcare delivery.
     </p>
     <div class="hero__actions">
       <a class="button button--primary" href="/portfolio/">View projects</a>
@@ -21,23 +21,23 @@ title: Babaniyi Olaniyi
     <img src="/images/profile.jpeg" alt="Babaniyi Olaniyi" class="hero__portrait">
     <div>
       <p class="panel-label">Current focus</p>
-      <p>Machine learning systems for pricing, demand forecasting, recommender systems, product experimentation, and digital health.</p>
+      <p>Senior-level DS and AI/ML engineering work across pricing, recommender systems, forecasting, causal experimentation, and health financing analytics.</p>
     </div>
   </div>
 </section>
 
 <section class="section-grid">
   <div class="metric">
-    <span class="metric__value">5+</span>
-    <span class="metric__label">years in applied data science</span>
+    <span class="metric__value">6+</span>
+    <span class="metric__label">years across data science, ML, and analytics</span>
   </div>
   <div class="metric">
     <span class="metric__value">EUR40M+</span>
-    <span class="metric__label">revenue impact from pricing and leakage work</span>
+    <span class="metric__label">pricing and revenue recovery impact</span>
   </div>
   <div class="metric">
     <span class="metric__value">50K+</span>
-    <span class="metric__label">medications forecasted for health supply chains</span>
+    <span class="metric__label">medications modeled for demand forecasting</span>
   </div>
 </section>
 
@@ -49,19 +49,19 @@ title: Babaniyi Olaniyi
   <div class="card-grid">
     <article class="feature-card">
       <p class="card-meta">Pricing and revenue</p>
-      <h3>Customer pricing leakage detection</h3>
-      <p>Built heuristic and machine learning approaches to identify price arbitrage, correct pricing errors, and improve gross profit against baseline price scenarios.</p>
+      <h3>Pricing leakage and optimization</h3>
+      <p>Developed leakage detection and optimal pricing models that identified price arbitrage, corrected pricing errors, and improved gross profit against baseline scenarios.</p>
     </article>
     <article class="feature-card">
       <p class="card-meta">Health technology</p>
-      <h3>Demand forecasting for pharmacies</h3>
-      <p>Forecasted demand across more than 50,000 medications to improve stock planning and reduce patient wait times in pharmacy networks.</p>
+      <h3>Digital health and supply analytics</h3>
+      <p>Built forecasting, survival, and engagement models for pharmacies, midwives, and mobile health users in low- and middle-income settings.</p>
     </article>
     <article class="feature-card">
-      <p class="card-meta">Recommender systems</p>
-      <h3>LLMs for product recommendations</h3>
-      <p>Explored how large language models can generate personalized recommendations from product metadata and reviews.</p>
-      <a href="https://github.com/babaniyi/LLMs-for-RecSys">Open project</a>
+      <p class="card-meta">AI/ML engineering</p>
+      <h3>Multimodal LLM recommendations</h3>
+      <p>Built recommendation experiments that combine product reviews, metadata, images, temporal signals, and ranking metrics such as Recall, MRR, Hit Rate, and NDCG.</p>
+      <a href="https://github.com/babaniyi/MultiModal-LLM-RecSys">Open project</a>
     </article>
   </div>
 </section>

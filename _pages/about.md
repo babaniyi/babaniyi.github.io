@@ -8,9 +8,9 @@ permalink: /about/
   <img src="/images/profile.jpeg" alt="Babaniyi Olaniyi" class="intro__image">
   <div>
     <p class="eyebrow">About</p>
-    <h1>Senior Data Scientist working across product, pricing, experimentation, and health systems.</h1>
+    <h1>Babs Olaniyi builds machine learning systems for product, pricing, experimentation, and health analytics.</h1>
     <p class="lead">
-      I work at the intersection of machine learning, product strategy, and decision systems. My recent work includes pricing optimization, leakage detection, demand forecasting, recommender systems, survival analysis, and experimentation programs that help teams act on data.
+      I am a Senior Data Scientist and AI/ML engineer with experience in retail, e-commerce, healthcare, and industrial pricing. My work combines statistical modeling, ML engineering, business translation, and experimentation to help teams make better decisions from complex data.
     </p>
   </div>
 </section>
@@ -20,15 +20,15 @@ permalink: /about/
   <div class="card-grid card-grid--two">
     <article class="feature-card">
       <h3>Applied machine learning</h3>
-      <p>I design models for forecasting, pricing, churn, recommendations, user engagement, and operational decision support.</p>
+      <p>I design models for pricing, forecasting, churn, recommendations, user engagement, inventory planning, and operational decision support.</p>
     </article>
     <article class="feature-card">
       <h3>Experimentation and causal thinking</h3>
-      <p>I use A/B testing, multi-armed bandits, survival analysis, and causal inference to understand behavior and improve products.</p>
+      <p>I use A/B testing, multi-armed bandits, survival analysis, and causal inference to understand behavior and design interventions.</p>
     </article>
     <article class="feature-card">
       <h3>Business translation</h3>
-      <p>I convert ambiguous business questions into measurable data science problems and communicate results to technical and non-technical stakeholders.</p>
+      <p>I convert ambiguous business questions into measurable data science problems, then communicate tradeoffs clearly to technical and non-technical stakeholders.</p>
     </article>
     <article class="feature-card">
       <h3>Data products</h3>
