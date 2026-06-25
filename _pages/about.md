@@ -10,7 +10,7 @@ permalink: /about/
     <p class="eyebrow">About</p>
     <h1>Babs Olaniyi builds machine learning systems for healthcare AI, pricing, experimentation, and decision science.</h1>
     <p class="lead">
-      I am a Data Scientist at Causal Foundry with a senior data science and AI/ML engineering profile. My work combines statistical modeling, machine learning engineering, health analytics, business translation, and experimentation to help teams make better decisions from complex data.
+      I am a Data Scientist at Causal Foundry. My work combines statistical modeling, machine learning engineering, health analytics, business translation, and experimentation to help teams make better decisions from complex data.
     </p>
   </div>
 </section>
@@ -59,13 +59,6 @@ permalink: /about/
       <div>
         <h3>Data Scientist, Benshi AI</h3>
         <p>Demand forecasting, recommender systems, survival models, and mobile health engagement analytics for users in low- and middle-income markets.</p>
-      </div>
-    </div>
-    <div class="timeline__item">
-      <span>2021</span>
-      <div>
-        <h3>Data Engineer, eDreams ODIGEO</h3>
-        <p>ETL, dashboards, and migration support for large-scale customer data from Oracle to Google Cloud.</p>
       </div>
     </div>
     <div class="timeline__item">
