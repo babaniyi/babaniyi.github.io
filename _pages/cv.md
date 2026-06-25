@@ -10,7 +10,7 @@ redirect_from:
 <section class="resume-hero">
   <p class="eyebrow">CV</p>
   <h1>Babs Olaniyi</h1>
-  <p class="lead">Data Scientist at Causal Foundry with a Senior Data Scientist / AI-ML Engineer profile, based in Barcelona, Spain.</p>
+  <p class="lead">Data Scientist at Causal Foundry, based in Barcelona, Spain.</p>
   <div class="inline-links">
     <a href="mailto:horlaneyee@gmail.com">Email</a>
     <a href="https://www.linkedin.com/in/babaniyi/">LinkedIn</a>
@@ -62,16 +62,6 @@ redirect_from:
         <li>Improved mobile health engagement using survival models, churn prediction, return/purchase models, and experiments around user actions.</li>
         <li>Designed adaptive intervention and recommendation systems using multi-armed bandits, rule-based optimization, and reinforcement-learning concepts.</li>
         <li>Mentored data scientists, supported recruitment, and translated technical results for product and policy stakeholders.</li>
-      </ul>
-    </article>
-    <article>
-      <div class="resume-list__header">
-        <h3>Data Engineer</h3>
-        <span>eDreams ODIGEO | Barcelona | 2021</span>
-      </div>
-      <ul>
-        <li>Worked across ETL, reporting, and dashboards for high-volume customer data.</li>
-        <li>Supported migration of more than 100 million customer records from Oracle to Google Cloud.</li>
       </ul>
     </article>
     <article>
