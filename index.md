@@ -92,6 +92,46 @@ title: Babs Olaniyi
 
 <section class="content-section">
   <div class="section-heading">
+    <p class="eyebrow">Reading</p>
+    <h2>Recent favourite reads</h2>
+    <p>Articles and papers I return to when thinking about recommendation systems, experimentation, ML systems, and practical data science.</p>
+  </div>
+  <div class="card-grid">
+    <article class="feature-card">
+      <p class="card-meta">Recommendations and ranking</p>
+      <h3>Recommender systems</h3>
+      <ul class="reading-list">
+        <li><a href="https://magazine.sebastianraschka.com/p/understanding-multimodal-llms">Understanding Multimodal LLMs</a></li>
+        <li><a href="https://engineering.linkedin.com/blog/2021/optimizing-pymk-for-equity-in-network-creation">How LinkedIn Suggests People You May Know</a></li>
+        <li><a href="https://oars-workshop.github.io/2021/xiang.pdf">Adaptively Optimize Content Recommendation Using MAB Algorithms in E-commerce</a></li>
+        <li><a href="https://amatriain.net/blog/on-the-usefulness-of-the-netflix-prize-403d360aaf2/">On the Usefulness of the Netflix Prize</a></li>
+      </ul>
+    </article>
+    <article class="feature-card">
+      <p class="card-meta">Experiments and causality</p>
+      <h3>Decision science</h3>
+      <ul class="reading-list">
+        <li><a href="https://eugeneyan.com/writing/bandits/">Bandits for Recommender Systems</a></li>
+        <li><a href="https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/">Multi-Armed Bandits and the Stitch Fix Experimentation Platform</a></li>
+        <li><a href="https://towardsdatascience.com/uplift-modeling-e38f96b1ef60">Uplift Modeling in Python</a></li>
+        <li><a href="https://whoisnnamdi.com/how-to-conquer-cohort-analysis/">Conquering Cohort Analysis with Kaplan-Meier Estimates</a></li>
+      </ul>
+    </article>
+    <article class="feature-card">
+      <p class="card-meta">ML systems and practice</p>
+      <h3>Production data science</h3>
+      <ul class="reading-list">
+        <li><a href="https://hamel.dev/blog/posts/drift/#fnref3">Debugging AI With Adversarial Validation</a></li>
+        <li><a href="https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html">Data Distribution Shifts and Monitoring</a></li>
+        <li><a href="https://huyenchip.com/2022/08/03/stream-processing-for-data-scientists.html">Introduction to Streaming for Data Scientists</a></li>
+        <li><a href="https://erikbern.com/2021/07/07/the-data-team-a-short-story.html">Building a Data Team at a Mid-stage Startup</a></li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section class="content-section">
+  <div class="section-heading">
     <p class="eyebrow">Skills</p>
     <h2>Working toolkit</h2>
   </div>
