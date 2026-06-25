@@ -1,61 +1,116 @@
 ---
-#
-# By default, content added below the "---" mark will appear in the home page
-# between the top bar and the list of recent posts.
-# To change the home page layout, edit the _layouts/home.html file.
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-#
 layout: page
 permalink: /
-title:  Welcome to Babaniyi's blog!
+title: Babaniyi Olaniyi
 ---
 
-Welcome to my blog! I write about data science, machine learning, and my projects.
+<section class="hero">
+  <div class="hero__content">
+    <p class="eyebrow">Senior Data Scientist</p>
+    <h1>Data science for pricing, recommendation systems, experimentation, and health technology.</h1>
+    <p class="lead">
+      I am Babaniyi Olaniyi, a Senior Data Scientist currently working as a Data Scientist. I build machine learning systems that turn messy product, commercial, and health data into decisions people can use.
+    </p>
+    <div class="hero__actions">
+      <a class="button button--primary" href="/portfolio/">View projects</a>
+      <a class="button" href="/cv/">Read CV</a>
+      <a class="button" href="https://www.linkedin.com/in/babaniyi/">LinkedIn</a>
+    </div>
+  </div>
+  <div class="hero__panel">
+    <img src="/images/profile.jpeg" alt="Babaniyi Olaniyi" class="hero__portrait">
+    <div>
+      <p class="panel-label">Current focus</p>
+      <p>Machine learning systems for pricing, demand forecasting, recommender systems, product experimentation, and digital health.</p>
+    </div>
+  </div>
+</section>
 
-While you're still here feel free to..
-- Check out my previous [blog posts](https://babaniyi.substack.com).
-- Look at some of the things I have worked on in [Projects](https://babaniyi.github.io/portfolio/) or on [![github](/images/github_icon.png)](https://github.com/babaniyi) 
+<section class="section-grid">
+  <div class="metric">
+    <span class="metric__value">5+</span>
+    <span class="metric__label">years in applied data science</span>
+  </div>
+  <div class="metric">
+    <span class="metric__value">EUR40M+</span>
+    <span class="metric__label">revenue impact from pricing and leakage work</span>
+  </div>
+  <div class="metric">
+    <span class="metric__value">50K+</span>
+    <span class="metric__label">medications forecasted for health supply chains</span>
+  </div>
+</section>
 
+<section class="content-section">
+  <div class="section-heading">
+    <p class="eyebrow">Selected Work</p>
+    <h2>Recent projects and research</h2>
+  </div>
+  <div class="card-grid">
+    <article class="feature-card">
+      <p class="card-meta">Pricing and revenue</p>
+      <h3>Customer pricing leakage detection</h3>
+      <p>Built heuristic and machine learning approaches to identify price arbitrage, correct pricing errors, and improve gross profit against baseline price scenarios.</p>
+    </article>
+    <article class="feature-card">
+      <p class="card-meta">Health technology</p>
+      <h3>Demand forecasting for pharmacies</h3>
+      <p>Forecasted demand across more than 50,000 medications to improve stock planning and reduce patient wait times in pharmacy networks.</p>
+    </article>
+    <article class="feature-card">
+      <p class="card-meta">Recommender systems</p>
+      <h3>LLMs for product recommendations</h3>
+      <p>Explored how large language models can generate personalized recommendations from product metadata and reviews.</p>
+      <a href="https://github.com/babaniyi/LLMs-for-RecSys">Open project</a>
+    </article>
+  </div>
+</section>
 
-You can contact me on &nbsp; &nbsp; &nbsp; [![twitter](/images/tweet_icon.png)](https://twitter.com/by_niyi) or &nbsp; &nbsp; &nbsp;[<img src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" width="22px">](https://www.linkedin.com/in/babaniyi/) if you'd like to collaborate on a project, comment on my blog posts or even to say Hi 🙋) 
+<section class="content-section split-section">
+  <div>
+    <p class="eyebrow">Writing</p>
+    <h2>Latest posts</h2>
+    <ul class="clean-list">
+      {% for post in site.posts limit:5 %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+          <span>{{ post.date | date: "%b %Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div>
+    <p class="eyebrow">Publications</p>
+    <h2>Research</h2>
+    <ul class="clean-list">
+      <li><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a><span>2025</span></li>
+      <li><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a><span>KDD 2022</span></li>
+      <li><span>Power Samade distribution: properties and application to real lifetime data</span><span>2023</span></li>
+    </ul>
+  </div>
+</section>
 
-*** 
-<center> <h3>Latest Posts</h3> </center>
-<ul>
-  {% for post in site.posts limit:5 %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
-  {% endfor %}
-</ul>
-
-***
-<center> <h3>Latest Projects</h3> </center>
-📱 Sep 2024 - [Can LLMs Power Product Recommendations?](https://github.com/babaniyi/LLMs-for-RecSys)\
-🪡 Jan 2022 - [Skyline: A needle in the haystack](https://babaniyi.substack.com/p/skyline-the-needle-in-the-haystack?s=w)
-
-*** 
-<center> <h3>Recent Favourite Reads</h3> </center>
-🧠 [Understanding Multimodal LLMs](https://magazine.sebastianraschka.com/p/understanding-multimodal-llms)\
-🩹 [Debugging AI With Adversarial Validation](https://hamel.dev/blog/posts/drift/#fnref3)\
-💻 [Research Software Engineering in Python](https://merely-useful.tech/py-rse/index.html)\
-🧑‍🤝‍🧑 [How LinkedIn Suggests "People You May Know"](https://engineering.linkedin.com/blog/2021/optimizing-pymk-for-equity-in-network-creation)\
-🏋️ [Uplift modeling in Python](https://towardsdatascience.com/uplift-modeling-e38f96b1ef60)\
-🧑‍🤝‍🧑 [Uplift Modeling: predictions for optimized marketing campaigns](https://pbiecek.github.io/xai_stories/story-uplift-marketing1.html)\
-🏛️ [Conquering Cohort Analysis with Kaplan-Meier Estimates](https://whoisnnamdi.com/how-to-conquer-cohort-analysis/)\
-🚸 [Propensity Score Matching with Python](https://towardsdatascience.com/a-hands-on-introduction-to-propensity-score-use-for-beginners-856302b632ac)\
-📆 [Everyday Data Science to Optimize your Life](https://andrewnc.github.io/blog/everyday_data_science.html)\
-🧵 [On the “Usefulness” of the Netflix Prize](https://amatriain.net/blog/on-the-usefulness-of-the-netflix-prize-403d360aaf2/)\
-📖 [Adaptively Optimize Content Recommendation Using MAB Algorithms in E-commerce](https://oars-workshop.github.io/2021/xiang.pdf)\
-🏗️ [Building a Data Team at a Mid-stage Startup](https://erikbern.com/2021/07/07/the-data-team-a-short-story.html) \
-🌩️ [Introduction to Streaming for Data Scientists](https://huyenchip.com/2022/08/03/stream-processing-for-data-scientists.html) \
-🕴️ [Deep Learning for Understanding Consumer Histories](https://engineering.zalando.com/posts/2016/10/deep-learning-for-understanding-consumer-histories.html) \
-💻 [Data Distributions Shifts and Monitoring](https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html) \
-🏪 [How LinkedIn Brings Stories to Your Feed](https://engineering.linkedin.com/blog/2017/03/bringing-storylines-feed)\
-🎰 [Creating Confidence Intervals for Machine Learning Classifiers](https://sebastianraschka.com/blog/2022/confidence-intervals-for-ml.html) \
-🎰 [Bandits for Recommender Systems](https://eugeneyan.com/writing/bandits/) \
-🎰 [Multi-Armed Bandits and the Stitch Fix Experimentation Platform](https://multithreaded.stitchfix.com/blog/2020/08/05/bandits/) \
-🥘 [Machine Learning System Design: Recommendation System for Restaurants](https://medium.datadriveninvestor.com/ml-system-design-case-recommend-restaurant-in-ubereats-baf5594608ea)
-
-
-
+<section class="content-section">
+  <div class="section-heading">
+    <p class="eyebrow">Skills</p>
+    <h2>Working toolkit</h2>
+  </div>
+  <div class="tag-cloud">
+    <span>Python</span>
+    <span>SQL</span>
+    <span>PySpark</span>
+    <span>Scala</span>
+    <span>Google Cloud</span>
+    <span>BigQuery</span>
+    <span>Azure Databricks</span>
+    <span>MLflow</span>
+    <span>PyTorch</span>
+    <span>TensorFlow</span>
+    <span>Scikit-learn</span>
+    <span>A/B testing</span>
+    <span>Forecasting</span>
+    <span>Survival analysis</span>
+    <span>Causal inference</span>
+    <span>Recommender systems</span>
+  </div>
+</section>

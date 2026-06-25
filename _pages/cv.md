@@ -1,241 +1,168 @@
 ---
-layout: default
-title: "CV"
+layout: page
+title: CV
 permalink: /cv/
 author_profile: true
 redirect_from:
   - /resume
 ---
 
-<!--{% include base_path %}-->
-{% include base_path %}
-{% include JB/setup %}
-{% assign posts_collate = site.categories.projects %}
-{% include JB/posts_collate %}
+<section class="resume-hero">
+  <p class="eyebrow">CV</p>
+  <h1>Babaniyi Olaniyi</h1>
+  <p class="lead">Senior Data Scientist profile, currently working as a Data Scientist in Barcelona, Spain.</p>
+  <div class="inline-links">
+    <a href="mailto:horlaneyee@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/babaniyi/">LinkedIn</a>
+    <a href="https://github.com/babaniyi">GitHub</a>
+    <a href="https://babaniyi.substack.com">Substack</a>
+  </div>
+</section>
 
-<!-- CV in [PDF](/archive/Catherine_Gitau_cv.pdf) version -->
+<section class="content-section">
+  <h2>Summary</h2>
+  <p>
+    Data scientist and machine learning practitioner with 5+ years of experience solving problems in pricing, e-commerce, retail, and healthcare. I have built systems for pricing optimization, revenue leakage detection, demand forecasting, mobile health engagement, survival analysis, recommender systems, and experimentation.
+  </p>
+</section>
 
+<section class="content-section">
+  <h2>Experience</h2>
+  <div class="resume-list">
+    <article>
+      <div class="resume-list__header">
+        <h3>Senior Data Scientist</h3>
+        <span>ZF Group | Barcelona | 2023 - Present</span>
+      </div>
+      <ul>
+        <li>Developed pricing leakage detection logic that identified customer price arbitrage and helped prevent significant revenue loss.</li>
+        <li>Built machine learning models for optimal pricing, improving gross profit compared with baseline pricing scenarios.</li>
+        <li>Led data-driven work to identify and correct customer pricing errors, contributing to large revenue recovery opportunities.</li>
+      </ul>
+    </article>
+    <article>
+      <div class="resume-list__header">
+        <h3>Data Scientist</h3>
+        <span>Benshi AI | Barcelona | 2021 - 2023</span>
+      </div>
+      <ul>
+        <li>Forecasted demand for more than 50,000 medications for Indonesian pharmacy networks, helping reduce patient wait times.</li>
+        <li>Improved mobile health app engagement using censoring models, churn prediction, and experiments around user actions.</li>
+        <li>Built recommender systems for pharmacy purchasing decisions and survival models for learning and certification engagement.</li>
+        <li>Mentored data scientists, supported recruitment, and translated technical results for product and policy stakeholders.</li>
+      </ul>
+    </article>
+    <article>
+      <div class="resume-list__header">
+        <h3>Data Engineer</h3>
+        <span>eDreams ODIGEO | Barcelona | 2021</span>
+      </div>
+      <ul>
+        <li>Worked across ETL, reporting, and dashboards for high-volume customer data.</li>
+        <li>Supported migration of more than 100 million customer records from Oracle to Google Cloud.</li>
+      </ul>
+    </article>
+    <article>
+      <div class="resume-list__header">
+        <h3>Data and Business Intelligence Analyst</h3>
+        <span>The Alchemist Atelier | Barcelona | 2019 - 2021</span>
+      </div>
+      <ul>
+        <li>Built customer segmentation and churn models to improve communication, retention, and customer satisfaction.</li>
+        <li>Combined multiple data sources into revenue, budget, expense, and KPI dashboards that reduced manual reporting.</li>
+        <li>Analyzed acquisition channels, customer journeys, pricing scenarios, and business performance for management decisions.</li>
+      </ul>
+    </article>
+    <article>
+      <div class="resume-list__header">
+        <h3>Research Associate / Research Assistant</h3>
+        <span>IAE CSIC and Rivers State University | 2016 - 2019</span>
+      </div>
+      <ul>
+        <li>Built web scraping and predictive modeling workflows using more than a century of newspaper text to study conflict risk.</li>
+        <li>Led analysis projects using statistical methods, market research, and applied data analysis for research and client work.</li>
+      </ul>
+    </article>
+  </div>
+</section>
 
-<!-- --- -->
+<section class="content-section">
+  <h2>Skills</h2>
+  <div class="skill-columns">
+    <div>
+      <h3>Programming and data</h3>
+      <p>Python, SQL, PySpark, Scala, R, Git, Microsoft Excel</p>
+    </div>
+    <div>
+      <h3>Machine learning</h3>
+      <p>Forecasting, recommender systems, A/B testing, survival analysis, causal inference, NLP, network analysis, deep learning</p>
+    </div>
+    <div>
+      <h3>Platforms</h3>
+      <p>Google Cloud, BigQuery, Azure Databricks, Spark, MLflow, Tableau, Power BI</p>
+    </div>
+    <div>
+      <h3>Libraries</h3>
+      <p>PyTorch, TensorFlow, Keras, Scikit-learn, pandas, NumPy</p>
+    </div>
+  </div>
+</section>
 
-# Education
----
-<table style="width:100%">
-<col width="9%">
-<col width="20">
-<col >
+<section class="content-section split-section">
+  <div>
+    <h2>Education</h2>
+    <div class="resume-list resume-list--compact">
+      <article>
+        <h3>MSc Quantitative Economics</h3>
+        <p>University of Paris 1 Pantheon-Sorbonne and Autonomous University of Barcelona, 2017 - 2019. Erasmus Mundus scholarship recipient.</p>
+      </article>
+      <article>
+        <h3>BSc Mathematics and Statistics</h3>
+        <p>Kwara State University, 2012 - 2016. First Class Honors.</p>
+      </article>
+    </div>
+  </div>
+  <div>
+    <h2>Awards and Affiliations</h2>
+    <ul class="clean-list clean-list--plain">
+      <li>Google Africa Developer Scholarship Program recipient</li>
+      <li>Erasmus Mundus scholarship recipient</li>
+      <li>Best graduating student, School of Statistics and Mathematical Sciences</li>
+      <li>Member: ASA, ACM, and SIAM</li>
+    </ul>
+  </div>
+</section>
 
-<tr style="border-bottom:1pt solid #eee">
-<td markdown="1">
-![updaris-logo](/images/cv/paris.jpeg)
-</td>
-<td></td>
-<td markdown="1">
-[Universitad de Autónoma, Barcelona](https://uab.cat) and [Universite Paris, Panthéon-Sorbonne](https://www.pantheonsorbonne.fr/en), 08/2017 - 06/2019
-- MSc In Quantitative Economics [QEM](https://master-economics-qem.eu/)
-- Erasmus Mundus Scholarship recipient, 2017
-</td> 
-</tr>
-
-<tr height="10"/>
-<tr style="border-bottom:1pt solid #eee">
-<td markdown="1">
-![kwasu-logo](/images/cv/kwasu.jpeg)
-</td>
-<td></td>
-<td markdown="1">
-[Kwara State University](https://kwasusite.kwasu.edu.ng/), 08/2012 - 06/2016
-- BSc In Mathematics and Statistics (First class honors)
-</td> 
-</tr>
-
-<tr style="border-bottom:1pt solid #eee">
-<td markdown="1">
-![stanford-logo](/images/cv/stanford.png)
-</td>
-<td></td>
-<td markdown="1">
-[Stanford University](http://www.standford.edu/)
-- Statistics in Medicine Certificate, 2015
-- Statistical Learnining, 2016
-</td> 
-</tr>
-</table>
-
-<!-- --- -->
-
-# Work Experiences
-
----
-
-<table style="width:100%">
-<col width="17%">
-<col width="20">
-<col >
-<tr style="border-bottom:1pt solid #eee">
-<td markdown="1">
-![benshi-logo](/images/cv/benshi.png)
-</td>
-<td></td>
-<td markdown="1">
-[Benshi AI](https://benshi.ai), 07/2021 - current
-- Data Scientist
-</td> 
-</tr>
-
-<tr height="10"/>
-<tr style="border-bottom:1pt solid #eee">
-<td markdown="1">
-![edreams-logo](/images/cv/edreams.png)
-</td>
-<td></td>
-<td markdown="1">
-[eDreams ODIGEO](https://edreams.com), 06/2021 - 07/2021
-- BI Data Engineer
-</td> 
-</tr>
-
-<tr height="10"/>
-<tr style="border-bottom:1pt solid #eee">
-<td markdown="1">
-![cadcg](/images/cv/taa.jpeg)
-</td>
-<td></td>
-<td markdown="1">
-[Noustique Perfumes - The Alchemist Atelier](https://stories.bsh-group.com/en_DE/article/creating-the-perfect-fragrance-with-the-scent-creator-39406), 10/2019 - 04/2021
-- Data and Business Intelligence Analyst
-</td> 
-</tr>
-
-<tr height="10"/>
-<tr style="border-bottom:1pt solid #eee">
-<td markdown="1">
-![dsdaily](/images/cv/dsdaily.webp)
-</td>
-<td></td>
-<td markdown="1">
-DatasetDaily, 04/2020 - 10/2020 
-- Freelance Data Scientist
-</td> 
-</tr>
-
-<tr height="10"/>
-<tr style="border-bottom:1pt solid #eee">
-<td markdown="1">
-![rsu](/images/cv/rsu.jpeg)
-</td>
-<td></td>
-<td markdown="1">
-[Rivers State University of Science and Technology](https://www.rsu.edu.ng/), 09/2016 - 10/2017 
-- Research Assistant
-</td> 
-</tr>
-</table>
-
-
-# Skills
-
----- 
-
-<div class="container">
-
-<div class="leftpane1" markdown="1">
-#### Programming
-- Python
-- R
-- Scala
-</div>
-  
-<div class="leftpane1" markdown="1">
-#### Libraries
-- PyTorch
-- Spark (PySpark)
-- Tensorflow
-</div>
-  
-<div class="leftpane1" markdown="1">
-#### Tools
-- Git 
-- LaTeX
-- Google Cloud
-- Azure Databricks
-</div>
-
-<div class="leftpane1" markdown="1">
-#### Language
-- English
-- Spanish
-</div>
-
-</div>
-
-
-
-
-<style type="text/css">
-td {
-    border: 0.5px;
-    vertical-align: top;
-    text-align: left;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-}
-
-.leftpane1 {
-    width: 24%;
-    height: 100%;
-    float: left;
-    border-collapse: collapse;
-}
-
-.leftpane2 {
-    width: 8%;
-    height: 100%;
-    margin: 8px;
-  	float: left;
-    border-collapse: collapse;
-}
-
-.leftpane3 {
-    width: 86%;
-    height: 100%;
-  	float: left;
-    border-collapse: collapse;
-}
-
-.leftpane4 {
-    width: 15%;
-    height: 100%;
-    margin: 8px;
-  	float: left;
-    border-collapse: collapse;
-}
-
-.leftpane5 {
-    width: 80%;
-    height: 100%;
-  	float: left;
-    border-collapse: collapse;
-}
-
-.rightpane {
-  width: 33%;
-  height: 100%;
-  float: right;
-  background-color: yellow;
-  border-collapse: collapse;
-}
-</style>
-
-
-
-<!--Publications
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>-->
-  
- 
+<section class="content-section">
+  <h2>Publications</h2>
+  <div class="publication-list">
+    <article>
+      <span>2025</span>
+      <div>
+        <h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3>
+        <p>Report on claims-data-driven capitation design, calibration, monitoring, and quality insights for Rwanda's Community-Based Health Insurance scheme.</p>
+      </div>
+    </article>
+    <article>
+      <span>2022</span>
+      <div>
+        <h3><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a></h3>
+        <p>KDD 2022 work on probabilistic and survival analysis for meaningful engagement and churn in mobile health applications.</p>
+      </div>
+    </article>
+    <article>
+      <span>2023</span>
+      <div>
+        <h3>Power Samade distribution: properties and application to real lifetime data</h3>
+        <p>Nigerian Journal of Science and Environment.</p>
+      </div>
+    </article>
+    <article>
+      <span>2018</span>
+      <div>
+        <h3>Homework vs. In Class-Exercise: Means of Assessment, Waste of Time or Punishment?</h3>
+        <p>International Journal of Scientific and Engineering Research.</p>
+      </div>
+    </article>
+  </div>
+</section>
