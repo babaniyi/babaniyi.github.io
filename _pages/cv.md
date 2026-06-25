@@ -49,7 +49,6 @@ redirect_from:
       <ul>
         <li>Designed price-arbitrage and anomaly detection systems that identified pricing inconsistencies and protected approximately EUR11M annually.</li>
         <li>Built elasticity and uplift models across a EUR500M+ product portfolio, contributing to a 13% gross-profit improvement.</li>
-        <li>Developed production Databricks jobs and PySpark pipelines with engineering partners to operationalize commercial analytics dashboards.</li>
       </ul>
     </article>
     <article>
@@ -73,16 +72,6 @@ redirect_from:
         <li>Built customer segmentation and churn models to improve communication, retention, and customer satisfaction.</li>
         <li>Combined multiple data sources into revenue, budget, expense, and KPI dashboards that reduced manual reporting.</li>
         <li>Analyzed acquisition channels, customer journeys, pricing scenarios, and business performance for management decisions.</li>
-      </ul>
-    </article>
-    <article>
-      <div class="resume-list__header">
-        <h3>Research Associate / Research Assistant</h3>
-        <span>IAE CSIC and Rivers State University | 2016 - 2019</span>
-      </div>
-      <ul>
-        <li>Built web scraping and predictive modeling workflows using more than a century of newspaper text to study conflict risk.</li>
-        <li>Led analysis projects using statistical methods, market research, and applied data analysis for research and client work.</li>
       </ul>
     </article>
   </div>
