@@ -10,7 +10,7 @@ redirect_from:
 <section class="resume-hero">
   <p class="eyebrow">CV</p>
   <h1>Babs Olaniyi</h1>
-  <p class="lead">Senior Data Scientist and AI/ML Engineer based in Barcelona, Spain.</p>
+  <p class="lead">Data Scientist at Causal Foundry with a Senior Data Scientist / AI-ML Engineer profile, based in Barcelona, Spain.</p>
   <div class="inline-links">
     <a href="mailto:horlaneyee@gmail.com">Email</a>
     <a href="https://www.linkedin.com/in/babaniyi/">LinkedIn</a>
@@ -22,7 +22,7 @@ redirect_from:
 <section class="content-section">
   <h2>Summary</h2>
   <p>
-    Senior Data Scientist and Machine Learning Engineer with 6+ years of experience applying data science and statistical techniques to problems in pricing, e-commerce, retail, and healthcare. I have built systems for pricing optimization, revenue leakage detection, demand forecasting, inventory planning, mobile health engagement, survival analysis, recommender systems, and experimentation.
+    Senior Data Scientist and Machine Learning Engineer with 7+ years of experience building and deploying applied machine learning systems across healthcare, e-commerce, supply chain, and commercial analytics. Current work at Causal Foundry focuses on healthcare AI, claims analytics, health financing, provider performance, anomaly detection, and decision-support systems.
   </p>
 </section>
 
@@ -31,24 +31,36 @@ redirect_from:
   <div class="resume-list">
     <article>
       <div class="resume-list__header">
-        <h3>Senior Data Scientist</h3>
-        <span>ZF Group | Barcelona | 2023 - Present</span>
+        <h3>Data Scientist, Healthcare AI</h3>
+        <span>Causal Foundry | Barcelona | Nov 2024 - Present</span>
       </div>
       <ul>
-        <li>Developed pricing leakage detection logic that identified customer price arbitrage and exposed loopholes linked to more than EUR10M in revenue loss exposure.</li>
-        <li>Built machine learning models for optimal pricing, improving gross profit by 20% compared with baseline pricing scenarios.</li>
-        <li>Led data-driven work to identify and correct customer pricing errors, contributing to EUR30M in revenue impact.</li>
+        <li>Built claims-driven healthcare financing models used in policy decision-making, including work supporting modeled liquidity for health centers covering 9M insured individuals.</li>
+        <li>Designed analytics and decision-support workflows for provider performance, healthcare utilization, patient outcomes, and national health financing reform.</li>
+        <li>Productionized a national drug catalog by reconciling 5,000+ SKUs across seven agencies using text similarity and embedding-based matching.</li>
+        <li>Developed monitoring systems with anomaly detection and automated indicators to reduce manual reporting and improve decision turnaround across 1,000+ providers.</li>
+      </ul>
+    </article>
+    <article>
+      <div class="resume-list__header">
+        <h3>Senior Data Scientist</h3>
+        <span>ZF Group | Barcelona | Feb 2023 - Sep 2024</span>
+      </div>
+      <ul>
+        <li>Designed price-arbitrage and anomaly detection systems that identified pricing inconsistencies and protected approximately EUR11M annually.</li>
+        <li>Built elasticity and uplift models across a EUR500M+ product portfolio, contributing to a 13% gross-profit improvement.</li>
+        <li>Developed production Databricks jobs and PySpark pipelines with engineering partners to operationalize commercial analytics dashboards.</li>
       </ul>
     </article>
     <article>
       <div class="resume-list__header">
         <h3>Data Scientist</h3>
-        <span>Benshi AI | Barcelona | 2021 - 2023</span>
+        <span>Benshi AI | Barcelona | Jul 2021 - Feb 2023</span>
       </div>
       <ul>
-        <li>Forecasted demand for more than 50,000 medications for Indonesian pharmacy networks, helping reduce patient wait times by about 20 minutes.</li>
-        <li>Improved mobile health app engagement using censoring models, churn prediction, and experiments around user actions.</li>
-        <li>Built recommender systems for pharmacy purchasing decisions and survival models for learning and certification engagement, contributing to measurable engagement and revenue improvements.</li>
+        <li>Forecasted demand for pharmacy networks using time-series and deep learning approaches, reducing stockouts and improving operational monitoring.</li>
+        <li>Improved mobile health engagement using survival models, churn prediction, return/purchase models, and experiments around user actions.</li>
+        <li>Designed adaptive intervention and recommendation systems using multi-armed bandits, rule-based optimization, and reinforcement-learning concepts.</li>
         <li>Mentored data scientists, supported recruitment, and translated technical results for product and policy stakeholders.</li>
       </ul>
     </article>
@@ -95,15 +107,15 @@ redirect_from:
     </div>
     <div>
       <h3>Machine learning</h3>
-      <p>Forecasting, recommender systems, A/B testing, survival analysis, causal inference, NLP, network analysis, deep learning</p>
+      <p>Forecasting, pricing optimization, recommender systems, A/B testing, survival analysis, causal inference, reinforcement learning, anomaly detection, NLP, multimodal learning</p>
     </div>
     <div>
       <h3>Platforms</h3>
-      <p>Google Cloud, BigQuery, Azure Databricks, Spark, MLflow, Tableau, Power BI</p>
+      <p>Google Cloud, BigQuery, AWS, Azure Databricks, Spark, MLflow, Airflow, Tableau, Power BI</p>
     </div>
     <div>
       <h3>Libraries</h3>
-      <p>PyTorch, TensorFlow, Keras, Scikit-learn, pandas, NumPy</p>
+      <p>PyTorch, TensorFlow, Keras, Scikit-learn, XGBoost, LightGBM, pandas, NumPy</p>
     </div>
   </div>
 </section>
@@ -125,6 +137,7 @@ redirect_from:
   <div>
     <h2>Awards and Affiliations</h2>
     <ul class="clean-list clean-list--plain">
+      <li>Cloud Credit Award, ML Collective and Google</li>
       <li>Google Africa Developer Scholarship Program recipient</li>
       <li>Erasmus Mundus scholarship recipient</li>
       <li>Best graduating student, School of Statistics and Mathematical Sciences</li>
@@ -136,6 +149,13 @@ redirect_from:
 <section class="content-section">
   <h2>Publications</h2>
   <div class="publication-list">
+    <article>
+      <span>2025</span>
+      <div>
+        <h3>Enhancing Product Recommendations with Multi-Modal LLMs</h3>
+        <p>ISIR-eCom 2025 work on multimodal product recommendation using text and image signals.</p>
+      </div>
+    </article>
     <article>
       <span>2025</span>
       <div>

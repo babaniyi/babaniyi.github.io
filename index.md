@@ -7,9 +7,9 @@ title: Babs Olaniyi
 <section class="hero">
   <div class="hero__content">
     <p class="eyebrow">Senior Data Scientist / AI-ML Engineer</p>
-    <h1>Machine learning systems for pricing, recommendations, experimentation, and health analytics.</h1>
+    <h1>Machine learning systems for healthcare AI, pricing, recommendations, and experimentation.</h1>
     <p class="lead">
-      I am Babs Olaniyi, a data scientist and machine learning engineer based in Barcelona. I build models, experiments, and data products that help teams improve pricing, inventory decisions, user engagement, and healthcare delivery.
+      I am Babs Olaniyi, a data scientist at Causal Foundry in Barcelona. I build models, experiments, and data products that support healthcare financing, provider performance, pricing decisions, user engagement, and operational decision-making.
     </p>
     <div class="hero__actions">
       <a class="button button--primary" href="/portfolio/">View projects</a>
@@ -21,23 +21,23 @@ title: Babs Olaniyi
     <img src="/images/profile.jpeg" alt="Babaniyi Olaniyi" class="hero__portrait">
     <div>
       <p class="panel-label">Current focus</p>
-      <p>Senior-level DS and AI/ML engineering work across pricing, recommender systems, forecasting, causal experimentation, and health financing analytics.</p>
+      <p>Current work: healthcare AI, claims analytics, provider performance, capitation reform, anomaly detection, and decision-support systems at Causal Foundry.</p>
     </div>
   </div>
 </section>
 
 <section class="section-grid">
   <div class="metric">
-    <span class="metric__value">6+</span>
+    <span class="metric__value">7+</span>
     <span class="metric__label">years across data science, ML, and analytics</span>
   </div>
   <div class="metric">
-    <span class="metric__value">EUR40M+</span>
-    <span class="metric__label">pricing and revenue recovery impact</span>
+    <span class="metric__value">9M+</span>
+    <span class="metric__label">insured individuals represented in healthcare analytics work</span>
   </div>
   <div class="metric">
-    <span class="metric__value">50K+</span>
-    <span class="metric__label">medications modeled for demand forecasting</span>
+    <span class="metric__value">EUR11M+</span>
+    <span class="metric__label">annual pricing leakage protected through anomaly detection</span>
   </div>
 </section>
 
@@ -48,14 +48,14 @@ title: Babs Olaniyi
   </div>
   <div class="card-grid">
     <article class="feature-card">
-      <p class="card-meta">Pricing and revenue</p>
-      <h3>Pricing leakage and optimization</h3>
-      <p>Developed leakage detection and optimal pricing models that identified price arbitrage, corrected pricing errors, and improved gross profit against baseline scenarios.</p>
+      <p class="card-meta">Healthcare AI</p>
+      <h3>Claims-driven health financing</h3>
+      <p>Built models and pipelines for healthcare financing, provider performance, capitation reform, anomaly detection, and decision support across large-scale claims data.</p>
     </article>
     <article class="feature-card">
-      <p class="card-meta">Health technology</p>
-      <h3>Digital health and supply analytics</h3>
-      <p>Built forecasting, survival, and engagement models for pharmacies, midwives, and mobile health users in low- and middle-income settings.</p>
+      <p class="card-meta">Pricing and revenue</p>
+      <h3>Pricing leakage and optimization</h3>
+      <p>Developed anomaly detection, elasticity, uplift, and optimal-pricing models across a EUR500M+ product portfolio.</p>
     </article>
     <article class="feature-card">
       <p class="card-meta">AI/ML engineering</p>
@@ -84,8 +84,8 @@ title: Babs Olaniyi
     <h2>Research</h2>
     <ul class="clean-list">
       <li><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a><span>2025</span></li>
+      <li><span>Enhancing Product Recommendations with Multi-Modal LLMs</span><span>ISIR-eCom 2025</span></li>
       <li><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a><span>KDD 2022</span></li>
-      <li><span>Power Samade distribution: properties and application to real lifetime data</span><span>2023</span></li>
     </ul>
   </div>
 </section>
@@ -104,8 +104,12 @@ title: Babs Olaniyi
     <span>BigQuery</span>
     <span>Azure Databricks</span>
     <span>MLflow</span>
+    <span>Airflow</span>
+    <span>AWS</span>
     <span>PyTorch</span>
     <span>TensorFlow</span>
+    <span>XGBoost</span>
+    <span>LightGBM</span>
     <span>Scikit-learn</span>
     <span>A/B testing</span>
     <span>Forecasting</span>

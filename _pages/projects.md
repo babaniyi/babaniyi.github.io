@@ -6,7 +6,7 @@ permalink: /portfolio/
 
 <section class="page-intro">
   <p class="eyebrow">Portfolio</p>
-  <h1>Senior data science and AI/ML engineering work across pricing, healthcare, recommender systems, and experimentation.</h1>
+  <h1>Senior data science and AI/ML engineering work across healthcare AI, pricing, recommender systems, and experimentation.</h1>
   <p class="lead">
     A focused view of work that best represents my profile: production-minded machine learning, applied research, data products, and business-facing analytics with measurable impact.
   </p>
@@ -19,36 +19,37 @@ permalink: /portfolio/
   </div>
   <div class="case-study-grid">
     <article class="case-study">
-      <p class="card-meta">Pricing / Commercial ML</p>
-      <h3>Pricing leakage detection and optimization</h3>
-      <p>Developed heuristics and machine learning models to identify customer price arbitrage, correct pricing errors, and recommend optimal prices.</p>
+      <p class="card-meta">Healthcare AI / Decision Support</p>
+      <h3>Causal Foundry: claims analytics and health financing models</h3>
+      <p>Built healthcare analytics and decision-support systems using claims and provider data to support financing reform, provider performance, anomaly detection, and operational monitoring.</p>
       <ul class="evidence-list">
-        <li>Identified loopholes linked to more than EUR10M in revenue loss exposure.</li>
-        <li>Built optimal-pricing models that improved gross profit by 20% versus baseline price scenarios.</li>
-        <li>Led data-driven customer pricing corrections associated with EUR30M revenue impact.</li>
+        <li>Worked with datasets covering more than 9M insured individuals and 4,500+ healthcare facilities.</li>
+        <li>Built large-scale pipelines processing 100M+ healthcare claims records using Python and SQL.</li>
+        <li>Developed monitoring systems with anomaly detection and automated indicators across 1,000+ providers.</li>
+        <li>Reconciled 5,000+ drug SKUs across seven agencies using text similarity and embedding-based matching.</li>
       </ul>
       <div class="tag-cloud tag-cloud--small">
-        <span>Pricing</span>
-        <span>Revenue analytics</span>
-        <span>Machine learning</span>
-        <span>Decision systems</span>
+        <span>Healthcare AI</span>
+        <span>Claims analytics</span>
+        <span>Provider performance</span>
+        <span>Anomaly detection</span>
       </div>
     </article>
 
     <article class="case-study">
-      <p class="card-meta">Healthcare / Data Products</p>
-      <h3>Rwanda health financing and monitoring pipeline</h3>
-      <p>Built analytics and pipeline components for health financing, monitoring indicators, anomaly detection, capitation calculations, and dashboard-ready data.</p>
+      <p class="card-meta">Pricing / Commercial ML</p>
+      <h3>ZF Group: pricing leakage detection and optimization</h3>
+      <p>Developed anomaly detection, elasticity, uplift, and optimization models for commercial pricing decisions across a large industrial product portfolio.</p>
       <ul class="evidence-list">
-        <li>Worked with claims and facility data to support capitation design and monitoring.</li>
-        <li>Designed production-oriented ETL across indicators, outliers, reporting, and capitation workflows.</li>
-        <li>Connected applied modeling with policy questions around primary healthcare financing.</li>
+        <li>Protected approximately EUR11M annually by identifying pricing inconsistencies and channel leakage.</li>
+        <li>Built pricing and uplift models across a EUR500M+ portfolio, contributing to a 13% gross-profit improvement.</li>
+        <li>Deployed PySpark and Databricks pipelines with engineering partners for commercial analytics workflows.</li>
       </ul>
       <div class="tag-cloud tag-cloud--small">
-        <span>Python</span>
-        <span>ClickHouse</span>
-        <span>ETL</span>
-        <span>Health financing</span>
+        <span>Pricing</span>
+        <span>XGBoost</span>
+        <span>PySpark</span>
+        <span>Databricks</span>
       </div>
     </article>
 
@@ -57,9 +58,9 @@ permalink: /portfolio/
       <h3>Mobile health engagement and demand forecasting</h3>
       <p>Built forecasting, survival, and experimentation workflows for pharmacy supply chains, healthcare workers, and mHealth applications.</p>
       <ul class="evidence-list">
-        <li>Forecasted demand for more than 50,000 medications, reducing patient wait times by about 20 minutes.</li>
-        <li>Improved mobile health engagement using churn, return, and purchase prediction models.</li>
-        <li>Designed A/B testing, multi-armed bandit, and survival-analysis approaches for behavioral interventions.</li>
+        <li>Forecasted demand for pharmacy networks using DeepAR and time-series modeling, reducing stockouts by 18%.</li>
+        <li>Improved engagement outcomes with survival modeling, churn prediction, contextual bandits, and rule-based optimization.</li>
+        <li>Designed A/B testing, multi-armed bandit, and reinforcement-learning approaches for adaptive interventions.</li>
       </ul>
       <div class="tag-cloud tag-cloud--small">
         <span>Forecasting</span>
@@ -84,9 +85,10 @@ permalink: /portfolio/
         <h2><a href="https://github.com/babaniyi/MultiModal-LLM-RecSys">Multi-Modal LLM-based Product Recommender System</a></h2>
         <p>Built a recommendation system that combines product reviews, metadata, images, temporal ordering, and multimodal feature fusion to predict the next items a user may purchase or review.</p>
         <ul class="evidence-list">
+          <li>Built a multimodal recommender over approximately 3M Amazon interactions using review text and image embeddings.</li>
           <li>Fine-tuned a GPT-2 style recommendation model with textual, visual, and temporal features.</li>
           <li>Implemented train/validation/test processing that respects time ordering to reduce leakage.</li>
-          <li>Compared against collaborative filtering, content-based, hybrid, and popularity baselines using Recall, Precision, MRR, Hit Rate, NDCG, MAP, coverage, diversity, and novelty.</li>
+          <li>Reported NDCG@5 of 0.22 and P@5 of 0.29, with evaluation harnesses, ablations, and documentation.</li>
         </ul>
         <div class="tag-cloud tag-cloud--small">
           <span>LLMs</span>
@@ -139,6 +141,11 @@ permalink: /portfolio/
     <p class="eyebrow">Publications</p>
     <h2>Research and papers</h2>
     <div class="article-list">
+      <article>
+        <span>ISIR-eCom 2025</span>
+        <h3>Enhancing Product Recommendations with Multi-Modal LLMs</h3>
+        <p>Research on multimodal product recommendation using text and image representations for next-item prediction.</p>
+      </article>
       <article>
         <span>2025</span>
         <h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3>
