@@ -47,7 +47,7 @@ To summarize the problem statement, we are designing an image search system that
 1. The model uses image metadata and pixels. Also, users can only click on an image and we can construct training data online and label them based on user interactions.
 
 
-# 1. Overview of the search system
+## 1. Overview of the search system
 As shown in Figure 1.2, the search system takes a text query as input and outputs a ranked list of images sorted by their relevance to the text query.
 
 <figure>
@@ -117,7 +117,7 @@ We compute the dot product between the text and each image in the embedding spac
 
 
 
-# 2. Data Preparation for Training
+## 2. Data Preparation for Training
 
 ## 2.1. Data engineering
 We assume we are given an annotated dataset to train and evaluate the model. We could have users, image and user-image interactions data. 
@@ -266,7 +266,7 @@ In the earlier section [1](#1-overview-of-the-search-system), we explained the g
 
 
 
-# 3. Model Development
+## 3. Model Development
 
 ## 3.1. Embedding Model Selection
 As discussed in the [Overview of the search system](#1-overview-of-the-search-system) and visualised in [Figure 1.6](#12-image-visual-search), text queries are converted into embeddings by a text encoder, and images are converted  into embeddings by an image encoder. In this section, we examine possible model architectures for each encoder.
@@ -489,7 +489,7 @@ Figure 2.1 visualises the system architecture, we see the model takes text query
 
 
 
-# 4. Evaluation
+## 4. Evaluation
 Evaluating the performance of the predictions is a critical step and this section focuses on this. The evaluation merics can be classified into offline and online metrics. [Aminian & Alex Xu (2023)](#references) covered this in-depth which would I summarised in the subsequent subsections.
 
 
@@ -545,7 +545,7 @@ This metric shows captures how engaged users are with the recommended images. Du
 
 
 
-# 5. Serving
+## 5. Serving
 At serving time, the system displays a ranked list of product images relevant to a given text query. Figure 2.2 shows the prediction pipeline, text and image indexing pipeline. We will discuss each pipeline in detail.
 
 <figure>
@@ -596,7 +596,7 @@ A trained image encoder is used to compute image embeddings, which are then inde
 ## 5.3 Text indexing pipeline
 Elasticsearch is used by this component to index titles, manually created tags, and automatically produced tags. In most cases, when users upload product images, they include tags to aid in image identification. But what if they don't manually enter tags? One choice is to generate tags using a standalone model. This element, which we refer to as the "auto-tagger," uses a model to produce tags. The auto-tagger, is particularly useful when a product image lacks manual tags. Although these tags make more noise than manual tags, they are nonetheless useful.
 
-# Conclusion
+## Conclusion
 It's vital to keep in mind that while we have simplified the system design for product search in e-commerce platforms, it is actually considerably more complex. Other elements such as adding popularity and freshness, increasing product features and user interaction, expanding text queries to support other languages, etc. were not included in this design.
 
 [[11]](#references) provides an overview of the offline-online, retrieval-ranking pattern for search and recommendations used by major companies such as Alibaba, Facebook, LinkedIn, etc. They also distinguish the latency-constrained online systems from the less-demanding offline systems, and split the online process into retrieval and ranking steps. 
@@ -633,7 +633,7 @@ To cite this content, please use:
 
 
 
-# References
+## References
 1. Ali Aminian & Alex Xu (2023). Machine Learning System Design Interview.
 2. [Full Text Search with MongoDB](https://www.mongodb.com/basics/full-text-search)
 3. [How To Improve Database Searches with Full-Text Search](https://www.digitalocean.com/community/tutorials/how-to-improve-database-searches-with-full-text-search-in-mysql-5-6-on-ubuntu-16-04)

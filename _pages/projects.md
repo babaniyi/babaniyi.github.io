@@ -1,252 +1,126 @@
 ---
 layout: page
-title: Portfolio
+title: Work
 permalink: /portfolio/
+description: Selected data science, policy, healthcare, pricing, and machine-learning work by Babs Olaniyi.
 ---
 
-<section class="page-intro">
-  <p class="eyebrow">Portfolio</p>
-  <h1>Applied data science for public policy, health, markets, and measurable human outcomes.</h1>
-  <p class="lead">
-    A focused view of work that best represents my profile: rigorous research design, production-minded machine learning, decision-support systems, and analytics that connect technical evidence to action.
-  </p>
+<section class="page-hero">
+  <p class="eyebrow">Selected work</p>
+  <h1>From complex data to decisions people can defend.</h1>
+  <div class="page-hero__meta">
+    <p class="lead">A curated portfolio spanning development economics, healthcare financing, experimentation, pricing, and applied machine learning.</p>
+    <p>Each project is framed around the decision, the evidence, and the outcome—not just the algorithm.</p>
+  </div>
 </section>
 
-<section class="content-section portfolio-spotlight">
-  <div class="section-heading">
-    <p class="eyebrow">Development economics and humanitarian response</p>
-    <h2>Featured policy case study</h2>
+<section class="content-section featured-project">
+  <div class="section-kicker">
+    <p class="eyebrow">Featured case study</p>
+    <span>01</span>
   </div>
-  <article class="project-card project-card--wide project-card--policy">
-    <img src="/images/projects/food-crisis-early-warning/location-verification-queue.png" alt="Illustrative food-crisis location verification queue">
-    <div>
-      <p class="card-meta">Food security / Multilingual NLP / Geospatial analytics</p>
-      <h2><a href="/portfolio/food-crisis-early-warning/">Food-crisis early warning from bilingual news</a></h2>
-      <p>Designed an auditable screening system that converts English and Arabic news into location-level evidence for food-security analysts across the Mashriq.</p>
+  <article class="work-feature work-feature--policy">
+    <div class="work-feature__visual">
+      <img src="/images/projects/food-crisis-early-warning/location-verification-queue.png" alt="Illustrative food-crisis location verification queue">
+    </div>
+    <div class="work-feature__content">
+      <p class="card-meta">Development economics · Humanitarian early warning</p>
+      <h2>Food-crisis early warning from bilingual news</h2>
+      <p>Designed an auditable screening system that converts English and Arabic news into location-level evidence for food-security analysts across Iraq, Jordan, Lebanon, Palestine, and Syria.</p>
       <ul class="evidence-list">
-        <li>Validated and translated 167 risk factors across 12 policy-relevant themes.</li>
-        <li>Resolved article mentions against 357 country, province, and district entities.</li>
-        <li>Used empirical-Bayes shrinkage to handle sparse local evidence without overstating precision.</li>
-        <li>Separated signal strength from evidence confidence and preserved article-level provenance.</li>
+        <li>Validated and translated 167 risk factors across 12 themes.</li>
+        <li>Resolved mentions against 357 geographic entities.</li>
+        <li>Separated signal strength from evidence confidence.</li>
+        <li>Connected calibrated risk to policy-facing action thresholds.</li>
       </ul>
-      <div class="inline-links">
-        <a class="button button--primary" href="/portfolio/food-crisis-early-warning/">Read case study</a>
-      </div>
-      <div class="tag-cloud tag-cloud--small">
-        <span>Development economics</span>
-        <span>Food security</span>
-        <span>Arabic NLP</span>
-        <span>Empirical Bayes</span>
-      </div>
+      <a class="button button--primary" href="/portfolio/food-crisis-early-warning/">Read the case study</a>
     </div>
   </article>
 </section>
 
 <section class="content-section">
-  <div class="section-heading">
-    <p class="eyebrow">Featured case studies</p>
-    <h2>High-impact applied work</h2>
+  <div class="section-kicker">
+    <p class="eyebrow">Applied impact</p>
+    <span>02</span>
   </div>
-  <div class="case-study-grid">
-    <article class="case-study">
-      <p class="card-meta">Healthcare AI / Decision Support</p>
-      <h3>Causal Foundry: claims analytics and health financing models</h3>
-      <p>Built healthcare analytics and decision-support systems using claims and provider data to support financing reform, provider performance, anomaly detection, and operational monitoring.</p>
-      <ul class="evidence-list">
-        <li>Worked with datasets covering more than 9M insured individuals and 4,500+ healthcare facilities.</li>
-        <li>Built large-scale pipelines processing 100M+ healthcare claims records using Python and SQL.</li>
-        <li>Developed monitoring systems with anomaly detection and automated indicators across 1,000+ providers.</li>
-        <li>Reconciled 5,000+ drug SKUs across seven agencies using text similarity and embedding-based matching.</li>
+  <div class="case-grid">
+    <article class="case-card case-card--green">
+      <p class="card-meta">Healthcare AI · Rwanda</p>
+      <h2>Claims-driven health financing and provider performance</h2>
+      <p>Built decision-support systems using claims and provider data to support financing reform, utilization monitoring, prescribing quality, and operational oversight.</p>
+      <ul class="result-list result-list--stacked">
+        <li><strong>9M+</strong><span>insured people represented</span></li>
+        <li><strong>100M+</strong><span>claims processed</span></li>
+        <li><strong>1,000+</strong><span>providers monitored</span></li>
       </ul>
-      <div class="tag-cloud tag-cloud--small">
-        <span>Healthcare AI</span>
-        <span>Claims analytics</span>
-        <span>Provider performance</span>
-        <span>Anomaly detection</span>
-      </div>
+      <div class="tag-cloud tag-cloud--small"><span>Health financing</span><span>Claims analytics</span><span>Anomaly detection</span><span>Decision support</span></div>
     </article>
 
-    <article class="case-study">
-      <p class="card-meta">Pricing / Commercial ML</p>
-      <h3>ZF Group: pricing leakage detection and optimization</h3>
-      <p>Developed anomaly detection, elasticity, uplift, and optimization models for commercial pricing decisions across a large industrial product portfolio.</p>
-      <ul class="evidence-list">
-        <li>Protected approximately EUR11M annually by identifying pricing inconsistencies and channel leakage.</li>
-        <li>Built pricing and uplift models across a EUR500M+ portfolio, contributing to a 13% gross-profit improvement.</li>
-        <li>Deployed PySpark and Databricks pipelines with engineering partners for commercial analytics workflows.</li>
+    <article class="case-card case-card--sand">
+      <p class="card-meta">Commercial ML · Europe</p>
+      <h2>Pricing leakage detection and optimization</h2>
+      <p>Developed anomaly-detection, elasticity, uplift, and optimization models for commercial decisions across a large industrial product portfolio.</p>
+      <ul class="result-list result-list--stacked">
+        <li><strong>€11M+</strong><span>annual leakage protected</span></li>
+        <li><strong>€500M+</strong><span>portfolio modeled</span></li>
+        <li><strong>13%</strong><span>gross-profit improvement supported</span></li>
       </ul>
-      <div class="tag-cloud tag-cloud--small">
-        <span>Pricing</span>
-        <span>XGBoost</span>
-        <span>PySpark</span>
-        <span>Databricks</span>
-      </div>
+      <div class="tag-cloud tag-cloud--small"><span>Pricing</span><span>Uplift modeling</span><span>PySpark</span><span>Databricks</span></div>
     </article>
 
-    <article class="case-study">
-      <p class="card-meta">Digital Health / Experimentation</p>
-      <h3>Mobile health engagement and demand forecasting</h3>
-      <p>Built forecasting, survival, and experimentation workflows for pharmacy supply chains, healthcare workers, and mHealth applications.</p>
-      <ul class="evidence-list">
-        <li>Forecasted demand for pharmacy networks using DeepAR and time-series modeling, reducing stockouts by 18%.</li>
-        <li>Improved engagement outcomes with survival modeling, churn prediction, contextual bandits, and rule-based optimization.</li>
-        <li>Designed A/B testing, multi-armed bandit, and reinforcement-learning approaches for adaptive interventions.</li>
+    <article class="case-card case-card--ink">
+      <p class="card-meta">Digital health · Emerging markets</p>
+      <h2>Engagement, forecasting, and adaptive interventions</h2>
+      <p>Built forecasting, survival, and experimentation workflows for pharmacy supply chains, healthcare workers, and mobile-health applications.</p>
+      <ul class="result-list result-list--stacked">
+        <li><strong>18%</strong><span>reduction in stockouts supported</span></li>
+        <li><strong>KDD ’22</strong><span>engagement research published</span></li>
+        <li><strong>Adaptive</strong><span>bandit and intervention designs</span></li>
       </ul>
-      <div class="tag-cloud tag-cloud--small">
-        <span>Forecasting</span>
-        <span>Survival analysis</span>
-        <span>A/B testing</span>
-        <span>Bandits</span>
-      </div>
+      <div class="tag-cloud tag-cloud--small"><span>Forecasting</span><span>Survival analysis</span><span>A/B testing</span><span>Bandits</span></div>
     </article>
   </div>
 </section>
 
 <section class="content-section">
-  <div class="section-heading">
-    <p class="eyebrow">AI and recommender systems</p>
-    <h2>Engineering projects</h2>
+  <div class="section-kicker">
+    <p class="eyebrow">Engineering projects</p>
+    <span>03</span>
   </div>
-  <section class="project-list">
-    <article class="project-card project-card--wide">
-      <img src="/images/projects/design.png" alt="Recommendation systems diagram">
-      <div>
-        <p class="card-meta">Multimodal LLMs / Recommenders</p>
-        <h2><a href="https://github.com/babaniyi/MultiModal-LLM-RecSys">Multi-Modal LLM-based Product Recommender System</a></h2>
-        <p>Built a recommendation system that combines product reviews, metadata, images, temporal ordering, and multimodal feature fusion to predict the next items a user may purchase or review.</p>
-        <ul class="evidence-list">
-          <li>Built a multimodal recommender over approximately 3M Amazon interactions using review text and image embeddings.</li>
-          <li>Fine-tuned a GPT-2 style recommendation model with textual, visual, and temporal features.</li>
-          <li>Implemented train/validation/test processing that respects time ordering to reduce leakage.</li>
-          <li>Reported NDCG@5 of 0.22 and P@5 of 0.29, with evaluation harnesses, ablations, and documentation.</li>
-        </ul>
-        <div class="tag-cloud tag-cloud--small">
-          <span>LLMs</span>
-          <span>Computer vision</span>
-          <span>Ranking metrics</span>
-          <span>PyTorch</span>
-        </div>
-      </div>
+  <div class="project-gallery">
+    <article>
+      <img src="/images/projects/design.png" alt="Recommendation-system architecture diagram">
+      <div><p class="card-meta">Multimodal AI · Recommenders</p><h3>Multi-Modal LLM Product Recommender</h3><p>Combined review text, metadata, images, and temporal signals for next-item prediction across approximately 3M interactions.</p><a class="text-link" href="https://github.com/babaniyi/MultiModal-LLM-RecSys">View project <span aria-hidden="true">↗</span></a></div>
     </article>
-
-    <article class="project-card project-card--wide">
-      <img src="/images/projects/markus-winkler-unsplash.jpg" alt="Decision optimization visual">
-      <div>
-        <p class="card-meta">Experimentation / Reinforcement learning</p>
-        <h2><a href="https://github.com/babaniyi/Deep-contextual-bandits">Deep Contextual Bandits</a></h2>
-        <p>Adapted deep contextual bandit ideas for reusable experimentation workflows, focusing on Bayesian neural networks, Thompson sampling, and decision-making under uncertainty.</p>
-        <ul class="evidence-list">
-          <li>Grounded in the ICLR 2018 Deep Bayesian Bandits benchmark.</li>
-          <li>Built toward a package that can run contextual bandit algorithms on arbitrary datasets.</li>
-          <li>Connects directly to product experimentation and adaptive intervention design.</li>
-        </ul>
-        <div class="tag-cloud tag-cloud--small">
-          <span>Contextual bandits</span>
-          <span>Thompson sampling</span>
-          <span>TensorFlow</span>
-          <span>Experimentation</span>
-        </div>
-      </div>
+    <article>
+      <img src="/images/projects/markus-winkler-unsplash.jpg" alt="Abstract visualization representing adaptive decisions">
+      <div><p class="card-meta">Experimentation · Reinforcement learning</p><h3>Deep Contextual Bandits</h3><p>Reusable experimentation workflows built around Bayesian neural networks, Thompson sampling, and decisions under uncertainty.</p><a class="text-link" href="https://github.com/babaniyi/Deep-contextual-bandits">View project <span aria-hidden="true">↗</span></a></div>
     </article>
-
-    <article class="project-card project-card--wide">
-      <img src="/images/projects/sales.jpeg" alt="Retail analytics dashboard">
-      <div>
-        <p class="card-meta">Customer analytics / ML</p>
-        <h2><a href="https://github.com/babaniyi/BusinessML">Business ML: retention, attribution, and segmentation</a></h2>
-        <p>Converted online retail transactions into a business analytics workflow covering revenue, retention, customer growth, attribution, journey analysis, and RFM-based segmentation.</p>
-        <div class="tag-cloud tag-cloud--small">
-          <span>Cohort analysis</span>
-          <span>Attribution</span>
-          <span>RFM</span>
-          <span>Segmentation</span>
-        </div>
-      </div>
+    <article>
+      <img src="/images/projects/segment.png" alt="Customer segmentation visualization">
+      <div><p class="card-meta">Customer analytics</p><h3>Segmentation and retention intelligence</h3><p>Cohort, attribution, RFM, churn, and satisfaction analyses translated into practical commercial recommendations.</p></div>
     </article>
-  </section>
-</section>
-
-<section class="content-section split-section">
-  <div>
-    <p class="eyebrow">Publications</p>
-    <h2>Research and papers</h2>
-    <div class="article-list">
-      <article>
-        <span>ISIR-eCom 2025</span>
-        <h3>Enhancing Product Recommendations with Multi-Modal LLMs</h3>
-        <p>Research on multimodal product recommendation using text and image representations for next-item prediction.</p>
-      </article>
-      <article>
-        <span>2025</span>
-        <h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3>
-        <p>Claims-data-driven capitation design, calibration, monitoring, and prescribing-quality insights for Rwanda's Community-Based Health Insurance scheme.</p>
-      </article>
-      <article>
-        <span>KDD 2022</span>
-        <h3><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a></h3>
-        <p>Probabilistic and survival-analysis framework for engagement and churn in mobile health applications used by healthcare workers.</p>
-      </article>
-      <article>
-        <span>2023</span>
-        <h3>Power Samade distribution: properties and application to real lifetime data</h3>
-        <p>Nigerian Journal of Science and Environment paper on distributional modeling and lifetime data analysis.</p>
-      </article>
-      <article>
-        <span>2018</span>
-        <h3>Homework vs. In Class-Exercise: Means of Assessment, Waste of Time or Punishment?</h3>
-        <p>International Journal of Scientific and Engineering Research.</p>
-      </article>
-    </div>
-  </div>
-  <div>
-    <p class="eyebrow">Writing</p>
-    <h2>Selected articles</h2>
-    <div class="article-list">
-      <article>
-        <span>2023</span>
-        <h3><a href="/2023/03/22/designing-a-recommendation-system-for-search-in-ecommerce.html">Designing Recommendation Systems for Search in E-commerce</a></h3>
-        <p>System-design oriented discussion of retrieval, ranking, and search recommendation tradeoffs.</p>
-      </article>
-      <article>
-        <span>2022</span>
-        <h3><a href="/2022/07/16/designing-machine-learning-solution-for-course-recommendation.html">Designing Machine Learning Solution for Course Recommendation</a></h3>
-        <p>End-to-end framing of a course recommendation problem from business goal to ML design.</p>
-      </article>
-      <article>
-        <span>2020</span>
-        <h3><a href="https://babaniyi.medium.com/customer-spend-satisfaction-and-segmentation-using-machine-learning-techniques-15822b60f5b">Customer spend, satisfaction, and segmentation</a></h3>
-        <p>Marketplace analytics using customer segmentation, satisfaction prediction, and spend modeling.</p>
-      </article>
-      <article>
-        <span>2019</span>
-        <h3>Identifying networks in customer reviews</h3>
-        <p>Network analysis applied to customer review relationships and behavioral insight discovery.</p>
-      </article>
-    </div>
+    <article>
+      <img src="/images/projects/sentiment-analysis.jpg" alt="Text-analysis visualization">
+      <div><p class="card-meta">NLP · Research</p><h3>Text as evidence</h3><p>Applied text retrieval, classification, similarity, and network analysis to public-policy and customer-behavior questions.</p></div>
+    </article>
   </div>
 </section>
 
-<section class="content-section">
-  <div class="section-heading">
-    <p class="eyebrow">Selected earlier work</p>
-    <h2>Analytics breadth</h2>
+<section class="content-section publication-band">
+  <div>
+    <p class="eyebrow">Selected research</p>
+    <h2>Published and presented work</h2>
   </div>
-  <div class="card-grid card-grid--two">
-    <article class="feature-card">
-      <h3><a href="https://nbviewer.jupyter.org/github/neahyo/Metyis/blob/2ab5b24e901cf1eaa1dbcb657684ebc311ff0882/Metyis/Analysis.ipynb">Is the movie industry dying?</a></h3>
-      <p>Explored film revenue, budget, genre, rating, audience, cast, and director effects to advise production strategy.</p>
-    </article>
-    <article class="feature-card">
-      <h3>The determinants of happiness</h3>
-      <p>Applied statistical modeling to study drivers of subjective wellbeing and socioeconomic outcomes.</p>
-    </article>
-    <article class="feature-card">
-      <h3>Is comparison really the thief of joy?</h3>
-      <p>Empirical analysis using South African data to study comparison, life satisfaction, and economic context.</p>
-    </article>
-    <article class="feature-card">
-      <h3>Data visualization practice</h3>
-      <p>Built a reference collection of Python visualization patterns inspired by The Economist, data-to-viz, and storytelling-with-data practices.</p>
-    </article>
+  <div class="publication-list publication-list--cards">
+    <article><span>2025</span><div><h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3><p>Claims-data-driven capitation design, monitoring, and prescribing-quality insights.</p></div></article>
+    <article><span>ISIR-eCom 2025</span><div><h3>Enhancing Product Recommendations with Multi-Modal LLMs</h3><p>Text and image representations for next-item prediction.</p></div></article>
+    <article><span>KDD 2022</span><div><h3><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a></h3><p>Probabilistic and survival-analysis methods for meaningful engagement and churn.</p></div></article>
   </div>
+</section>
+
+<section class="closing-cta closing-cta--compact">
+  <p class="eyebrow">Need the detailed chronology?</p>
+  <h2>See the experience, methods, and tools behind the work.</h2>
+  <div><a class="button button--light" href="/cv/">View CV</a><a class="text-link text-link--light" href="mailto:horlaneyee@gmail.com">Start a conversation <span aria-hidden="true">↗</span></a></div>
 </section>

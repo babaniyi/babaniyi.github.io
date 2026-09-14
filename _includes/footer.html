@@ -1,35 +1,24 @@
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
   <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <h3>Contact</h3>
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
+    <div class="footer-main">
+      <div class="footer-intro">
+        <a class="site-title" rel="author" href="{{ "/" | relative_url }}"><span>Babs</span> Olaniyi</a>
+        <p>Senior data scientist and economist building useful evidence for healthcare, public policy, and applied AI.</p>
       </div>
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/privacy">Privacy Policy</a></li>
-        </ul>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <p class="footer-label">Explore</p>
+        <a href="/#profile">Profile</a><a href="/portfolio/">Work</a><a href="/posts/">Writing</a><a href="/cv/">CV</a>
+      </nav>
+      <div class="footer-contact">
+        <p class="footer-label">Contact</p>
+        <h2>Have a complex data problem?</h2>
+        <a class="footer-email u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a>
       </div>
     </div>
-
-    <div class="social-links">
-      <h3>Follow Us</h3>
-      {%- include social.html -%}
+    <div class="footer-bottom">
+      <span>© {{ 'now' | date: "%Y" }} Babaniyi Olaniyi</span>
+      <div><a href="https://www.linkedin.com/in/babaniyi/">LinkedIn</a><a href="https://github.com/Babaniyi">GitHub</a><a href="https://babaniyi.substack.com">Substack</a></div>
     </div>
-
   </div>
-
 </footer>
