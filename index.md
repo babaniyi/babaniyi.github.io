@@ -7,9 +7,9 @@ title: Babs Olaniyi
 <section class="hero">
   <div class="hero__content">
     <p class="eyebrow">Senior Data Scientist / AI-ML Engineer</p>
-    <h1>Machine learning systems for healthcare AI, pricing, recommendations, and experimentation.</h1>
+    <h1>Data science for health, public policy, markets, and better decisions.</h1>
     <p class="lead">
-      I am Babs Olaniyi, a data scientist at Causal Foundry in Barcelona. I build models, experiments, and data products that support healthcare financing, provider performance, pricing decisions, user engagement, and operational decision-making.
+      I am Babs Olaniyi, a data scientist at Causal Foundry in Barcelona. I build models, experiments, and data products that support healthcare financing, public-sector outcomes, provider performance, pricing decisions, user engagement, and operational decision-making.
     </p>
     <div class="hero__actions">
       <a class="button button--primary" href="/portfolio/">View projects</a>
@@ -46,7 +46,13 @@ title: Babs Olaniyi
     <p class="eyebrow">Selected Work</p>
     <h2>Recent projects and research</h2>
   </div>
-  <div class="card-grid">
+  <div class="card-grid card-grid--two">
+    <article class="feature-card feature-card--policy">
+      <p class="card-meta">Development economics / Food security</p>
+      <h3>Food-crisis early warning from bilingual news</h3>
+      <p>Built an auditable English–Arabic NLP and geospatial pipeline that ranks locations for analyst verification while making uncertainty and source evidence explicit.</p>
+      <a href="/portfolio/food-crisis-early-warning/">Read case study</a>
+    </article>
     <article class="feature-card">
       <p class="card-meta">Healthcare AI</p>
       <h3>Claims-driven health financing</h3>
@@ -157,6 +163,10 @@ title: Babs Olaniyi
     <span>Forecasting</span>
     <span>Survival analysis</span>
     <span>Causal inference</span>
+    <span>Geospatial analytics</span>
+    <span>Multilingual NLP</span>
+    <span>Bayesian modeling</span>
+    <span>Early-warning systems</span>
     <span>Recommender systems</span>
   </div>
 </section>

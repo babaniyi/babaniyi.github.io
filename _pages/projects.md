@@ -6,10 +6,41 @@ permalink: /portfolio/
 
 <section class="page-intro">
   <p class="eyebrow">Portfolio</p>
-  <h1>Senior data science and AI/ML engineering work across healthcare AI, pricing, recommender systems, and experimentation.</h1>
+  <h1>Applied data science for public policy, health, markets, and measurable human outcomes.</h1>
   <p class="lead">
-    A focused view of work that best represents my profile: production-minded machine learning, applied research, data products, and business-facing analytics with measurable impact.
+    A focused view of work that best represents my profile: rigorous research design, production-minded machine learning, decision-support systems, and analytics that connect technical evidence to action.
   </p>
+</section>
+
+<section class="content-section portfolio-spotlight">
+  <div class="section-heading">
+    <p class="eyebrow">Development economics and humanitarian response</p>
+    <h2>Featured policy case study</h2>
+  </div>
+  <article class="project-card project-card--wide project-card--policy">
+    <img src="/images/projects/food-crisis-early-warning/location-verification-queue.png" alt="Illustrative food-crisis location verification queue">
+    <div>
+      <p class="card-meta">Food security / Multilingual NLP / Geospatial analytics</p>
+      <h2><a href="/portfolio/food-crisis-early-warning/">Food-crisis early warning from bilingual news</a></h2>
+      <p>Designed an auditable screening system that converts English and Arabic news into location-level evidence for food-security analysts across the Mashriq.</p>
+      <ul class="evidence-list">
+        <li>Validated and translated 167 risk factors across 12 policy-relevant themes.</li>
+        <li>Resolved article mentions against 357 country, province, and district entities.</li>
+        <li>Used empirical-Bayes shrinkage to handle sparse local evidence without overstating precision.</li>
+        <li>Separated signal strength from evidence confidence and preserved article-level provenance.</li>
+      </ul>
+      <div class="inline-links">
+        <a class="button button--primary" href="/portfolio/food-crisis-early-warning/">Read case study</a>
+        <a class="button" href="/assets/projects/food-crisis-early-warning/solution_Babaniyi_Olaniyi.ipynb" download>Download notebook</a>
+      </div>
+      <div class="tag-cloud tag-cloud--small">
+        <span>Development economics</span>
+        <span>Food security</span>
+        <span>Arabic NLP</span>
+        <span>Empirical Bayes</span>
+      </div>
+    </div>
+  </article>
 </section>
 
 <section class="content-section">
