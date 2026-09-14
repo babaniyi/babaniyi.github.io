@@ -31,7 +31,6 @@ permalink: /portfolio/
       </ul>
       <div class="inline-links">
         <a class="button button--primary" href="/portfolio/food-crisis-early-warning/">Read case study</a>
-        <a class="button" href="/assets/projects/food-crisis-early-warning/solution_Babaniyi_Olaniyi.ipynb" download>Download notebook</a>
       </div>
       <div class="tag-cloud tag-cloud--small">
         <span>Development economics</span>

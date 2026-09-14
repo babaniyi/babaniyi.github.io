@@ -12,8 +12,7 @@ description: An auditable bilingual NLP and geospatial screening system for food
     I designed a research prototype that converts English and Arabic news into location-level evidence for food-insecurity monitoring across Iraq, Jordan, Lebanon, Palestine, and Syria. The system helps analysts decide where to investigate—not whether a crisis exists.
   </p>
   <div class="hero__actions">
-    <a class="button button--primary" href="/assets/projects/food-crisis-early-warning/solution_Babaniyi_Olaniyi.ipynb" download>Download the executed notebook</a>
-    <a class="button" href="/portfolio/">Back to portfolio</a>
+    <a class="button button--primary" href="/portfolio/">Back to portfolio</a>
   </div>
 </section>
 
@@ -105,7 +104,7 @@ description: An auditable bilingual NLP and geospatial screening system for food
       <span>06</span>
       <div>
         <h3>Connect prediction to decisions</h3>
-        <p>The notebook applies a cost-sensitive prevention framework: a desk review, field verification, and material intervention should each have different thresholds because their costs and effectiveness differ.</p>
+        <p>The analysis applies a cost-sensitive prevention framework: a desk review, field verification, and material intervention should each have different thresholds because their costs and effectiveness differ.</p>
       </div>
     </li>
   </ol>
@@ -143,7 +142,7 @@ description: An auditable bilingual NLP and geospatial screening system for food
     <aside class="evidence-note">
       <p class="card-meta">Important interpretation</p>
       <h3>The current charts are validation outputs, not crisis estimates</h3>
-      <p>The assessment bundle available for this implementation did not include the two news CSVs. I used a clearly labeled synthetic fixture to exercise every pipeline stage and saved all notebook outputs. I do not present those examples as empirical findings.</p>
+      <p>The assessment bundle available for this implementation did not include the two news CSVs. I used a clearly labeled synthetic fixture to exercise every pipeline stage and saved the resulting validation outputs. I do not present those examples as empirical findings.</p>
       <p>This is a deliberate research choice: missing data should narrow the claim, not lower the standard of evidence.</p>
     </aside>
   </div>
@@ -208,9 +207,9 @@ description: An auditable bilingual NLP and geospatial screening system for food
 
 <section class="project-cta">
   <div>
-    <p class="eyebrow">Technical artifact</p>
-    <h2>Review the complete, executed analysis</h2>
-    <p>The notebook contains the full code, assumptions, tests, visual diagnostics, forecast design, references, and reflection.</p>
+    <p class="eyebrow">More work</p>
+    <h2>Explore more applied data projects</h2>
+    <p>Return to the portfolio for more work at the intersection of development economics, policy, and data science.</p>
   </div>
-  <a class="button button--primary" href="/assets/projects/food-crisis-early-warning/solution_Babaniyi_Olaniyi.ipynb" download>Download notebook</a>
+  <a class="button button--primary" href="/portfolio/">View portfolio</a>
 </section>
