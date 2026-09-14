@@ -78,7 +78,7 @@ redirect_from:
       <div class="section-kicker"><p class="eyebrow">Research</p><span>02</span></div>
       <div class="publication-list">
         <article><span>2025</span><div><h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3><p>Claims-data-driven capitation design, calibration, monitoring, and quality insights.</p></div></article>
-        <article><span>2025</span><div><h3>Enhancing Product Recommendations with Multi-Modal LLMs</h3><p>ISIR-eCom research on text and image signals for next-item prediction.</p></div></article>
+        <article><span>2025</span><div><h3><a href="https://ieeexplore.ieee.org/abstract/document/11416058/">Enhancing Product Recommendations with Multi-Modal LLMs</a></h3><p>ISIR-eCom research on text and image signals for next-item prediction.</p></div></article>
         <article><span>2022</span><div><h3><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a></h3><p>KDD work on probabilistic and survival-analysis approaches to engagement and churn.</p></div></article>
         <article><span>2023</span><div><h3>Power Samade distribution: properties and application to real lifetime data</h3><p>Nigerian Journal of Science and Environment.</p></div></article>
       </div>

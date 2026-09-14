@@ -143,7 +143,7 @@ description: Senior data scientist and economist building decision systems for h
     <h2>Work designed to travel beyond the model.</h2>
     <ul class="clean-list">
       <li><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a><span>2025</span></li>
-      <li><span>Enhancing Product Recommendations with Multi-Modal LLMs</span><span>2025</span></li>
+      <li><a href="https://ieeexplore.ieee.org/abstract/document/11416058/">Enhancing Product Recommendations with Multi-Modal LLMs</a><span>2025</span></li>
       <li><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a><span>KDD 2022</span></li>
     </ul>
   </div>

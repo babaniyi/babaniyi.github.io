@@ -114,7 +114,7 @@ description: Selected data science, policy, healthcare, pricing, and machine-lea
   </div>
   <div class="publication-list publication-list--cards">
     <article><span>2025</span><div><h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3><p>Claims-data-driven capitation design, monitoring, and prescribing-quality insights.</p></div></article>
-    <article><span>ISIR-eCom 2025</span><div><h3>Enhancing Product Recommendations with Multi-Modal LLMs</h3><p>Text and image representations for next-item prediction.</p></div></article>
+    <article><span>ISIR-eCom 2025</span><div><h3><a href="https://ieeexplore.ieee.org/abstract/document/11416058/">Enhancing Product Recommendations with Multi-Modal LLMs</a></h3><p>Text and image representations for next-item prediction.</p></div></article>
     <article><span>KDD 2022</span><div><h3><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a></h3><p>Probabilistic and survival-analysis methods for meaningful engagement and churn.</p></div></article>
   </div>
 </section>
