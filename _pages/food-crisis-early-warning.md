@@ -3,6 +3,7 @@ layout: case-study
 title: Food-crisis early warning from bilingual news
 permalink: /portfolio/food-crisis-early-warning/
 description: An auditable bilingual NLP and geospatial screening system for food-insecurity early warning in the Mashriq.
+image: /images/projects/food-crisis-early-warning/location-verification-queue.png
 ---
 
 <section class="case-study-hero case-study-hero--policy">

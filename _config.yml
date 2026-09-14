@@ -2,8 +2,8 @@ title: Babs Olaniyi
 author:
   name: Babaniyi Olaniyi
   email: horlaneyee@gmail.com
-description: > # this means to ignore newlines until "show_excerpts:"
- Babs Olaniyi is a Data Scientist at Causal Foundry in Barcelona, Spain, with a senior data science and AI/ML engineering profile across healthcare AI, claims analytics, pricing, experimentation, recommender systems, and decision-support systems.
+description: >
+ Senior data scientist and economist building decision systems for healthcare, public policy, and applied AI.
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
@@ -52,14 +52,14 @@ minima:
 # - about.md
 
 # Minima: custom header links
-header_pages:
-  - _pages/about.md
-  - _pages/posts.md
-  - _pages/projects.md
-  - _pages/cv.md
-
 include:
     - _pages
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /images/social-preview.png
 
 # Build settings
 theme: minima
@@ -67,7 +67,7 @@ theme: minima
 disqus:
   shortname: by_niyi
 
-url: https://babaniyi.github.io
+url: https://www.babaniyi.com
 
 
 plugins:

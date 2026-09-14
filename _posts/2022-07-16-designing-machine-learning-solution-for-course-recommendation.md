@@ -45,7 +45,7 @@ This idea is visualised in the following figure and subsequently explained.
 <img src="/images/blogs/Skill-based model.jpeg">
 
 
-# Course to Skill Mapping
+## Course to Skill Mapping
 There are various techniques to build the mapping from scratch, among them are:
 
 #### 1. Manually tagging using taxonomy
@@ -69,7 +69,7 @@ We can also train a classification model such that for a given pair of course-sk
 
 
 
-# User to Skill Mapping
+## User to Skill Mapping
 #### 1. Member to skill via profile
 LinkedIn users can add skills to their profile by entering free-form text or choosing from existing standardized skills. This mapping us usually noisy and needs to be standardized. In practice, the coverage is not high since not many users provide this kind of data. We also train a supervised model *p(user_inputted_skill, standardized_skill)* to provide a score for the mapping.
 
@@ -86,6 +86,6 @@ To increase the coverage, we can use cohort-level mapping. For example, suppose 
 The explanation above should be sufficient for an interview. I did not delve into the non-functional software design requirements such as latency, availability and scalability requirements , API design, and so on.
 
 
-# Reference
+## Reference
 [Machine Learning System Design Interview by Khang Pham](https://www.amazon.com/Machine-Learning-Design-Interview-System/dp/B09YQWX59Z/ref=sr_1_1?qid=1658002680&refinements=p_27%3AKhang+Pham&s=books&sr=1-1)\
 [Personalized Recommendations in Linkedin Learning](https://engineering.linkedin.com/blog/2016/12/personalized-recommendations-in-linkedin-learning)

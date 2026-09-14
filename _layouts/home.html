@@ -2,77 +2,45 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-    {% include archive.html %}
-  {%- endif -%}
+<article class="writing-page">
+  <section class="page-hero page-hero--writing">
+    <p class="eyebrow">Writing</p>
+    <h1>Notes on building machine-learning systems people can use.</h1>
+    <div class="page-hero__meta">
+      <p class="lead">Long-form thinking on recommendation systems, experimentation, research design, and production data science.</p>
+      <p>Written to make technical choices, trade-offs, and failure modes easier to reason about.</p>
+    </div>
+  </section>
 
-  {{ content }}
+  <section class="writing-list" aria-label="Articles">
+    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+    {%- for post in site.posts -%}
+      <article class="writing-card">
+        <div><span>{{ post.date | date: "%Y" }}</span><span>{{ post.categories | first | default: "Essay" }}</span></div>
+        <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+        <p>{{ post.excerpt | strip_html | truncatewords: 34 }}</p>
+        <a class="text-link" href="{{ post.url | relative_url }}">Read article <span aria-hidden="true">→</span></a>
+      </article>
+    {%- endfor -%}
+  </section>
 
-  <div class="featured">
-    <h2>Featured Posts</h2>
-    <ul class="featured-list">
-      {%- assign featured_posts = site.posts | where: "featured", true -%}
-      {%- for post in featured_posts limit: 3 -%}
-      <li>
-        <a href="{{ post.url | relative_url }}">
-          <h3>{{ post.title | escape }}</h3>
-          <p>{{ post.excerpt }}</p>
-        </a>
-      </li>
-      {%- endfor -%}
-    </ul>
-  </div>
+  <section class="reading-shelf">
+    <div>
+      <p class="eyebrow">Reading shelf</p>
+      <h2>Ideas I return to.</h2>
+      <p>Selected work on recommender systems, experimentation, research software, and production machine learning.</p>
+    </div>
+    <div class="reading-shelf__links">
+      <a href="https://magazine.sebastianraschka.com/p/understanding-multimodal-llms"><span>Multimodal models</span>Understanding Multimodal LLMs</a>
+      <a href="https://eugeneyan.com/writing/bandits/"><span>Decision science</span>Bandits for Recommender Systems</a>
+      <a href="https://merely-useful.tech/py-rse/index.html"><span>Research engineering</span>Research Software Engineering in Python</a>
+      <a href="https://huyenchip.com/2022/02/07/data-distribution-shifts-and-monitoring.html"><span>ML systems</span>Data Distribution Shifts and Monitoring</a>
+    </div>
+  </section>
 
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
-
-
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
-    <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
-      <li class="post-item">
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          <p>{{ post.excerpt }}</p>
-        {%- endif -%}
-      </li>
-      
-      {%- endfor -%}
-    </ul>
-   
-
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
-      </div>
-    {%- endif %}
-
-  {%- endif -%}
-
-</div>
+  <section class="closing-cta closing-cta--compact">
+    <p class="eyebrow">Prefer the work itself?</p>
+    <h2>Explore projects where the methods meet real decisions.</h2>
+    <div><a class="button button--light" href="/portfolio/">View selected work</a></div>
+  </section>
+</article>
