@@ -80,7 +80,7 @@ redirect_from:
         <article><span>2025</span><div><h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3><p>Claims-data-driven capitation design, calibration, monitoring, and quality insights.</p></div></article>
         <article><span>2025</span><div><h3><a href="https://ieeexplore.ieee.org/abstract/document/11416058/">Enhancing Product Recommendations with Multi-Modal LLMs</a></h3><p>ISIR-eCom research on text and image signals for next-item prediction.</p></div></article>
         <article><span>2022</span><div><h3><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a></h3><p>KDD work on probabilistic and survival-analysis approaches to engagement and churn.</p></div></article>
-        <article><span>2023</span><div><h3>Power Samade distribution: properties and application to real lifetime data</h3><p>Nigerian Journal of Science and Environment.</p></div></article>
+        <article><span>2023</span><div><h3><a href="https://kwasuspace.kwasu.edu.ng/bitstreams/76e0bb8b-0e6f-49de-8090-2f2923d4bf69/download">Power Samade distribution: properties and application to real lifetime data</a></h3><p>Nigerian Journal of Science and Environment.</p></div></article>
       </div>
     </section>
   </main>
