@@ -568,31 +568,47 @@ a {
 }
 
 .analysis-flow {
-  align-items: stretch;
-  background: var(--site-surface);
-  border: 1px solid var(--site-line);
-  border-radius: 12px;
   display: grid;
-  gap: 12px;
-  grid-template-columns: minmax(0, 1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr) 28px minmax(0, 1fr);
-  padding: 26px;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.analysis-flow div {
+.analysis-flow li {
   background: var(--site-card);
   border: 1px solid var(--site-line);
+  border-top: 4px solid var(--site-accent);
   border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(22, 32, 42, 0.06);
   min-width: 0;
   overflow-wrap: break-word;
-  padding: 18px;
+  padding: 22px;
 }
 
-.analysis-flow span,
+.analysis-flow__number,
+.analysis-flow__label,
 .analysis-flow strong {
   display: block;
 }
 
-.analysis-flow span {
+.analysis-flow__number {
+  align-items: center;
+  background: #e7f4f2;
+  border-radius: 999px;
+  color: var(--site-accent-dark);
+  display: inline-flex;
+  font-size: 13px;
+  font-weight: 850;
+  height: 34px;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  margin-bottom: 28px;
+  width: 34px;
+}
+
+.analysis-flow__label {
   color: var(--site-accent-dark);
   font-size: 12px;
   font-weight: 850;
@@ -601,11 +617,10 @@ a {
   text-transform: uppercase;
 }
 
-.analysis-flow b {
-  align-self: center;
-  color: var(--site-accent);
-  font-size: 24px;
-  text-align: center;
+.analysis-flow strong {
+  color: var(--site-ink);
+  font-size: 18px;
+  line-height: 1.4;
 }
 
 .evidence-note {
@@ -672,12 +687,7 @@ a {
 
 @media (max-width: 1000px) {
   .analysis-flow {
-    grid-template-columns: 1fr;
-    padding: 20px;
-  }
-
-  .analysis-flow b {
-    transform: rotate(90deg);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -719,6 +729,10 @@ a {
     border-bottom: 1px solid var(--site-line);
     border-left: 0;
     padding: 16px 8px;
+  }
+
+  .analysis-flow {
+    grid-template-columns: 1fr;
   }
 
   .project-cta {

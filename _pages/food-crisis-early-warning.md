@@ -111,15 +111,32 @@ description: An auditable bilingual NLP and geospatial screening system for food
 </section>
 
 <section class="content-section">
-  <div class="analysis-flow" aria-label="Analysis workflow">
-    <div><span>Inputs</span><strong>News + risk taxonomy + place names</strong></div>
-    <b aria-hidden="true">→</b>
-    <div><span>Measure</span><strong>Bilingual phrase and location matching</strong></div>
-    <b aria-hidden="true">→</b>
-    <div><span>Estimate</span><strong>Partially pooled location signals</strong></div>
-    <b aria-hidden="true">→</b>
-    <div><span>Act</span><strong>Ranked queue with evidence drill-down</strong></div>
+  <div class="section-heading">
+    <p class="eyebrow">Analytical workflow</p>
+    <h2>Four steps turn reporting into a review queue</h2>
   </div>
+  <ol class="analysis-flow" aria-label="Analysis workflow">
+    <li>
+      <span class="analysis-flow__number">01</span>
+      <span class="analysis-flow__label">Inputs</span>
+      <strong>News, risk taxonomy and place names</strong>
+    </li>
+    <li>
+      <span class="analysis-flow__number">02</span>
+      <span class="analysis-flow__label">Measure</span>
+      <strong>Bilingual phrase and location matching</strong>
+    </li>
+    <li>
+      <span class="analysis-flow__number">03</span>
+      <span class="analysis-flow__label">Estimate</span>
+      <strong>Partially pooled location-level signals</strong>
+    </li>
+    <li>
+      <span class="analysis-flow__number">04</span>
+      <span class="analysis-flow__label">Act</span>
+      <strong>Evidence-linked analyst review queue</strong>
+    </li>
+  </ol>
 </section>
 
 <section class="content-section case-study-results">
