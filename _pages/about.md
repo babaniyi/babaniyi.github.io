@@ -7,9 +7,9 @@ description: The career story and working principles behind Babs Olaniyi’s wor
 
 <section class="page-hero page-hero--profile">
   <div>
-    <p class="eyebrow">About Babs</p>
-    <h1>Economics taught me to ask why. Data science gave me tools to test what works.</h1>
-    <p class="lead">I build analytical systems for decisions that affect people, institutions, and markets—from health financing in Rwanda to pricing systems in Europe and digital-health tools across emerging markets.</p>
+    <p class="eyebrow">A little background</p>
+    <h1>About me</h1>
+    <p class="lead">I am Babs Olaniyi, a data scientist at Causal Foundry in Barcelona. I trained in mathematics, statistics, and quantitative economics before moving into applied machine learning.</p>
   </div>
   <figure>
     <img src="/images/profile.jpeg" alt="Babaniyi Olaniyi">
@@ -19,15 +19,15 @@ description: The career story and working principles behind Babs Olaniyi’s wor
 
 <section class="narrative-section">
   <div class="section-kicker">
-    <p class="eyebrow">The through-line</p>
+    <p class="eyebrow">Background</p>
     <span>01</span>
   </div>
   <div class="narrative-section__grid">
-    <h2>I care about the distance between a technically correct answer and a genuinely useful one.</h2>
+    <h2>From economics to applied data science</h2>
     <div>
-      <p class="lead">The best model is rarely the most complicated model. It is the one built around the decision, honest about uncertainty, and clear enough for people to challenge and use.</p>
-      <p>My path began in mathematics and quantitative economics, moved through political-violence research and business intelligence, and developed into applied machine learning across healthcare, pricing, recommendations, and experimentation.</p>
-      <p>That breadth shapes how I work today: start with the institutional context, build the minimum credible evidence, and design the output around action.</p>
+      <p class="lead">My work has taken me from newspaper data and political-violence research to customer analytics, pricing, and healthcare.</p>
+      <p>At Causal Foundry, I work with claims and provider data on health financing, prescribing quality, and operational monitoring. Before that, I built pricing models at ZF Group and worked on forecasting, engagement, and experimentation at Benshi AI.</p>
+      <p>I enjoy the mix of statistical reasoning and engineering that this work needs, as well as explaining the results to the people making the decisions.</p>
     </div>
   </div>
 </section>
@@ -86,7 +86,6 @@ description: The career story and working principles behind Babs Olaniyi’s wor
 </section>
 
 <section class="closing-cta closing-cta--compact">
-  <p class="eyebrow">The short version</p>
-  <h2>I bring economic reasoning, production-minded data science, and clear communication to high-stakes decisions.</h2>
-  <div><a class="button button--light" href="/portfolio/">See selected work</a><a class="text-link text-link--light" href="mailto:horlaneyee@gmail.com">Email me <span aria-hidden="true">↗</span></a></div>
+  <h2>More about my work</h2>
+  <div><a class="text-link" href="/portfolio/">Selected projects <span aria-hidden="true">&rarr;</span></a><a class="text-link" href="/cv/">Full CV <span aria-hidden="true">&rarr;</span></a></div>
 </section>
