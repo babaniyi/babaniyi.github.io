@@ -58,8 +58,13 @@ description: Babs Olaniyi, data scientist and economist in Barcelona. Work on he
     {% for post in site.posts limit:3 %}
     <li><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y" }}</time><a href="{{ post.url | relative_url }}">{{ post.title | escape }} <span aria-hidden="true">&rarr;</span></a></li>
     {% endfor %}
+    {% for article in site.data.medium_articles %}
+    {% unless article.local_url %}
+    <li><time datetime="{{ article.date }}">{{ article.date | date: "%Y" }}</time><a href="{{ article.url }}">{{ article.title | escape }} <span aria-hidden="true">&nearr;</span></a></li>
+    {% endunless %}
+    {% endfor %}
   </ul>
-  <p class="section-footnote">You can also find me on <a href="https://babaniyi.substack.com">Substack</a>.</p>
+  <p class="section-footnote">I also publish on <a href="https://medium.com/@babaniyi">Medium</a> and <a href="https://babaniyi.substack.com">Substack</a>.</p>
 </section>
 
 <section class="index-section" aria-labelledby="reading-heading">
