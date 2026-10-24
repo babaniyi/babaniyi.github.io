@@ -2,6 +2,7 @@
 layout: post
 tags: data-science system-design recsys interviews
 comments: true
+excerpt: "A course recommendation design based on mapping users and courses to skills, handling cold starts, and evaluating recommendation relevance."
 ---
 
 <!-- ---

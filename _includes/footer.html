@@ -1,24 +1,12 @@
 <footer class="site-footer h-card">
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
   <div class="wrapper">
-    <div class="footer-main">
-      <div class="footer-intro">
-        <a class="site-title" rel="author" href="{{ "/" | relative_url }}"><span>Babs</span> Olaniyi</a>
-        <p>Senior data scientist and economist building useful evidence for healthcare, public policy, and applied AI.</p>
-      </div>
-      <nav class="footer-nav" aria-label="Footer navigation">
-        <p class="footer-label">Explore</p>
-        <a href="/#profile">Profile</a><a href="/portfolio/">Work</a><a href="/posts/">Writing</a><a href="/cv/">CV</a>
-      </nav>
-      <div class="footer-contact">
-        <p class="footer-label">Contact</p>
-        <h2>Have a complex data problem?</h2>
-        <a class="footer-email u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">↗</span></a>
-      </div>
+    <div class="footer-contact-line">
+      <p>Have something in mind?</p>
+      <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }} <span aria-hidden="true">&nearr;</span></a>
     </div>
     <div class="footer-bottom">
-      <span>© {{ 'now' | date: "%Y" }} Babaniyi Olaniyi</span>
-      <div><a href="https://www.linkedin.com/in/babaniyi/">LinkedIn</a><a href="https://github.com/Babaniyi">GitHub</a><a href="https://babaniyi.substack.com">Substack</a></div>
+      <span>&copy; {{ 'now' | date: '%Y' }} Babs Olaniyi</span>
+      <nav aria-label="Professional profiles"><a href="https://www.linkedin.com/in/babaniyi/">LinkedIn</a><a href="https://github.com/babaniyi">GitHub</a><a href="https://medium.com/@babaniyi">Medium</a><a href="https://babaniyi.substack.com">Substack</a><a href="{{ '/feed.xml' | relative_url }}">RSS</a></nav>
     </div>
   </div>
 </footer>

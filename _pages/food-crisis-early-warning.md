@@ -17,13 +17,7 @@ image: /images/projects/food-crisis-early-warning/location-verification-queue.pn
   </div>
 </section>
 
-<section class="project-metrics" aria-label="Project scope">
-  <div><strong>5</strong><span>Mashriq countries</span></div>
-  <div><strong>2</strong><span>news languages</span></div>
-  <div><strong>167</strong><span>risk-factor phrases</span></div>
-  <div><strong>357</strong><span>geographic entities</span></div>
-  <div><strong>12</strong><span>risk themes</span></div>
-</section>
+<p class="project-scope">Scope: 5 Mashriq countries / English &amp; Arabic / 167 risk-factor phrases / 357 geographic entities / 12 themes</p>
 
 <section class="content-section case-study-section case-study-section--narrow">
   <p class="eyebrow">The question</p>
@@ -209,17 +203,7 @@ image: /images/projects/food-crisis-early-warning/location-verification-queue.pn
   </div>
   <div>
     <p class="eyebrow">Capabilities demonstrated</p>
-    <div class="tag-cloud">
-      <span>Development economics</span>
-      <span>Food security</span>
-      <span>Multilingual NLP</span>
-      <span>Geospatial analytics</span>
-      <span>Bayesian shrinkage</span>
-      <span>Rare-event forecasting</span>
-      <span>Decision theory</span>
-      <span>Responsible AI</span>
-      <span>Research design</span>
-    </div>
+    <p>Development economics, food security, multilingual NLP, geospatial analytics, Bayesian shrinkage, rare-event forecasting, decision theory, responsible AI, and research design.</p>
   </div>
 </section>
 

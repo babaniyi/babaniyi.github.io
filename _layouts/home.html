@@ -4,23 +4,33 @@ layout: default
 
 <article class="writing-page">
   <section class="page-hero page-hero--writing">
-    <p class="eyebrow">Writing</p>
-    <h1>Notes on building machine-learning systems people can use.</h1>
+    <p class="eyebrow">Essays &amp; notes</p>
+    <h1>Writing</h1>
     <div class="page-hero__meta">
-      <p class="lead">Long-form thinking on recommendation systems, experimentation, research design, and production data science.</p>
-      <p>Written to make technical choices, trade-offs, and failure modes easier to reason about.</p>
+      <p class="lead">Things I have learned about recommendations, experiments, economics, and applied data science.</p>
+      <div class="inline-links"><a href="https://medium.com/@babaniyi">Medium <span aria-hidden="true">&nearr;</span></a><a href="https://babaniyi.substack.com">Substack <span aria-hidden="true">&nearr;</span></a></div>
     </div>
   </section>
 
   <section class="writing-list" aria-label="Articles">
-    {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
     {%- for post in site.posts -%}
+      {%- assign medium_version = site.data.medium_articles | where: "local_url", post.url | first -%}
       <article class="writing-card">
         <div><span>{{ post.date | date: "%Y" }}</span><span>{{ post.categories | first | default: "Essay" }}</span></div>
         <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
         <p>{{ post.excerpt | strip_html | truncatewords: 34 }}</p>
-        <a class="text-link" href="{{ post.url | relative_url }}">Read article <span aria-hidden="true">→</span></a>
+        <p class="writing-card__links"><a class="text-link" href="{{ post.url | relative_url }}">Read article <span aria-hidden="true">&rarr;</span></a>{% if medium_version %}<a class="text-link" href="{{ medium_version.url }}">Also on Medium <span aria-hidden="true">&nearr;</span></a>{% endif %}</p>
       </article>
+    {%- endfor -%}
+    {%- for article in site.data.medium_articles -%}
+      {%- unless article.local_url -%}
+      <article class="writing-card">
+        <div><time datetime="{{ article.date }}">{{ article.date | date: "%Y" }}</time><span>Medium / {{ article.topic | escape }}</span></div>
+        <h2><a href="{{ article.url }}">{{ article.title | escape }}</a></h2>
+        <p>{{ article.summary | escape }}</p>
+        <p class="writing-card__links"><a class="text-link" href="{{ article.url }}">Read on Medium <span aria-hidden="true">&nearr;</span></a></p>
+      </article>
+      {%- endunless -%}
     {%- endfor -%}
   </section>
 
@@ -39,8 +49,7 @@ layout: default
   </section>
 
   <section class="closing-cta closing-cta--compact">
-    <p class="eyebrow">Prefer the work itself?</p>
-    <h2>Explore projects where the methods meet real decisions.</h2>
-    <div><a class="button button--light" href="/portfolio/">View selected work</a></div>
+    <h2>Projects behind the writing</h2>
+    <div><a class="text-link" href="/portfolio/">View selected work <span aria-hidden="true">&rarr;</span></a></div>
   </section>
 </article>

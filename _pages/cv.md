@@ -18,13 +18,6 @@ redirect_from:
   </div>
 </section>
 
-<section class="cv-impact" aria-label="Selected career results">
-  <div><strong>9M+</strong><span>insured people represented</span></div>
-  <div><strong>100M+</strong><span>healthcare claims processed</span></div>
-  <div><strong>€11M+</strong><span>annual pricing leakage protected</span></div>
-  <div><strong>13%</strong><span>gross-profit improvement supported</span></div>
-</section>
-
 <div class="cv-layout">
   <aside class="cv-sidebar">
     <section>
@@ -49,7 +42,7 @@ redirect_from:
     </section>
   </aside>
 
-  <main class="cv-main">
+  <div class="cv-main">
     <div class="section-kicker"><p class="eyebrow">Experience</p><span>01</span></div>
     <div class="resume-list resume-list--editorial">
       <article>
@@ -74,7 +67,7 @@ redirect_from:
       </article>
     </div>
 
-    <section class="cv-publications">
+    <section class="cv-publications" id="publications">
       <div class="section-kicker"><p class="eyebrow">Research</p><span>02</span></div>
       <div class="publication-list">
         <article><span>2025</span><div><h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3><p>Claims-data-driven capitation design, calibration, monitoring, and quality insights.</p></div></article>
@@ -83,11 +76,10 @@ redirect_from:
         <article><span>2023</span><div><h3><a href="https://kwasuspace.kwasu.edu.ng/bitstreams/76e0bb8b-0e6f-49de-8090-2f2923d4bf69/download">Power Samade distribution: properties and application to real lifetime data</a></h3><p>Nigerian Journal of Science and Environment.</p></div></article>
       </div>
     </section>
-  </main>
+  </div>
 </div>
 
 <section class="closing-cta closing-cta--compact">
-  <p class="eyebrow">Selected work</p>
-  <h2>See how this experience translates into policy and product outcomes.</h2>
-  <div><a class="button button--light" href="/portfolio/">Explore the portfolio</a><a class="text-link text-link--light" href="mailto:horlaneyee@gmail.com">Get in touch <span aria-hidden="true">↗</span></a></div>
+  <h2>Selected projects and research</h2>
+  <div><a class="text-link" href="/portfolio/">View portfolio <span aria-hidden="true">&rarr;</span></a></div>
 </section>

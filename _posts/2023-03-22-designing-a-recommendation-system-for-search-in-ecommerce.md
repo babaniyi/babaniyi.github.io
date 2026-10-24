@@ -2,7 +2,7 @@
 layout: post
 tags: data-science system-design search
 comments: true
-excerpt: ""
+excerpt: "Designing an e-commerce image search system using text and image embeddings, with retrieval, ranking, training data, and evaluation."
 ---
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.jsconfig=TeX-AMS-MML_HTMLorMML"></script>
 

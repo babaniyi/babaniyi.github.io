@@ -1,0 +1,18 @@
+- title: Designing A Recommendation System For Search In E-commerce
+  url: https://babaniyi.medium.com/designing-a-recommendation-system-for-search-in-e-commerce-1b8f6b52f8f4
+  date: "2023-03-28"
+  topic: Recommender systems
+  summary: Designing an e-commerce image search system, from text and image embeddings to retrieval, ranking, training data, and evaluation.
+  local_url: /2023/03/22/designing-a-recommendation-system-for-search-in-ecommerce.html
+
+- title: The Determinants of Happiness
+  url: https://babaniyi.medium.com/the-determinants-of-happiness-6a2edcc266dd
+  date: "2020-04-09"
+  topic: Economics
+  summary: Exploring the factors associated with life satisfaction using South African survey data and linear regression.
+
+- title: Customer Spend, Satisfaction and Segmentation using Machine Learning Techniques
+  url: https://babaniyi.medium.com/customer-spend-satisfaction-and-segmentation-using-machine-learning-techniques-15822b60f5b1
+  date: "2020-03-24"
+  topic: Customer analytics
+  summary: Using Brazilian marketplace data to segment customers and model satisfaction and spending, with practical recommendations for online retailers.
