@@ -2,14 +2,14 @@
 layout: page
 title: About
 permalink: /about/
-description: Babs Olaniyi's background in statistics, data science, and machine learning for mobile health, alongside career experience and education.
+description: Babs Olaniyi's background in statistics, experimentation, and applied machine learning, spanning forecasting, supply chains, pricing, and healthcare.
 ---
 
 <section class="page-hero page-hero--profile">
   <div>
     <p class="eyebrow">A little background</p>
     <h1>About me</h1>
-    <p class="lead">My background is in statistics, data science, and machine learning, with a focus on mobile health applications. I work on user engagement, personalized interventions, and healthcare decision support.</p>
+    <p class="lead">My background is in statistics, data science, and machine learning. I build models, design experiments, and develop decision tools across healthcare, supply chains, pricing, and digital products.</p>
   </div>
   <figure>
     <img src="/images/profile.jpeg" alt="Babaniyi Olaniyi">
@@ -25,7 +25,16 @@ description: Babs Olaniyi's background in statistics, data science, and machine 
   <div class="timeline timeline--editorial">
     <article class="timeline__item">
       <span>Nov 2024—Present</span>
-      <div><p class="card-meta">Barcelona · Healthcare AI</p><h3>Data Scientist, Causal Foundry</h3><p>Building claims-driven systems for health financing, provider performance, prescribing quality, anomaly detection, and operational monitoring.</p></div>
+      <div>
+        <p class="card-meta">Barcelona · Applied data science</p>
+        <h3>Data Scientist, Causal Foundry</h3>
+        <p>My work spans national medical supply chains, health financing, and facility operations.</p>
+        <ul class="evidence-list">
+          <li>Build demand-forecasting models and procurement recommendations to support supply planning.</li>
+          <li>Lead the capitation payment methodology, supported by analysis of claims and facility behaviour.</li>
+          <li>Develop provider-performance and anomaly-detection workflows, working with engineers and domain experts to turn results into monitoring and decision tools.</li>
+        </ul>
+      </div>
     </article>
     <article class="timeline__item">
       <span>Feb 2023—Sep 2024</span>
@@ -46,34 +55,34 @@ description: Babs Olaniyi's background in statistics, data science, and machine 
   </div>
 </section>
 
-<section class="content-section">
-  <div class="section-kicker">
-    <p class="eyebrow">How I work</p>
-    <span>02</span>
-  </div>
-  <div class="principle-grid">
-    <article><span>01</span><h3>Start with the decision</h3><p>I define who acts, what changes, and what a useful answer must contain before reaching for a model.</p></article>
-    <article><span>02</span><h3>Make uncertainty visible</h3><p>I separate signal from confidence, document assumptions, and build checks that invite scrutiny rather than hide it.</p></article>
-    <article><span>03</span><h3>Design for adoption</h3><p>I translate across research, engineering, policy, and product teams so evidence can move into real workflows.</p></article>
-  </div>
-</section>
-
 <section class="content-section toolkit-section" id="expertise">
   <div class="section-kicker">
     <p class="eyebrow">Expertise</p>
-    <span>03</span>
+    <span>02</span>
   </div>
   <div class="toolkit-grid">
-    <div><h3>Research & decisions</h3><p>Causal inference · A/B testing · survival analysis · forecasting · Bayesian modeling · decision theory</p></div>
-    <div><h3>Machine learning</h3><p>NLP · recommender systems · anomaly detection · pricing optimization · multimodal learning · reinforcement learning</p></div>
-    <div><h3>Data & production</h3><p>Python · SQL · PySpark · BigQuery · Databricks · MLflow · Airflow · Google Cloud · AWS · PyTorch · Scikit-learn</p></div>
+    <div>
+      <h3>Research &amp; decisions</h3>
+      <p>Turn product and operational questions into experiments and causal analyses. Communicate findings with clear assumptions, uncertainty, and limitations.</p>
+      <p>Causal inference · Experimentation · Survival analysis · Forecasting · Bayesian modeling · Decision theory</p>
+    </div>
+    <div>
+      <h3>Applied ML</h3>
+      <p>Build and validate models for forecasting, risk stratification, personalization, and resource allocation, checking for bias and performance beyond the training data.</p>
+      <p>NLP · Recommender systems · Anomaly detection · Pricing optimization · Multimodal learning · Reinforcement learning</p>
+    </div>
+    <div>
+      <h3>Data &amp; production</h3>
+      <p>Analyse complex longitudinal datasets, assess data quality, and build reproducible Python and SQL workflows. Partner with engineers and domain experts to put models into practice.</p>
+      <p>Python · SQL · PySpark · BigQuery · Databricks · MLflow · Airflow · Google Cloud · AWS · PyTorch · Scikit-learn</p>
+    </div>
   </div>
 </section>
 
 <section class="content-section" id="education">
   <div class="section-kicker">
     <p class="eyebrow">Education</p>
-    <span>04</span>
+    <span>03</span>
   </div>
   <div class="timeline timeline--editorial">
     <article class="timeline__item">
@@ -90,7 +99,7 @@ description: Babs Olaniyi's background in statistics, data science, and machine 
 <section class="content-section" id="recognition">
   <div class="section-kicker">
     <p class="eyebrow">Recognition</p>
-    <span>05</span>
+    <span>04</span>
   </div>
   <ul class="evidence-list">
     <li>ML Collective &amp; Google Cloud Credit Award</li>

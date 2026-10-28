@@ -2,13 +2,13 @@
 layout: page
 title: Work
 permalink: /portfolio/
-description: Selected projects, publications, and applied data science work by Babs Olaniyi, across healthcare, public policy, pricing, and machine learning.
+description: Selected projects and applied data science work by Babs Olaniyi, across forecasting, supply chains, healthcare, public policy, pricing, and machine learning.
 ---
 
 <section class="page-hero">
   <p class="eyebrow">Portfolio</p>
   <h1>Selected work</h1>
-  <div class="page-hero__meta"><p class="lead">Projects from healthcare, public policy, pricing, and recommendation systems.</p><p>A mix of industry work, research, and open-source projects.</p></div>
+  <div class="page-hero__meta"><p class="lead">Projects from forecasting, supply chains, healthcare, public policy, pricing, and recommendation systems.</p><p>A mix of industry work, research, and open-source projects.</p></div>
 </section>
 
 <section class="content-section" aria-labelledby="featured-project">
@@ -33,8 +33,18 @@ description: Selected projects, publications, and applied data science work by B
   <div class="section-kicker"><p class="eyebrow">Industry work</p><span>02</span></div>
   <div class="applied-work">
     <article id="health-financing">
-      <div><p class="card-meta">Causal Foundry / Healthcare</p><h2>Claims-driven health financing and provider performance</h2></div>
-      <div><p>I build analytical models and monitoring systems for financing reform, utilization, prescribing quality, and provider performance.</p><ul class="evidence-list"><li>Claims pipelines processing more than 100M records, with data representing over 9M insured people.</li><li>Automated indicators and anomaly detection for oversight across 1,000+ providers.</li><li>Reconciliation of more than 5,000 drug SKUs across seven agencies using text similarity and embeddings.</li></ul><a class="text-link" href="https://arxiv.org/abs/2510.21851">Read the capitation reform paper <span aria-hidden="true">&nearr;</span></a></div>
+      <div><p class="card-meta">Causal Foundry / Applied data science</p><h2>Demand forecasting, procurement, and health financing</h2></div>
+      <div>
+        <p>I build predictive models and decision-support systems across national medical supply chains, health financing, and facility operations.</p>
+        <ul class="evidence-list">
+          <li>Build demand-forecasting models and procurement recommendations to support supply planning.</li>
+          <li>Lead the capitation payment methodology and analyse facility behaviour to inform payment design and resource allocation.</li>
+          <li>Develop analytical pipelines over more than 100M claims, with data representing over 9M insured people.</li>
+          <li>Build automated indicators and anomaly detection across 1,000+ providers, including utilization, prescribing quality, and performance monitoring.</li>
+          <li>Reconcile more than 5,000 drug SKUs across seven agencies using text similarity and embeddings.</li>
+        </ul>
+        <a class="text-link" href="https://arxiv.org/abs/2510.21851">Read the capitation reform paper <span aria-hidden="true">&nearr;</span></a>
+      </div>
     </article>
     <article id="pricing">
       <div><p class="card-meta">ZF Group / Commercial ML</p><h2>Pricing leakage detection and optimization</h2></div>
