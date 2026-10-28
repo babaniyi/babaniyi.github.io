@@ -43,12 +43,12 @@ description: Babs Olaniyi, data scientist and economist in Barcelona. Work on he
   </div>
 </section>
 
-<section class="index-section" aria-labelledby="research-heading">
-  <div class="index-section__heading"><h2 id="research-heading">Papers &amp; publications</h2><a href="{{ '/cv/#publications' | relative_url }}">All publications <span aria-hidden="true">&rarr;</span></a></div>
+<section class="index-section" id="publications" aria-labelledby="research-heading">
+  <div class="index-section__heading"><h2 id="research-heading">Papers &amp; publications</h2><span>{{ site.data.publications.size }} papers</span></div>
   <div class="publication-list">
-    <article><span>2025</span><div><h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3><p>Health financing, claims data, and provider payment.</p></div></article>
-    <article><span>2025</span><div><h3><a href="https://ieeexplore.ieee.org/abstract/document/11416058/">Enhancing Product Recommendations with Multi-Modal LLMs</a></h3><p>ISIR-eCom / Text and image signals for recommendations.</p></div></article>
-    <article><span>2022</span><div><h3><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a></h3><p>KDD / Probabilistic and survival models of engagement.</p></div></article>
+    {% for publication in site.data.publications %}
+    <article><span>{{ publication.year }}</span><div><h3><a href="{{ publication.url }}">{{ publication.title | escape }}</a></h3><p>{{ publication.summary | escape }}</p></div></article>
+    {% endfor %}
   </div>
 </section>
 

@@ -57,14 +57,4 @@ description: Selected projects, publications, and applied data science work by B
   </div>
 </section>
 
-<section class="content-section publication-band" aria-labelledby="papers-heading">
-  <div><p class="eyebrow">Publications</p><h2 id="papers-heading">Published and presented work</h2></div>
-  <div class="publication-list">
-    <article><span>2025</span><div><h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3><p>Claims-data-driven capitation design, monitoring, and prescribing-quality insights.</p></div></article>
-    <article><span>2025</span><div><h3><a href="https://ieeexplore.ieee.org/abstract/document/11416058/">Enhancing Product Recommendations with Multi-Modal LLMs</a></h3><p>ISIR-eCom / Text and image representations for next-item prediction.</p></div></article>
-    <article><span>2022</span><div><h3><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a></h3><p>KDD / Probabilistic and survival-analysis methods for engagement and churn.</p></div></article>
-    <article><span>2023</span><div><h3><a href="https://kwasuspace.kwasu.edu.ng/bitstreams/76e0bb8b-0e6f-49de-8090-2f2923d4bf69/download">Power Samade distribution: properties and application to real lifetime data</a></h3><p>Nigerian Journal of Science and Environment.</p></div></article>
-  </div>
-</section>
-
-<section class="closing-cta"><h2>Experience, education, and methods</h2><div><a class="text-link" href="{{ '/cv/' | relative_url }}">View CV <span aria-hidden="true">&rarr;</span></a></div></section>
+<section class="closing-cta"><h2>Background and research</h2><div><a class="text-link" href="{{ '/about/' | relative_url }}">Experience &amp; education <span aria-hidden="true">&rarr;</span></a><a class="text-link" href="{{ '/#publications' | relative_url }}">Papers &amp; publications <span aria-hidden="true">&rarr;</span></a></div></section>
