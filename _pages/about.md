@@ -2,14 +2,14 @@
 layout: page
 title: About
 permalink: /about/
-description: Babs Olaniyi's career, expertise, education, and working principles in economics, healthcare, and applied machine learning.
+description: Babs Olaniyi's background in statistics, data science, and machine learning for mobile health, alongside career experience and education.
 ---
 
 <section class="page-hero page-hero--profile">
   <div>
     <p class="eyebrow">A little background</p>
     <h1>About me</h1>
-    <p class="lead">My background is in mathematics, statistics, and quantitative economics. My work has taken me from newspaper data and political-violence research to customer analytics, pricing, and healthcare.</p>
+    <p class="lead">My background is in statistics, data science, and machine learning, with a focus on mobile health applications. I work on user engagement, personalized interventions, and healthcare decision support.</p>
   </div>
   <figure>
     <img src="/images/profile.jpeg" alt="Babaniyi Olaniyi">
