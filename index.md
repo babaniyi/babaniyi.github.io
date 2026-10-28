@@ -2,7 +2,7 @@
 layout: page
 permalink: /
 title: Babs Olaniyi
-description: Babs Olaniyi, data scientist and economist in Barcelona. Work on healthcare financing, experimentation, pricing, and machine learning.
+description: Babs Olaniyi, data scientist in Barcelona. Work on forecasting, supply chains, healthcare, experimentation, pricing, and machine learning.
 ---
 
 <section class="personal-intro" id="profile" aria-labelledby="intro-title">
@@ -15,7 +15,7 @@ description: Babs Olaniyi, data scientist and economist in Barcelona. Work on he
     <img src="{{ '/images/profile.jpeg' | relative_url }}" alt="Babs Olaniyi" class="personal-intro__portrait" width="168" height="190" fetchpriority="high">
   </div>
   <div class="personal-intro__body">
-    <p>I am a data scientist at Causal Foundry. My work brings together economics, statistics, and machine learning, from healthcare financing in Rwanda to pricing and recommendation systems.</p>
+    <p>I am a data scientist at Causal Foundry. My work combines statistics, machine learning, and experimentation across supply chains, healthcare, pricing, and recommendation systems.</p>
     <p>I like working through the whole problem: what to measure, how to test it, and how to turn the result into something people can use.</p>
     <div class="inline-links"><a href="{{ '/about/' | relative_url }}">More about me <span aria-hidden="true">&rarr;</span></a><a href="https://github.com/babaniyi">GitHub <span aria-hidden="true">&nearr;</span></a><a href="https://www.linkedin.com/in/babaniyi/">LinkedIn <span aria-hidden="true">&nearr;</span></a></div>
   </div>
@@ -29,8 +29,8 @@ description: Babs Olaniyi, data scientist and economist in Barcelona. Work on he
       <div><h3><a href="{{ '/portfolio/food-crisis-early-warning/' | relative_url }}">Food-crisis early warning from bilingual news <span aria-hidden="true">&rarr;</span></a></h3><p>English and Arabic news turned into an auditable review queue for food-security analysts across five Mashriq countries.</p></div>
     </article>
     <article class="work-entry">
-      <p class="work-entry__meta">Healthcare<br><span>Causal Foundry</span></p>
-      <div><h3><a href="{{ '/portfolio/#health-financing' | relative_url }}">Claims-driven health financing <span aria-hidden="true">&rarr;</span></a></h3><p>Claims analytics, capitation reform, and provider monitoring using data representing more than 9 million insured people.</p></div>
+      <p class="work-entry__meta">Health systems<br><span>Causal Foundry</span></p>
+      <div><h3><a href="{{ '/portfolio/#health-financing' | relative_url }}">Forecasting, procurement, and health financing <span aria-hidden="true">&rarr;</span></a></h3><p>Demand models and procurement recommendations for national medical supply chains, alongside capitation methodology and analysis of facility behaviour.</p></div>
     </article>
     <article class="work-entry">
       <p class="work-entry__meta">Pricing<br><span>ZF Group</span></p>
@@ -43,12 +43,12 @@ description: Babs Olaniyi, data scientist and economist in Barcelona. Work on he
   </div>
 </section>
 
-<section class="index-section" aria-labelledby="research-heading">
-  <div class="index-section__heading"><h2 id="research-heading">Papers &amp; publications</h2><a href="{{ '/cv/#publications' | relative_url }}">All publications <span aria-hidden="true">&rarr;</span></a></div>
+<section class="index-section" id="publications" aria-labelledby="research-heading">
+  <div class="index-section__heading"><h2 id="research-heading">Papers &amp; publications</h2><span>{{ site.data.publications.size }} papers</span></div>
   <div class="publication-list">
-    <article><span>2025</span><div><h3><a href="https://arxiv.org/abs/2510.21851">Data-Driven Approach to Capitation Reform in Rwanda</a></h3><p>Health financing, claims data, and provider payment.</p></div></article>
-    <article><span>2025</span><div><h3><a href="https://ieeexplore.ieee.org/abstract/document/11416058/">Enhancing Product Recommendations with Multi-Modal LLMs</a></h3><p>ISIR-eCom / Text and image signals for recommendations.</p></div></article>
-    <article><span>2022</span><div><h3><a href="https://arxiv.org/abs/2206.08178">User Engagement in Mobile Health Applications</a></h3><p>KDD / Probabilistic and survival models of engagement.</p></div></article>
+    {% for publication in site.data.publications %}
+    <article><span>{{ publication.year }}</span><div><h3><a href="{{ publication.url }}">{{ publication.title | escape }}</a></h3><p>{{ publication.summary | escape }}</p></div></article>
+    {% endfor %}
   </div>
 </section>
 

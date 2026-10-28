@@ -2,14 +2,14 @@
 layout: page
 title: About
 permalink: /about/
-description: The career story and working principles behind Babs Olaniyi’s work in economics, healthcare, and applied machine learning.
+description: Babs Olaniyi's background in statistics, experimentation, and applied machine learning, spanning forecasting, supply chains, pricing, and healthcare.
 ---
 
 <section class="page-hero page-hero--profile">
   <div>
     <p class="eyebrow">A little background</p>
     <h1>About me</h1>
-    <p class="lead">I am Babs Olaniyi, a data scientist at Causal Foundry in Barcelona. I trained in mathematics, statistics, and quantitative economics before moving into applied machine learning.</p>
+    <p class="lead">My background is in statistics, data science, and machine learning. I build models, design experiments, and develop decision tools across healthcare, supply chains, pricing, and digital products.</p>
   </div>
   <figure>
     <img src="/images/profile.jpeg" alt="Babaniyi Olaniyi">
@@ -17,30 +17,24 @@ description: The career story and working principles behind Babs Olaniyi’s wor
   </figure>
 </section>
 
-<section class="narrative-section">
-  <div class="section-kicker">
-    <p class="eyebrow">Background</p>
-    <span>01</span>
-  </div>
-  <div class="narrative-section__grid">
-    <h2>From economics to applied data science</h2>
-    <div>
-      <p class="lead">My work has taken me from newspaper data and political-violence research to customer analytics, pricing, and healthcare.</p>
-      <p>At Causal Foundry, I work with claims and provider data on health financing, prescribing quality, and operational monitoring. Before that, I built pricing models at ZF Group and worked on forecasting, engagement, and experimentation at Benshi AI.</p>
-      <p>I enjoy the mix of statistical reasoning and engineering that this work needs, as well as explaining the results to the people making the decisions.</p>
-    </div>
-  </div>
-</section>
-
-<section class="content-section">
+<section class="content-section" id="experience">
   <div class="section-kicker">
     <p class="eyebrow">Career path</p>
-    <span>02</span>
+    <span>01</span>
   </div>
   <div class="timeline timeline--editorial">
     <article class="timeline__item">
       <span>Nov 2024—Present</span>
-      <div><p class="card-meta">Barcelona · Healthcare AI</p><h3>Data Scientist, Causal Foundry</h3><p>Building claims-driven systems for health financing, provider performance, prescribing quality, anomaly detection, and operational monitoring.</p></div>
+      <div>
+        <p class="card-meta">Barcelona · Applied data science</p>
+        <h3>Data Scientist, Causal Foundry</h3>
+        <p>My work spans national medical supply chains, health financing, and facility operations.</p>
+        <ul class="evidence-list">
+          <li>Build demand-forecasting models and procurement recommendations to support supply planning.</li>
+          <li>Lead the capitation payment methodology, supported by analysis of claims and facility behaviour.</li>
+          <li>Develop provider-performance and anomaly-detection workflows, working with engineers and domain experts to turn results into monitoring and decision tools.</li>
+        </ul>
+      </div>
     </article>
     <article class="timeline__item">
       <span>Feb 2023—Sep 2024</span>
@@ -52,40 +46,69 @@ description: The career story and working principles behind Babs Olaniyi’s wor
     </article>
     <article class="timeline__item">
       <span>2019—2021</span>
-      <div><p class="card-meta">Analytics · Research</p><h3>Business intelligence and political-violence research</h3><p>Worked on customer analytics and decision dashboards after building newspaper-text workflows for research on conflict risk at IAE-CSIC.</p></div>
+      <div><p class="card-meta">Barcelona · Business intelligence</p><h3>Data &amp; Business Intelligence Analyst, The Alchemist Atelier</h3><p>Built segmentation and churn models, revenue dashboards, and customer-journey analyses for retail and e-commerce decisions.</p></div>
     </article>
     <article class="timeline__item">
-      <span>2017—2019</span>
-      <div><p class="card-meta">Paris · Barcelona</p><h3>MSc Quantitative Economics</h3><p>Studied at Université Paris 1 Panthéon-Sorbonne and Universitat Autònoma de Barcelona as an Erasmus Mundus scholar.</p></div>
+      <span>2019</span>
+      <div><p class="card-meta">Barcelona · Political economy</p><h3>Research Assistant, IAE-CSIC</h3><p>Built newspaper-text collection and predictive-modeling workflows to study political violence and conflict risk.</p></div>
     </article>
   </div>
 </section>
 
-<section class="content-section">
+<section class="content-section toolkit-section" id="expertise">
   <div class="section-kicker">
-    <p class="eyebrow">How I work</p>
-    <span>03</span>
+    <p class="eyebrow">Expertise</p>
+    <span>02</span>
   </div>
-  <div class="principle-grid">
-    <article><span>01</span><h3>Start with the decision</h3><p>I define who acts, what changes, and what a useful answer must contain before reaching for a model.</p></article>
-    <article><span>02</span><h3>Make uncertainty visible</h3><p>I separate signal from confidence, document assumptions, and build checks that invite scrutiny rather than hide it.</p></article>
-    <article><span>03</span><h3>Design for adoption</h3><p>I translate across research, engineering, policy, and product teams so evidence can move into real workflows.</p></article>
+  <div class="toolkit-grid">
+    <div>
+      <h3>Research &amp; decisions</h3>
+      <p>Turn product and operational questions into experiments and causal analyses. Communicate findings with clear assumptions, uncertainty, and limitations.</p>
+      <p>Causal inference · Experimentation · Survival analysis · Forecasting · Bayesian modeling · Decision theory</p>
+    </div>
+    <div>
+      <h3>Applied ML</h3>
+      <p>Build and validate models for forecasting, risk stratification, personalization, and resource allocation, checking for bias and performance beyond the training data.</p>
+      <p>NLP · Recommender systems · Anomaly detection · Pricing optimization · Multimodal learning · Reinforcement learning</p>
+    </div>
+    <div>
+      <h3>Data &amp; production</h3>
+      <p>Analyse complex longitudinal datasets, assess data quality, and build reproducible Python and SQL workflows. Partner with engineers and domain experts to put models into practice.</p>
+      <p>Python · SQL · PySpark · BigQuery · Databricks · MLflow · Airflow · Google Cloud · AWS · PyTorch · Scikit-learn</p>
+    </div>
   </div>
 </section>
 
-<section class="content-section toolkit-section">
+<section class="content-section" id="education">
   <div class="section-kicker">
-    <p class="eyebrow">Toolkit</p>
+    <p class="eyebrow">Education</p>
+    <span>03</span>
+  </div>
+  <div class="timeline timeline--editorial">
+    <article class="timeline__item">
+      <span>2017—2019</span>
+      <div><h3>MSc Quantitative Economics</h3><p>Université Paris 1 Panthéon-Sorbonne and Universitat Autònoma de Barcelona. Erasmus Mundus scholar.</p></div>
+    </article>
+    <article class="timeline__item">
+      <span>2012—2016</span>
+      <div><h3>BSc Mathematics &amp; Statistics</h3><p>Kwara State University. First Class Honours.</p></div>
+    </article>
+  </div>
+</section>
+
+<section class="content-section" id="recognition">
+  <div class="section-kicker">
+    <p class="eyebrow">Recognition</p>
     <span>04</span>
   </div>
-  <div class="toolkit-grid">
-    <div><h3>Research & decisions</h3><p>Causal inference · A/B testing · survival analysis · forecasting · Bayesian modeling · decision theory</p></div>
-    <div><h3>Machine learning</h3><p>NLP · recommender systems · anomaly detection · pricing optimization · multimodal learning · reinforcement learning</p></div>
-    <div><h3>Data & production</h3><p>Python · SQL · PySpark · BigQuery · Databricks · MLflow · Airflow · Google Cloud · AWS</p></div>
-  </div>
+  <ul class="evidence-list">
+    <li>ML Collective &amp; Google Cloud Credit Award</li>
+    <li>Google Africa Developer Scholarship</li>
+    <li>Best graduating student, School of Statistics and Mathematical Sciences</li>
+  </ul>
 </section>
 
 <section class="closing-cta closing-cta--compact">
   <h2>More about my work</h2>
-  <div><a class="text-link" href="/portfolio/">Selected projects <span aria-hidden="true">&rarr;</span></a><a class="text-link" href="/cv/">Full CV <span aria-hidden="true">&rarr;</span></a></div>
+  <div><a class="text-link" href="{{ '/portfolio/' | relative_url }}">Selected projects <span aria-hidden="true">&rarr;</span></a><a class="text-link" href="{{ '/#publications' | relative_url }}">Papers &amp; publications <span aria-hidden="true">&rarr;</span></a></div>
 </section>
